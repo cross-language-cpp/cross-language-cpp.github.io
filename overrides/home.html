@@ -1,0 +1,150 @@
+<!--
+  Copyright (c) 2016-2020 Martin Donath <martin.donath@squidfunk.com>
+  Copyright (c) 2020 cross-language-cpp
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+{% extends "main.html" %}
+
+<!-- Render hero under tabs -->
+{% block tabs %}
+  {{ super() }}
+
+  <!-- Additional styles for landing page -->
+  <style>
+
+    /* Application header should be static for the landing page */
+    .md-header {
+      position: initial;
+    }
+
+    .tx-container {
+      text-align: center;
+      padding-bottom: 9.5rem;
+      padding-top: 1.8rem;
+      background-color: var(--md-primary-fg-color);
+      background-image: url(assets/hero_background.svg);
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: 101%;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .tx-container {
+        background-image: url(assets/hero_background_dark.svg);
+      }
+    }
+
+    .tx-hero {
+      padding: .8rem;
+    }
+
+    .tx-hero p {
+      max-width: 800px;
+      margin: 1rem auto;
+    }
+
+    .tx-hero h1, .tx-hero p {
+      color: var(--md-primary-bg-color);
+    }
+
+    
+
+    .tx-hero .md-button {
+      margin-top: .5rem;
+      margin-right: .5rem;
+      color: var(--md-primary-bg-color);
+    }
+    .tx-hero .md-button--primary {
+      color: var(--md-primary-fg-color);
+      background-color: var(--md-primary-bg-color);
+      border-color: var(--md-primary-bg-color);
+    }
+
+    /* Hide table of contents */
+    @media screen and (min-width: 60em) {
+      .md-sidebar--secondary {
+        display: none;
+      }
+    }
+
+    /* Hide navigation */
+    @media screen and (min-width: 76.25em) {
+      .md-sidebar--primary {
+        display: none;
+      }
+    }
+
+    .md-content {
+      margin: -8.5rem auto 0 auto;
+    }
+
+
+    .tabbed-set {
+      background: var(--md-primary-bg-color);
+      box-shadow: 0 0 20px 0px #00000035;
+    }
+
+    .tabbed-set label {
+      color: var(--md-primary-bg-color)
+    }
+
+    .md-content article h1 {
+      display: none;
+    }
+  </style>
+
+  <!-- Hero for landing page -->
+  <section class="tx-container">
+    <div class="md-grid md-typeset">
+      <div class="tx-hero">
+
+        <!-- Hero content -->
+        <div class="tx-hero__content">
+          <h1>Integrate C++ code into<br>your Java and Objective-C/Swift application</h1>
+          <p>{{ config.site_description }}</p>
+          <a
+            href="{{ page.next_page.url | url }}"
+            title="{{ page.next_page.title | e }}"
+            class="md-button md-button--primary"
+          >
+            Getting Started
+          </a>
+          <a
+            href="https://github.com/cross-language-cpp"
+            title="Contribute on Github"
+            class="md-button"
+            target="blank"
+          >
+          Contribute
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+  {{ super() }}
+{% endblock %}
+
+<!-- Application footer -->
+{% block footer %}{% endblock %}

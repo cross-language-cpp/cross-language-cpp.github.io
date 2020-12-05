@@ -1,0 +1,3 @@
+site_name: djinni-support-lib
+nav:
+  - Getting Started: "getting-started.md"
