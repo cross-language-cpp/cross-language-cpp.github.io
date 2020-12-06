@@ -42,6 +42,8 @@ The submodules follow the HEAD of the `main` branch. This means that changes in 
 
 The documentation is built using [Markdown](https://www.markdownguide.org/) files, the [mkdocs](https://www.mkdocs.org/) generator and the [mkdocs-material](https://squidfunk.github.io/mkdocs-material/) theme.
 
+To consolidate multiple repositories into one documentation, the `mkdocs-monorepo-plugin` is used.
+
 A few non-standard CSS-customizations have been made to the theme:
 - a custom color theme has been created
 - a rudimentary dark mode was implemented by overriding some color variables on the `media (prefers-color-scheme: dark)` selector.
