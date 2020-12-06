@@ -34,7 +34,7 @@ mkdocs serve
 
 ### Build (github actions)
 
-The page is automatically deployed on each PR into `main`, and once a day at midnight.
+The page is automatically deployed on each merge into `main`, and once a day at midnight.
 
 The submodules follow the HEAD of the `main` branch. This means that changes in the documentation in once of the submodules will automatically be rendered and published at midnight.
 
