@@ -7,7 +7,7 @@ hide:
 ---
 
 
-## :clap: Stupid Simple IDL
+## :clap: Simple IDL
 
 The [**Djinni-IDL**](djinni-generator/idl.md) provides a simple, yet powerful way to design your interfaces.
 

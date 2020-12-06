@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - main
-      - mkdocs_initial_setup
   schedule:
     - cron:  '0 0 * * *'
 jobs:
