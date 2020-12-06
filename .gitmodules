@@ -6,3 +6,7 @@
 	path = djinni-generator
 	url = https://github.com/cross-language-cpp/djinni-generator.git
 	branch = main
+[submodule "djinni-support-lib"]
+	path = djinni-support-lib
+	url = https://github.com/cross-language-cpp/djinni-support-lib.git
+	branch = main
