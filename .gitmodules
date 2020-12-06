@@ -1,0 +1,4 @@
+[submodule "djinni-intellij-plugin"]
+	path = djinni-intellij-plugin
+	url = https://github.com/cross-language-cpp/djinni-intellij-plugin.git
+	branch = main
