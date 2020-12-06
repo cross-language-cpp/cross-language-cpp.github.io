@@ -13,6 +13,19 @@ The [**Djinni-IDL**](djinni-generator/idl.md) provides a simple, yet powerful wa
 
 ---
 
+## :electric_plug: IDE Integration
+
+Plugins for the Djinni IDL are available for [**IntelliJ IDEA**](djinni-intellij-plugin/about.md) & [**VS Code**](vscode-plugin.md)
+
+---
+
+## :rocket: Ready for the Future
+
+Djinni is also compatible with modern technologies. Call your C++ Code from **Kotlin** and **Swift** to have even more fun!
+
+
+---
+
 ## :arrow_up_down: Works in both directions
 
 Call in and out of C++ with ease:
@@ -30,18 +43,6 @@ Java, "C++", "Obj-C" [ shape=box, style="rounded" ]
 }
 @enduml
 ```
-
----
-
-## :electric_plug: IDE Integration
-
-Plugins for the Djinni IDL are available for [**IntelliJ IDEA**](djinni-intellij-plugin/about.md) & [**VS Code**](vscode-plugin.md)
-
----
-
-## :rocket: Ready for the Future
-
-Djinni is also compatible with modern technologies. Call your C++ Code from **Kotlin** and **Swift** to have even more fun!
 
 <br>
 <br>
