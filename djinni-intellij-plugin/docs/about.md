@@ -1,3 +1,3 @@
-# About
+# About IntelliJ IDEA Plugin
 
-<iframe frameborder="none" width="384px" height="319px" src="https://plugins.jetbrains.com/embeddable/card/15347"></iframe>
+<script defer src="https://plugins.jetbrains.com/assets/scripts/mp-widget.js"></script>
