@@ -37,7 +37,7 @@
 
     .tx-container {
       text-align: center;
-      padding-bottom: 9.5rem;
+      padding-bottom: 5rem;
       padding-top: 1.8rem;
       background-color: var(--md-primary-fg-color);
       background-image: url(assets/hero_background.svg);
@@ -53,7 +53,7 @@
     }
 
     .tx-hero {
-      padding: .8rem;
+      padding: .5rem;
     }
 
     .tx-hero p {
@@ -93,7 +93,8 @@
     }
 
     .md-content {
-      margin: -8.5rem auto 0 auto;
+      margin: -1.5rem auto 0 auto;
+      text-align: center;
     }
 
 
@@ -109,6 +110,12 @@
     .md-content article h1 {
       display: none;
     }
+
+    .md-content hr {
+      margin: 2.2em auto;
+      max-width: 400px;
+      border-bottom: .05rem solid var(--md-default-fg-color--lighter);
+    }
   </style>
 
   <!-- Hero for landing page -->
@@ -118,7 +125,7 @@
 
         <!-- Hero content -->
         <div class="tx-hero__content">
-          <h1>Integrate C++ code into<br>your Java and Objective-C/Swift application</h1>
+          <h1>Integrate <b>C++</b> code into<br>your <b>Java</b> or <b>Objective-C</b> application!</h1>
           <p>{{ config.site_description }}</p>
           <a
             href="{{ page.next_page.url | url }}"
@@ -147,4 +154,6 @@
 {% endblock %}
 
 <!-- Application footer -->
-{% block footer %}{% endblock %}
+{% block footer %}
+  {{ super() }}
+{% endblock %}

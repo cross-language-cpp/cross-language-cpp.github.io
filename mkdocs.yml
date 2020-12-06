@@ -5,7 +5,10 @@ site_description: >-
 copyright: Copyright &copy; 2020 cross-language-cpp
 markdown_extensions:
   - pymdownx.tabbed
+  - pymdownx.highlight
   - pymdownx.superfences
+  - admonition
+  - pymdownx.details
   - toc:
       permalink: true
   - pymdownx.emoji:
