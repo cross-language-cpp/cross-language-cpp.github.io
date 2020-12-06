@@ -1,3 +1,4 @@
 site_name: djinni-intellij-plugin
 nav:
-  - Getting Started: "getting-started.md"
+  - about.md
+  - developer-guide.md

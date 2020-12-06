@@ -29,7 +29,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .md-header-nav__button.md-logo img {
+  .md-header-nav__button.md-logo img, .uml {
     filter: invert(1);
   }
 }
@@ -45,4 +45,12 @@
 
 .md-search__input:hover {
   background-color: rgba(255,255,255,0.25);
+}
+
+.md-footer {
+  margin-top: 3.5rem;
+}
+
+.md-content hr {
+  border-bottom: .05rem solid var(--md-default-fg-color--lighter);
 }

@@ -4,13 +4,24 @@ on:
     branches:
       - main
       - mkdocs_initial_setup
+  schedule:
+    - cron:  '0 0 * * *'
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          submodules: true
+      - name: Install Python
+        uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      - run: pip install -r requirements.txt
-      - run: mkdocs gh-deploy --force
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+      - name: Install PlantUML
+        run: sudo apt-get -y install plantuml
+      - name: Deploy mkdocs to github pages
+        run: mkdocs gh-deploy --force

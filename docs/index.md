@@ -1,18 +1,41 @@
 ---
 template: 'home.html'
 title: Djinni
+hide:
+  - navigation
+  - toc
 ---
 
 
 ## :clap: Stupid Simple IDL
 
-The [**Djinni-IDL**](djinni-generator/idl/) provides a simple, yet powerful way to design your interfaces.
+The [**Djinni-IDL**](djinni-generator/idl.md) provides a simple, yet powerful way to design your interfaces.
+
+---
+
+## :arrow_up_down: Works in both directions
+
+Call in and out of C++ with ease:
+
+```plantuml
+@startuml
+digraph world {
+graph [truecolor=true bgcolor=transparent]
+{rank=same; Java "Obj-C";}
+Java, "C++", "Obj-C" [ shape=box, style="rounded" ]
+"C++" [ width=1.75 ]
+
+	Java -> "C++" [dir=both];
+	"C++" -> "Obj-C" [dir=both];
+}
+@enduml
+```
 
 ---
 
 ## :electric_plug: IDE Integration
 
-Plugins for the Djinni IDL are available for [**IntelliJ IDEA**](https://plugins.jetbrains.com/plugin/15347-djinni-idl-file-support) & [**VS Code**](https://marketplace.visualstudio.com/items?itemName=patrikminder.djinni-syntax-highlighting)
+Plugins for the Djinni IDL are available for [**IntelliJ IDEA**](djinni-intellij-plugin/about.md) & [**VS Code**](vscode-plugin.md)
 
 ---
 

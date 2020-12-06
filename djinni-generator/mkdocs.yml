@@ -2,5 +2,6 @@ site_name: djinni-generator
 nav:
   - setup.md
   - idl.md
-  - usage.md
-  - developer-docs.md
+  - cli-usage.md
+  - generated-code-usage.md
+  - developer-guide.md
