@@ -3,7 +3,6 @@ site_description: >-
   Djinni is a tool for generating cross-language type declarations and interface bindings. 
   It's designed to connect C++ with either Java or Objective-C.
 copyright: Copyright &copy; 2020 cross-language-cpp
-repo_url: https://github.com/jothepro/djinni-documentation
 markdown_extensions:
   - pymdownx.tabbed
   - pymdownx.highlight
