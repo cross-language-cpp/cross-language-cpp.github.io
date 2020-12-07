@@ -12,11 +12,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
-          ref: main
           fetch-depth: 0
           submodules: true
       - name: update submodules
-        run: git submodule foreach git pull
+        run: git submodule foreach git pull origin main
       - name: Install Python
         uses: actions/setup-python@v2
         with:
