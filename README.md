@@ -1,4 +1,4 @@
-# cross-language-cpp.github.io
+# Djinni Documentation
 
 Documentation for the **cross-language-cpp** fork of djinni.
 
