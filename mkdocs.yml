@@ -2,7 +2,7 @@ site_name: Djinni
 site_description: >-
   Djinni is a tool for generating cross-language type declarations and interface bindings. 
   It's designed to connect C++ with either Java or Objective-C.
-copyright: Copyright &copy; 2020 cross-language-cpp
+copyright: Copyright &copy; 2020 <a href="https://github.com/cross-language-cpp" target="_blank">cross-language-cpp</a>
 markdown_extensions:
   - pymdownx.tabbed
   - pymdownx.highlight
@@ -23,8 +23,16 @@ plugins:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/cross-langugage-cpp
+      name: djinni-generator
+      link: https://github.com/cross-language-cpp/djinni-generator
+    - icon: fontawesome/brands/github
+      name: djinni-support-lib
+      link: https://github.com/cross-language-cpp/djinni-support-lib
+    - icon: fontawesome/brands/github
+      name: djinni-intellij-plugin
+      link: https://github.com/cross-language-cpp/djinni-intellij-plugin
     - icon: fontawesome/brands/slack
+      name: mobilecpp
       link: https://mobilecpp.herokuapp.com/
 theme:
   name: material

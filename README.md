@@ -1,8 +1,8 @@
-# djinni-documentation
-
-**[:arrow_right: Documentation Website :arrow_left:](https://cross-language-cpp.github.io/djinni-documentation/)**
+# cross-language-cpp.github.io
 
 Documentation for the **cross-language-cpp** fork of djinni.
+
+:arrow_right: Available at: **[djinni.xlcpp.dev](https://djinni.xlcpp.dev/)**
 
 This documentation covers of the following topics:
 
