@@ -54,3 +54,37 @@
 .md-content hr {
   border-bottom: .05rem solid var(--md-default-fg-color--lighter);
 }
+
+.md-footer {
+  padding-bottom: .35rem;
+}
+
+/* custom styles for social.html */
+
+.md-footer-social {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 0;
+}
+
+.md-footer-social__link {
+  width: auto;
+  height: auto;
+  margin: .2rem .2rem;
+  padding: .2rem .26rem;
+  border: 1px solid var(--md-footer-fg-color--lighter);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.md-footer-social__link svg {
+  height: .9rem;
+  width: .9rem;
+}
+
+.md-footer-social__name {
+  margin: 0 .26rem;
+  font-size: .64rem;
+}
