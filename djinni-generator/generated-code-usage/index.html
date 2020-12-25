@@ -462,7 +462,7 @@
 
   <li class="md-nav__item">
     <a href="../idl/" class="md-nav__link">
-      Interface Definition Language
+      Interface Definition Language (IDL)
     </a>
   </li>
 
@@ -901,9 +901,8 @@
 <p>Add all generated source files to your build target, as well as the contents of
 <code>support-lib/java</code>.</p>
 <h3 id="our-jni-approach">Our JNI approach<a class="headerlink" href="#our-jni-approach" title="Permanent link">&para;</a></h3>
-<p>JNI stands for Java Native Interface, an extension of the Java language to allow interop with
-native (C/C++) code or libraries. Complete documentation on JNI is available at:
-http://docs.oracle.com/javase/6/docs/technotes/guides/jni/spec/jniTOC.html</p>
+<p>JNI stands for <a href="http://docs.oracle.com/javase/6/docs/technotes/guides/jni/spec/jniTOC.html">Java Native Interface</a>, an extension of the Java language to allow interop with
+native (C/C++) code or libraries.</p>
 <p>For each type, built-in (<code>list</code>, <code>string</code>, etc.) or user-defined, Djinni produces a translator
 class with a <code>toJava</code> and <code>fromJava</code> function to translate back and forth.</p>
 <p>Application code is responsible for the initial load of the JNI library. Add a static block
@@ -911,9 +910,8 @@ somewhere in your code:</p>
 <div class="highlight"><pre><span></span><code>System.loadLibrary(&quot;YourLibraryName&quot;);
 // The name is specified in Android.mk / build.gradle / Makefile, depending on your build system.
 </code></pre></div>
-<p>If you package your native library in a jar, you can also use <code>com.dropbox.djinni.NativeLibLoader</code> 
-to help unpack and load your lib(s).  See the <a href="example/localhost/README.md">Localhost README</a>
-for details.</p>
+<p>If you package your native library in a jar, you can also use the <a href="https://github.com/cross-language-cpp/djinni-support-lib/blob/main/java/com/dropbox/djinni/NativeLibLoader.java"><code>NativeLibLoader</code></a>
+to help unpack and load your lib(s).</p>
 <p>When a native library is called, JNI calls a special function called <code>JNI_OnLoad</code>. If you use
 Djinni for all JNI interface code, include <code>support_lib/jni/djinni_main.cpp</code>; if not,
 you'll need to add calls to your own <code>JNI_OnLoad</code> and <code>JNI_OnUnload</code> functions. See
@@ -942,7 +940,7 @@ you'll need to add calls to your own <code>JNI_OnLoad</code> and <code>JNI_OnUnl
 <tr>
 <td>Record</td>
 <td>my_record[_base].hpp</td>
-<td>my_record[_base].cpp (+)</td>
+<td>my_record[_base].cpp <img alt="1⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/31-20e3.svg" title=":one:" /></td>
 <td>DBMyRecord[Base].h</td>
 <td>DBMyRecord[Base]+Private.h</td>
 </tr>
@@ -950,13 +948,13 @@ you'll need to add calls to your own <code>JNI_OnLoad</code> and <code>JNI_OnUnl
 <td></td>
 <td></td>
 <td></td>
-<td>DBMyRecord[Base].mm (++)</td>
+<td>DBMyRecord[Base].mm <img alt="2⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/32-20e3.svg" title=":two:" /></td>
 <td>DBMyRecord[Base]+Private.mm</td>
 </tr>
 <tr>
 <td>Interface</td>
 <td>my_interface.hpp</td>
-<td>my_interface.cpp (+)</td>
+<td>my_interface.cpp <img alt="1⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/31-20e3.svg" title=":one:" /></td>
 <td>DBMyInterface.h</td>
 <td>DBMyInterface+Private.h</td>
 </tr>
@@ -969,8 +967,10 @@ you'll need to add calls to your own <code>JNI_OnLoad</code> and <code>JNI_OnUnl
 </tr>
 </tbody>
 </table>
-<p>(+) Generated only for types that contain constants.
-(++) Generated only for types with derived operations and/or constants. These have <code>.mm</code> extensions to allow non-trivial constants.</p>
+<ul>
+<li><img alt="1⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/31-20e3.svg" title=":one:" /> Generated only for types that contain constants.</li>
+<li><img alt="2⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/32-20e3.svg" title=":two:" /> Generated only for types with derived operations and/or constants. These have <code>.mm</code> extensions to allow non-trivial constants.</li>
+</ul>
 <p>Add all generated files to your build target, as well as the contents of <code>support-lib/objc</code>.
 Note that <code>+Private</code> files can only be used with ObjC++ source (other headers are pure ObjC) and are not required by Objective-C users of your interface.</p>
                 
@@ -981,7 +981,7 @@ Note that <code>+Private</code> files can only be used with ObjC++ source (other
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 7, 2020</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 24, 2020</span>
     
   </small>
 </div>

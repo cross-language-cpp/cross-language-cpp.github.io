@@ -39,7 +39,7 @@
     
     
       
-        <title>Interface Definition Language - Djinni</title>
+        <title>Interface Definition Language (IDL) - Djinni</title>
       
     
     
@@ -76,7 +76,7 @@
 
   <!-- Open graph meta tags -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Djinni - Interface Definition Language" />
+  <meta property="og:title" content="Djinni - Interface Definition Language (IDL)" />
   <meta property="og:description" content="Djinni is a tool for generating cross-language type declarations and interface bindings.  It's designed to connect C++ with either Java or Objective-C." />
   <meta property="og:url" content="None" />
 
@@ -99,7 +99,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#interface-definition-language" class="md-skip">
+        <a href="#interface-definition-language-idl" class="md-skip">
           Skip to content
         </a>
       
@@ -138,7 +138,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              Interface Definition Language
+              Interface Definition Language (IDL)
             
           </span>
         </div>
@@ -470,12 +470,12 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Interface Definition Language
+        Interface Definition Language (IDL)
         <span class="md-nav__icon md-icon"></span>
       </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
-      Interface Definition Language
+      Interface Definition Language (IDL)
     </a>
     
       
@@ -583,6 +583,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    Comments
+  </a>
   
 </li>
       
@@ -937,6 +944,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    Comments
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -951,7 +965,7 @@
   
                 
                 
-                <h1 id="interface-definition-language">Interface Definition Language<a class="headerlink" href="#interface-definition-language" title="Permanent link">&para;</a></h1>
+                <h1 id="interface-definition-language-idl">Interface Definition Language (IDL)<a class="headerlink" href="#interface-definition-language-idl" title="Permanent link">&para;</a></h1>
 <p>Djinni's input is an interface description file. Here's an example:</p>
 <div class="highlight"><pre><span></span><code># Multi-line comments can be added here. This comment will be propagated
 # to each generated definition.
@@ -1164,6 +1178,11 @@ interface/record prefixed. Example:</p>
 </code></pre></div>
 <p>will be <code>RecordWithConst::CONST_VALUE</code> in C++, <code>RecordWithConst.CONST_VALUE</code> in Java, and
 <code>RecordWithConstConstValue</code> in Objective-C.</p>
+<h2 id="comments">Comments<a class="headerlink" href="#comments" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code># This is a comment
+</code></pre></div>
+<p>If comments are are placed <strong>on top or inside a type definition</strong>,
+they will be converted to <strong>Javadoc / Doxygen compatible</strong> comments in the generated Java/C++/Objective-C interfaces.</p>
                 
                   
                     
@@ -1172,7 +1191,7 @@ interface/record prefixed. Example:</p>
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 7, 2020</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 24, 2020</span>
     
   </small>
 </div>
