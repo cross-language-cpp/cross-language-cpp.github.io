@@ -1114,7 +1114,7 @@
 </tr>
 <tr>
 <td><code>--jni-base-lib-include-prefix ...</code></td>
-<td>The JNI base library's include path, relative to the JNI C++ classes.</td>
+<td>The JNI base support library's include path (default: djinni/jni/).</td>
 </tr>
 </tbody>
 </table>
@@ -1200,7 +1200,7 @@
 </tr>
 <tr>
 <td><code>--objc-base-lib-include-prefix ...</code></td>
-<td>The Objective-C++ base library's include path, relative to the Objective-C++ classes.</td>
+<td>The Objective-C base support library's include path (default: djinni/objc/).</td>
 </tr>
 </tbody>
 </table>
@@ -1321,6 +1321,34 @@
 </tr>
 </tbody>
 </table>
+<p>The <em>Identifier Style</em> is a text conversion hint on how to generate names from the djinni idl file.</p>
+<p>Example:
+The djinni idl for an enum</p>
+<div class="highlight"><pre><span></span><code>SomeEnum = enum {
+    Value;
+}
+</code></pre></div>
+<p>transforms per default to the following Java code</p>
+<p><div class="highlight"><pre><span></span><code>public enum SomeEnum {
+    VALUE,
+    ;
+}
+</code></pre></div>
+As you see, <em>VALUE</em> is now in upper case letters.</p>
+<p>If you use <code>--ident-java-enum foo_bar</code> then <em>Value</em> will not be transformed into upper case and the following Java code will be generated.</p>
+<div class="highlight"><pre><span></span><code>public enum SomeEnum {
+    Value,
+    ;
+}
+</code></pre></div>
+<p>This way you can adopt code generation to some extend to your existing coding style.</p>
+<p>The best way to find out how that works is playing around with different values for different identifier options.</p>
+<p><strong>If you wish not text transformation to happen, use the <code>foo_bar</code> style.</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some identifiers do have text transformation enabled by default. 
+Nevertheless make sure to <strong>explicitly set</strong> text transformation styles if you need them! All text transformation may be disabled by default in a future release of the generator.</p>
+</div>
                 
                   
                     
@@ -1329,7 +1357,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 7, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 20, 2021</span>
     
   </small>
 </div>
