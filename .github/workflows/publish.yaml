@@ -12,7 +12,7 @@ jobs:
         with:
           fetch-depth: 0
           submodules: true
-      - name: update submodules
+      - name: Update submodules to latest release
         run: git submodule foreach 'git fetch origin; git checkout $(git describe --tags `git rev-list --tags --max-count=1`);'
       - name: Install Python
         uses: actions/setup-python@v2
@@ -22,5 +22,7 @@ jobs:
         run: pip install -r requirements.txt
       - name: Install PlantUML
         run: sudo apt-get -y install plantuml
+      - name: Substitute environment variables in mkdocs.yml
+        run: ./configure.sh
       - name: Deploy mkdocs to github pages
         run: mkdocs gh-deploy --force

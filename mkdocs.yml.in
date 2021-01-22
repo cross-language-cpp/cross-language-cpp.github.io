@@ -52,10 +52,10 @@ nav:
     - setup.md
     - example.md
     - contributing.md
-  - Generator: '!include ./djinni-generator/mkdocs.yml'
-  - Support Lib: '!include ./djinni-support-lib/mkdocs.yml'
+  - Generator <code>${VERSION_djinni_generator}</code>: '!include ./djinni-generator/mkdocs.yml'
+  - Support Lib <code>${VERSION_djinni_support_lib}</code>: '!include ./djinni-support-lib/mkdocs.yml'
   - IDE Integration:
-    - IntelliJ IDEA Plugin: '!include ./djinni-intellij-plugin/mkdocs.yml'
+    - IntelliJ IDEA Plugin <code>${VERSION_djinni_intellij_plugin}</code>: '!include ./djinni-intellij-plugin/mkdocs.yml'
     - VS Code Plugin: vscode-plugin.md
   - Resources: 
     - icon_resources.md

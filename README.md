@@ -17,6 +17,7 @@ This documentation covers of the following topics:
 
 - plantuml
 - python3
+- bash
 
 Install python dependencies:
 
@@ -26,23 +27,25 @@ pip3 install -r requirements.txt
 
 ### Build (local)
 
-**Important**: Before making changes locally, make sure to update all submodules:
-
-```bash
-git submodule foreach git pull
-```
-
-Start a dev server with:
-
-```bash
-mkdocs serve
-```
+1. Before making local changes, make sure to update all submodules:
+    ```bash
+    git submodule foreach git pull
+    ```
+2. Configure the mkdocs.yml file:
+    ```bash
+    ./configure.sh
+    ```
+3. Start a dev server:
+    ```bash
+    mkdocs serve
+    ```
+4. A live preview of the page is now available at [http://localhost:8000/](http://localhost:8000/).
 
 ### Build (github actions)
 
-The page is automatically deployed on each merge into `main`, and once a day at midnight.
+The page is automatically deployed on each merge into `main`.
 
-The submodules follow the `main` branch of each repository. Changes in the documentation in one of the submodules will automatically be pulled, rendered and pushed to the `gh-pages` branch on each publish action.
+The submodules follow the `main` branch of each repository. On each publish action the submodules will be automatically updated to the latest release tag, rendered and pushed to the `gh-pages` branch.
 
 **Important**: The pipeline has to always pull the latest changes of all submodules because submodules point to a specific commit in the linked repository.
 That way the rendered documentation in `gh-pages` will always stay up-to-date, while the submodules in the repository will point to an older commit if not updated manually.
@@ -53,7 +56,8 @@ The documentation is built using [Markdown](https://www.markdownguide.org/) file
 
 To consolidate multiple repositories into one documentation, the `mkdocs-monorepo-plugin` is used.
 
-
 A few non-standard CSS-customizations have been made to the theme:
+
 - a custom color theme has been created
 - a rudimentary dark mode was implemented by overriding some color variables on the `media (prefers-color-scheme: dark)` selector.
+- the version of each submodule is injected into `mkdocs.yml` with `./configure.sh`. The version is displayed as a small tag in the sidebar navigation.
