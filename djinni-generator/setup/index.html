@@ -493,6 +493,26 @@
     Linux, macOS
   </a>
   
+    <nav class="md-nav" aria-label="Linux, macOS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download-install-manually" class="md-nav__link">
+    Download &amp; Install Manually
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-with-asdf" class="md-nav__link">
+    Install with asdf
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -790,6 +810,26 @@
     Linux, macOS
   </a>
   
+    <nav class="md-nav" aria-label="Linux, macOS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download-install-manually" class="md-nav__link">
+    Download &amp; Install Manually
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-with-asdf" class="md-nav__link">
+    Install with asdf
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -825,12 +865,17 @@
 <p>The generator <strong>requires Java</strong>!</p>
 </div>
 <h3 id="linux-macos">Linux, macOS<a class="headerlink" href="#linux-macos" title="Permanent link">&para;</a></h3>
+<h4 id="download-install-manually">Download &amp; Install Manually<a class="headerlink" href="#download-install-manually" title="Permanent link">&para;</a></h4>
 <p>Download the <a href="https://github.com/cross-language-cpp/djinni-generator/releases/latest/download/djinni">lastest released binary</a>, make it executable and put the containing folder on your PATH:</p>
 <div class="highlight"><pre><span></span><code>curl -LO https://github.com/cross-language-cpp/djinni-generator/releases/latest/download/djinni
 chmod u+x djinni
 <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:<span class="nv">$PATH</span>
 </code></pre></div>
 <p>Make sure to <a href="https://stackabuse.com/how-to-permanently-set-path-in-linux/">put it on your PATH permanently</a> once you fell in love with djinni! <img alt="😊" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f60a.svg" title=":blush:" /></p>
+<h4 id="install-with-asdf">Install with <a href="https://asdf-vm.com/">asdf</a><a class="headerlink" href="#install-with-asdf" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>asdf plugin add djinni
+asdf install djinni latest
+</code></pre></div>
 <h3 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h3>
 <p>Download the <a href="https://github.com/cross-language-cpp/djinni-generator/releases/latest/download/djinni.bat">latest released batch file</a>, copy it where you want and <a href="https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/">put the folder on your PATH</a>.</p>
                 
@@ -841,7 +886,7 @@ chmod u+x djinni
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 24, 2020</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 22, 2021</span>
     
   </small>
 </div>
