@@ -16,6 +16,9 @@
     --md-default-fg-color: #ffffff;
     --md-default-fg-color--light: #FBFBFB;
     --md-default-fg-color--lighter: #FBFBFB88;
+    --md-typeset-kbd-color: rgb(26, 26, 26);
+    --md-typeset-kbd-border-color: rgb(10, 10, 10);
+    --md-typeset-kbd-accent-color: rgb(24, 24, 24);
   }
 }
 
@@ -53,10 +56,6 @@
 
 .md-content hr {
   border-bottom: .05rem solid var(--md-default-fg-color--lighter);
-}
-
-.md-footer {
-  padding-bottom: .35rem;
 }
 
 /* custom styles for social.html */

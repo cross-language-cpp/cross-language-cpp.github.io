@@ -10,3 +10,6 @@
 	path = djinni-support-lib
 	url = https://github.com/cross-language-cpp/djinni-support-lib.git
 	branch = main
+[submodule "vscode-djinni"]
+	path = vscode-djinni
+	url = https://github.com/cross-language-cpp/vscode-djinni.git
