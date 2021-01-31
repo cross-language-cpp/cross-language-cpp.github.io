@@ -15,7 +15,7 @@ The [**Djinni-IDL**](djinni-generator/idl.md) provides a simple, yet powerful wa
 
 ## :electric_plug: IDE Integration
 
-Plugins for the Djinni IDL are available for [**IntelliJ IDEA**](djinni-intellij-plugin/about.md) & [**VS Code**](vscode-plugin.md)
+Plugins for the Djinni IDL are available for [**IntelliJ IDEA**](djinni-intellij-plugin/about.md) & [**VS Code**](vscode-djinni/index.md)
 
 ---
 
