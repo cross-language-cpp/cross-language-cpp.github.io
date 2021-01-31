@@ -31,6 +31,9 @@ extra:
     - icon: fontawesome/brands/github
       name: djinni-intellij-plugin
       link: https://github.com/cross-language-cpp/djinni-intellij-plugin
+    - icon: fontawesome/brands/github
+      name: vscode-djinni
+      link: https://github.com/cross-language-cpp/vscode-djinni
     - icon: fontawesome/brands/slack
       name: mobilecpp
       link: https://mobilecpp.herokuapp.com/
