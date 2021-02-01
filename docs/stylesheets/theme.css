@@ -87,3 +87,19 @@
   margin: 0 .26rem;
   font-size: .64rem;
 }
+
+/* custom version tags in sidebar navigation */
+
+nav.md-nav a code, nav.md-nav label code {
+  background: var(--md-code-bg-color);
+  border-radius: 4px;
+  padding: 2px 4px;
+  font-size: 8pt;
+  font-weight: normal;
+}
+
+/* don't show version tags in tabs navigation */
+
+nav.md-tabs a code, div.md-footer-nav a code {
+  display: none;
+}

@@ -31,6 +31,9 @@ extra:
     - icon: fontawesome/brands/github
       name: djinni-intellij-plugin
       link: https://github.com/cross-language-cpp/djinni-intellij-plugin
+    - icon: fontawesome/brands/github
+      name: vscode-djinni
+      link: https://github.com/cross-language-cpp/vscode-djinni
     - icon: fontawesome/brands/slack
       name: mobilecpp
       link: https://mobilecpp.herokuapp.com/
@@ -52,10 +55,10 @@ nav:
     - setup.md
     - example.md
     - contributing.md
-  - Generator: '!include ./djinni-generator/mkdocs.yml'
-  - Support Lib: '!include ./djinni-support-lib/mkdocs.yml'
+  - Generator <code>${VERSION_djinni_generator}</code>: '!include ./djinni-generator/mkdocs.yml'
+  - Support Lib <code>${VERSION_djinni_support_lib}</code>: '!include ./djinni-support-lib/mkdocs.yml'
   - IDE Integration:
-    - IntelliJ IDEA Plugin: '!include ./djinni-intellij-plugin/mkdocs.yml'
-    - VS Code Plugin: '!include ./vscode-djinni/mkdocs.yml'
+    - IntelliJ IDEA Plugin <code>${VERSION_djinni_intellij_plugin}</code>: '!include ./djinni-intellij-plugin/mkdocs.yml'
+    - VS Code Extension <code>${VERSION_vscode_djinni}</code>: '!include ./vscode-djinni/mkdocs.yml'
   - Resources: 
     - icon_resources.md
