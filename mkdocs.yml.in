@@ -59,6 +59,6 @@ nav:
   - Support Lib <code>${VERSION_djinni_support_lib}</code>: '!include ./djinni-support-lib/mkdocs.yml'
   - IDE Integration:
     - IntelliJ IDEA Plugin <code>${VERSION_djinni_intellij_plugin}</code>: '!include ./djinni-intellij-plugin/mkdocs.yml'
-    - VS Code Plugin <code>${VERSION_vscode_djinni}</code>: '!include ./vscode-djinni/mkdocs.yml'
+    - VS Code Extension <code>${VERSION_vscode_djinni}</code>: '!include ./vscode-djinni/mkdocs.yml'
   - Resources: 
     - icon_resources.md
