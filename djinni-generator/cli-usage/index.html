@@ -35,7 +35,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.2">
     
     
       
@@ -43,7 +43,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.33e2939f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f955dcd.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
@@ -229,7 +229,7 @@
   
     <li class="md-tabs__item">
       <a href="../setup/" class="md-tabs__link md-tabs__link--active">
-        Generator <code>v0.3.2</code>
+        Generator <code>v0.4.0</code>
       </a>
     </li>
   
@@ -429,13 +429,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       <label class="md-nav__link" for="__nav_3">
-        Generator <code>v0.3.2</code>
+        Generator <code>v0.4.0</code>
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Generator <code>v0.3.2</code>" data-md-level="1">
+      <nav class="md-nav" aria-label="Generator <code>v0.4.0</code>" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Generator <code>v0.3.2</code>
+          Generator <code>v0.4.0</code>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -473,6 +473,7 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+      
         
       
       
@@ -487,6 +488,7 @@
       
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
@@ -549,6 +551,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#yaml-generation" class="md-nav__link">
     Yaml Generation
   </a>
@@ -587,6 +596,13 @@
           <li class="md-nav__item">
   <a href="#objective-c_2" class="md-nav__link">
     Objective C
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python_1" class="md-nav__link">
+    Python
   </a>
   
 </li>
@@ -870,6 +886,7 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
     
   
   
@@ -930,6 +947,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#yaml-generation" class="md-nav__link">
     Yaml Generation
   </a>
@@ -968,6 +992,13 @@
           <li class="md-nav__item">
   <a href="#objective-c_2" class="md-nav__link">
     Objective C
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python_1" class="md-nav__link">
+    Python
   </a>
   
 </li>
@@ -1014,6 +1045,12 @@
    --objc-type-prefix DB <span class="se">\ </span><span class="c1"># Apple suggests Objective-C classes have a prefix for each defined type.</span>
    <span class="se">\</span>
    --objcpp-out OBJC_OUTPUT_FOLDER <span class="se">\</span>
+   <span class="se">\</span>
+   --py-out PYTHON_OUTPUT_FOLDER <span class="se">\</span>
+   --pycffi-out CFFI_OUTPUT_FOLDER <span class="se">\ </span><span class="c1"># Required for Python support</span>
+   --pycffi-package-name PyCFFIlib <span class="se">\</span>
+   --pycffi-dynamic-lib-list mylib <span class="se">\</span>
+   --c-wrapper-out C_WRAPPER_OUTPUT_FOLDER <span class="se">\ </span><span class="c1"># Required for Python support</span>
    <span class="se">\</span>
    --idl MY_PROJECT.djinni
 </code></pre></div>
@@ -1256,7 +1293,7 @@
 </tr>
 <tr>
 <td><code>--objcpp-include-prefix &lt;prefix&gt;</code></td>
-<td>The prefix for #import of Objective-C++ header files from Objective-C++ files.</td>
+<td>The prefix for <code>#import</code> of Objective-C++ header files from Objective-C++ files.</td>
 </tr>
 <tr>
 <td><code>--objcpp-include-cpp-prefix &lt;prefix&gt;</code></td>
@@ -1281,6 +1318,57 @@
 <tr>
 <td><code>--objc-base-lib-include-prefix ...</code></td>
 <td>The Objective-C base support library's include path (default: <code>djinni/objc/</code>).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="python">Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--py-out &lt;out-folder&gt;</code></td>
+<td>The output folder for Python files (Generator disabled if unspecified).</td>
+</tr>
+<tr>
+<td><code>--pycffi-out &lt;out-folder&gt;</code></td>
+<td>The output folder for PyCFFI files (Generator disabled if unspecified).</td>
+</tr>
+<tr>
+<td><code>--pycffi-package-name ...</code></td>
+<td>The package name to use for the generated PyCFFI classes.</td>
+</tr>
+<tr>
+<td><code>--pycffi-dynamic-lib-list ...</code></td>
+<td>The names of the dynamic libraries to be linked with PyCFFI.</td>
+</tr>
+<tr>
+<td><code>--c-wrapper-out &lt;out-folder&gt;</code></td>
+<td>The output folder for C wrapper files (Generator disabled if unspecified).</td>
+</tr>
+<tr>
+<td><code>--c-wrapper-header-out &lt;out-folder&gt;</code></td>
+<td>The output folder for C wrapper header files (default: the same as <code>--c-wrapper-out</code>).</td>
+</tr>
+<tr>
+<td><code>--c-wrapper-include-prefix &lt;prefix&gt;</code></td>
+<td>The prefix for #includes of C wrapper header files from C wrapper C++ files.</td>
+</tr>
+<tr>
+<td><code>--c-wrapper-include-cpp-prefix &lt;prefix&gt;</code></td>
+<td>The prefix for #includes of C++ header files from C wrapper C++ files.</td>
+</tr>
+<tr>
+<td><code>--c-wrapper-base-lib-include-prefix &lt;prefix&gt;</code></td>
+<td>The C wrapper base support library's include path (default: <code>djinni/cwrapper/</code>).</td>
+</tr>
+<tr>
+<td><code>--py-import-prefix &lt;import-prefix&gt;</code></td>
+<td>The import prefix used within python generated files (default: "")</td>
 </tr>
 </tbody>
 </table>
@@ -1446,6 +1534,49 @@
 </tr>
 </tbody>
 </table>
+<h4 id="python_1">Python<a class="headerlink" href="#python_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--ident-py-type</code></td>
+<td><code>foo_bar</code></td>
+</tr>
+<tr>
+<td><code>--ident-py-class-name</code></td>
+<td><code>FooBar</code></td>
+</tr>
+<tr>
+<td><code>--ident-py-type-param</code></td>
+<td><code>foo_bar</code></td>
+</tr>
+<tr>
+<td><code>--ident-py-method</code></td>
+<td><code>foo_bar</code></td>
+</tr>
+<tr>
+<td><code>--ident-py-field</code></td>
+<td><code>foo_bar</code></td>
+</tr>
+<tr>
+<td><code>--ident-py-local</code></td>
+<td><code>foo_bar</code></td>
+</tr>
+<tr>
+<td><code>--ident-py-enum</code></td>
+<td><code>Foo_Bar</code></td>
+</tr>
+<tr>
+<td><code>--ident-py-const</code></td>
+<td><code>FOO_BAR</code></td>
+</tr>
+</tbody>
+</table>
 <p>Example:</p>
 <p>The djinni idl for an enum</p>
 <div class="highlight"><pre><span></span><code>SomeEnum = enum {
@@ -1467,7 +1598,7 @@ As you see, <em>VALUE</em> is now in upper case letters.</p>
 </code></pre></div>
 <p>This way you can adopt code generation to some extend to your existing coding style.</p>
 <p>The best way to find out how that works is playing around with different values for different identifier options.</p>
-<p><strong>If you wish not text transformation to happen, use the <code>foo_bar</code> style.</strong></p>
+<p><strong>If you wish no text transformation to happen, use the <code>foo_bar</code> style.</strong></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Some identifiers do have text transformation enabled by default.
@@ -1481,7 +1612,7 @@ Nevertheless make sure to <strong>explicitly set</strong> text transformation st
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 7, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 18, 2021</span>
     
   </small>
 </div>
@@ -1627,7 +1758,7 @@ Nevertheless make sure to <strong>explicitly set</strong> text transformation st
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d892486b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.4ea5477f.min.js"></script>
       
     
   </body>

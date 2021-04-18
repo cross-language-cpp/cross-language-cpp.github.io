@@ -35,7 +35,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.2">
     
     
       
@@ -43,7 +43,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.33e2939f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f955dcd.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
@@ -229,7 +229,7 @@
   
     <li class="md-tabs__item">
       <a href="../setup/" class="md-tabs__link md-tabs__link--active">
-        Generator <code>v0.3.2</code>
+        Generator <code>v0.4.0</code>
       </a>
     </li>
   
@@ -429,13 +429,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       <label class="md-nav__link" for="__nav_3">
-        Generator <code>v0.3.2</code>
+        Generator <code>v0.4.0</code>
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Generator <code>v0.3.2</code>" data-md-level="1">
+      <nav class="md-nav" aria-label="Generator <code>v0.4.0</code>" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Generator <code>v0.3.2</code>
+          Generator <code>v0.4.0</code>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -485,6 +485,7 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+      
         
       
       
@@ -499,6 +500,7 @@
       
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
@@ -548,6 +550,33 @@
           <li class="md-nav__item">
   <a href="#includes-build-target_1" class="md-nav__link">
     Includes &amp; Build Target
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-c-project-experimental" class="md-nav__link">
+    Python / C++ Project (Experimental)
+  </a>
+  
+    <nav class="md-nav" aria-label="Python / C++ Project (Experimental)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#includes-build-target_2" class="md-nav__link">
+    Includes &amp; Build Target
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#known-limitations-of-the-generator" class="md-nav__link">
+    Known limitations of the generator
   </a>
   
 </li>
@@ -814,6 +843,7 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
     
   
   
@@ -861,6 +891,33 @@
           <li class="md-nav__item">
   <a href="#includes-build-target_1" class="md-nav__link">
     Includes &amp; Build Target
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-c-project-experimental" class="md-nav__link">
+    Python / C++ Project (Experimental)
+  </a>
+  
+    <nav class="md-nav" aria-label="Python / C++ Project (Experimental)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#includes-build-target_2" class="md-nav__link">
+    Includes &amp; Build Target
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#known-limitations-of-the-generator" class="md-nav__link">
+    Known limitations of the generator
   </a>
   
 </li>
@@ -1006,6 +1063,147 @@ It defines default <code>JNI_Onload</code> and <code>JNI_OnUnload</code> functio
 </ul>
 <p>Add all generated files to your build target, and link against the <a href="https://github.com/cross-language-cpp/djinni-support-lib">djinni-support-lib</a>.</p>
 <p>Note that <code>+Private</code> files can only be used with ObjC++ source (other headers are pure ObjC) and are not required by Objective-C users of your interface.</p>
+<h2 id="python-c-project-experimental">Python / C++ Project (Experimental)<a class="headerlink" href="#python-c-project-experimental" title="Permanent link">&para;</a></h2>
+<p>Python support in Djinni is experimental, but ready to try out.  It can generate code for bridging
+C++ with Python 3.</p>
+<p>For more information, you can check out the talk from CppCon 2015.
+<a href="https://bit.ly/djinnitalk2">Slides</a> and <a href="https://bit.ly/djinnivideo2">video</a> are available online.</p>
+<h3 id="includes-build-target_2">Includes &amp; Build Target<a class="headerlink" href="#includes-build-target_2" title="Permanent link">&para;</a></h3>
+<p>When bridging to Python, Djinni generates 4 types of output:</p>
+<ul>
+<li><code>python</code> Generated Python classes and proxies for interacting with C++ via <a href="https://cffi.readthedocs.org/">CFFI</a>.</li>
+<li><code>cffi</code> Python code run at build time to create a Python extension out of the C++ code.</li>
+<li><code>cwrapper</code> A C interface implemented in C++ to allowing Python to interact with C++ classes.</li>
+<li><code>cpp</code> The same C++ classes generated for all other Djinni languages.</li>
+</ul>
+<p>Generated files for Python / C++ are as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>C++ header</th>
+<th>C++ source</th>
+<th>Python files</th>
+<th>CFFI</th>
+<th>C Wrapper</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enum/Flags</td>
+<td>my_enum.hpp</td>
+<td></td>
+<td>my_enum.py</td>
+<td></td>
+<td>dh__my_enum.cpp</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>dh__my_enum.h</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>dh__my_enum.hpp</td>
+</tr>
+<tr>
+<td>Record</td>
+<td>my_record[_base].hpp</td>
+<td>my_record[_base].cpp <img alt="1⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/31-20e3.svg" title=":one:" /></td>
+<td>my_record[_base].py</td>
+<td></td>
+<td>dh__my_record.cpp</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>dh__my_record.h</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>dh__my_record.hpp</td>
+</tr>
+<tr>
+<td>Interface</td>
+<td>my_interface.hpp</td>
+<td>my_interface.cpp <img alt="1⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/31-20e3.svg" title=":one:" /></td>
+<td>my_interface.py</td>
+<td>pycffi_lib_build.py</td>
+<td>cw__my_interface.cpp</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>cw__my_interface.h</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>cw__my_interface.hpp</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><img alt="1⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/31-20e3.svg" title=":one:" /> Generated only for types that contain constants.</li>
+</ul>
+<p>Additional C Wrapper files are generated for data structures; their names are encoded as:</p>
+<div class="highlight"><pre><span></span><code>dh__{list,set,map}_{encoded_type(s)}.cpp
+dh__{list,set,map}_{encoded_type(s)}.h
+dh__{list,set,map}_{encoded_type(s)}.hpp
+</code></pre></div>
+<p>See the in the table below a few examples:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>C Wrapper</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>list&lt;i32&gt;</code></td>
+<td>dh__list_int32_t.{cpp,h,hpp}</td>
+</tr>
+<tr>
+<td><code>set&lt;string&gt;</code></td>
+<td>dh__set_string.{cpp,h,hpp}</td>
+</tr>
+<tr>
+<td><code>map&lt;i32, set&lt;string&gt;&gt;</code></td>
+<td>dh__map_int32_t_set_string.{cpp,h,hpp}</td>
+</tr>
+</tbody>
+</table>
+<p>Add all generated C and C++ source files to your build target, and link it against the
+<a href="https://github.com/cross-language-cpp/djinni-support-lib">djinni-support-lib</a>.</p>
+<p>Compile the Python extension module (CFFI) by executing <code>pycffi_lib_build.py</code> while providing all C
+Wrapper header files (<code>.h</code>) as arguments. The resulting shared library will enable Python to access
+your C++ library through the CFFI bridge.</p>
+<h3 id="known-limitations-of-the-generator">Known limitations of the generator<a class="headerlink" href="#known-limitations-of-the-generator" title="Permanent link">&para;</a></h3>
+<ul>
+<li>External types defined in YAML are not yet supported.</li>
+<li>Use of non-nullable pointers is not yet supported.</li>
+</ul>
                 
                   
                     
@@ -1014,7 +1212,7 @@ It defines default <code>JNI_Onload</code> and <code>JNI_OnUnload</code> functio
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 7, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 18, 2021</span>
     
   </small>
 </div>
@@ -1160,7 +1358,7 @@ It defines default <code>JNI_Onload</code> and <code>JNI_OnUnload</code> functio
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d892486b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.4ea5477f.min.js"></script>
       
     
   </body>
