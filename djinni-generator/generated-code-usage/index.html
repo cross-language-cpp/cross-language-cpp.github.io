@@ -229,7 +229,7 @@
   
     <li class="md-tabs__item">
       <a href="../setup/" class="md-tabs__link md-tabs__link--active">
-        Generator <code>v0.4.0</code>
+        Generator <code>v0.5.0</code>
       </a>
     </li>
   
@@ -429,13 +429,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       <label class="md-nav__link" for="__nav_3">
-        Generator <code>v0.4.0</code>
+        Generator <code>v0.5.0</code>
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Generator <code>v0.4.0</code>" data-md-level="1">
+      <nav class="md-nav" aria-label="Generator <code>v0.5.0</code>" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Generator <code>v0.4.0</code>
+          Generator <code>v0.5.0</code>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -577,6 +577,26 @@
           <li class="md-nav__item">
   <a href="#known-limitations-of-the-generator" class="md-nav__link">
     Known limitations of the generator
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ccli-c-project" class="md-nav__link">
+    C++/CLI / C++ Project
+  </a>
+  
+    <nav class="md-nav" aria-label="C++/CLI / C++ Project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#includes-build-target_3" class="md-nav__link">
+    Includes &amp; Build target
   </a>
   
 </li>
@@ -927,6 +947,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ccli-c-project" class="md-nav__link">
+    C++/CLI / C++ Project
+  </a>
+  
+    <nav class="md-nav" aria-label="C++/CLI / C++ Project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#includes-build-target_3" class="md-nav__link">
+    Includes &amp; Build target
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1204,6 +1244,45 @@ your C++ library through the CFFI bridge.</p>
 <li>External types defined in YAML are not yet supported.</li>
 <li>Use of non-nullable pointers is not yet supported.</li>
 </ul>
+<h2 id="ccli-c-project">C++/CLI / C++ Project<a class="headerlink" href="#ccli-c-project" title="Permanent link">&para;</a></h2>
+<p>C++/CLI is a technology by Microsoft that provides interoperability of C++ with Microsoft .NET languages such as C#.
+It is only supported on Windows.</p>
+<p>Djinni generates a shallow C++/CLI wrapper around the C++ interfaces. Once compiled to a shared library, the resulting <code>dll</code>
+just needs to be added to your C# project as reference, and you can call your Djinni interfaces from C# like any other .NET library.</p>
+<h3 id="includes-build-target_3">Includes &amp; Build target<a class="headerlink" href="#includes-build-target_3" title="Permanent link">&para;</a></h3>
+<p>The following code will be generated for each defined type:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>C++ header</th>
+<th>C++ source</th>
+<th>C++/CLI header/sources</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enum/Flags</td>
+<td>my_enum.hpp</td>
+<td></td>
+<td>MyEnum.hpp, MyEnum.cpp</td>
+</tr>
+<tr>
+<td>Record</td>
+<td>my_record.hpp</td>
+<td>my_record.cpp</td>
+<td>MyRecord.hpp, MyRecord.cpp</td>
+</tr>
+<tr>
+<td>Interface</td>
+<td>my_interface.hpp</td>
+<td>my_interface.cpp (+)</td>
+<td>MyInterface.hpp, MyInterface.cpp</td>
+</tr>
+</tbody>
+</table>
+<p>Add all generated files to your build target, and link against the <a href="https://github.com/cross-language-cpp/djinni-support-lib">djinni-support-lib</a>.</p>
+<p>C++/CLI sources have to be compiled with MSVC and the <a href="https://docs.microsoft.com/en-us/cpp/build/reference/clr-common-language-runtime-compilation?view=msvc-160"><code>/clr</code> (Common Language Runtime Compilation)</a> option.</p>
                 
                   
                     
@@ -1212,7 +1291,7 @@ your C++ library through the CFFI bridge.</p>
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 18, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 23, 2021</span>
     
   </small>
 </div>

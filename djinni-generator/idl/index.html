@@ -229,7 +229,7 @@
   
     <li class="md-tabs__item">
       <a href="../setup/" class="md-tabs__link md-tabs__link--active">
-        Generator <code>v0.4.0</code>
+        Generator <code>v0.5.0</code>
       </a>
     </li>
   
@@ -429,13 +429,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       <label class="md-nav__link" for="__nav_3">
-        Generator <code>v0.4.0</code>
+        Generator <code>v0.5.0</code>
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Generator <code>v0.4.0</code>" data-md-level="1">
+      <nav class="md-nav" aria-label="Generator <code>v0.5.0</code>" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Generator <code>v0.4.0</code>
+          Generator <code>v0.5.0</code>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1048,8 +1048,8 @@ my_cpp_interface = interface +c {
     const version: i32 = 1;
 }
 
-# This interface will be implemented in Java, ObjC and Python and can be called from C++.
-my_client_interface = interface +j +o +p {
+# This interface will be implemented in Java, ObjC, Python and C# and can be called from C++.
+my_client_interface = interface +j +o +p +s {
     log_string(str: string): bool;
 }
 </code></pre></div>
@@ -1068,16 +1068,18 @@ will only be processed once.</p>
 <li>Primitives (<code>i8</code>, <code>i16</code>, <code>i32</code>, <code>i64</code>, <code>f32</code>, <code>f64</code>).</li>
 <li>Strings (<code>string</code>)</li>
 <li>Binary (<code>binary</code>). This is implemented as <code>std::vector&lt;uint8_t&gt;</code> in C++, <code>byte[]</code> in Java,
-   <code>NSData</code> in Objective-C, and an object supporting the <code>buffer</code> interface in Python.</li>
+   <code>NSData</code> in Objective-C, an object supporting the <code>buffer</code> interface in Python, and <code>System.Array&lt;System.Byte&gt;</code> in C#.</li>
 <li>Date (<code>date</code>).  This is <code>chrono::system_clock::time_point</code> in C++, <code>Date</code> in Java,
-   <code>NSDate</code> in Objective-C, and <code>datetime.datetime</code> in Python.</li>
+   <code>NSDate</code> in Objective-C, <code>datetime.datetime</code> in Python, and <code>System.DateTime</code> in C#.</li>
 <li>List (<code>list&lt;type&gt;</code>). This is <code>vector&lt;T&gt;</code> in C++, <code>ArrayList</code> in Java, <code>NSArray</code>
-   in Objective-C, and <code>List</code> in Python. Primitives in a list will be boxed in Java and Objective-C.</li>
+   in Objective-C, <code>List</code> in Python, and <code>System.Collections.Generic.List</code> in C#. 
+   Primitives in a list will be boxed in Java and Objective-C.</li>
 <li>Set (<code>set&lt;type&gt;</code>). This is <code>unordered_set&lt;T&gt;</code> in C++, <code>HashSet</code> in Java, <code>NSSet</code> in
-   Objective-C, and <code>Set</code> in Python. Primitives in a set will be boxed in Java and Objective-C.</li>
+   Objective-C, <code>Set</code> in Python, and <code>System.Collections.Generic.HashSet</code> in C#. 
+   Primitives in a set will be boxed in Java and Objective-C.</li>
 <li>Map (<code>map&lt;typeA, typeB&gt;</code>). This is <code>unordered_map&lt;K, V&gt;</code> in C++, <code>HashMap</code> in Java, 
-   <code>NSDictionary</code> in Objective-C, and <code>Dictionary</code> in Python. Primitives in a map will be boxed in Java
-   and Objective-C.</li>
+   <code>NSDictionary</code> in Objective-C, <code>Dictionary</code> in Python, and <code>System.Collections.Generic.Dictionary</code> in C#. 
+   Primitives in a map will be boxed in Java and Objective-C.</li>
 <li>Enumerations / Flags</li>
 <li>Optionals (<code>optional&lt;typeA&gt;</code>). This is <code>std::experimental::optional&lt;T&gt;</code> in C++11, object /
    boxed primitive reference in Java (which can be <code>null</code>), and object / NSNumber strong
@@ -1088,12 +1090,13 @@ will only be processed once.</p>
 <h2 id="types">Types<a class="headerlink" href="#types" title="Permanent link">&para;</a></h2>
 <p>An IDL file can contain 4 kinds of declarations: enums, flags, records, and interfaces.</p>
 <ul>
-<li><a href="#enums"><strong>Enums</strong></a> become C++ enum classes, Java enums, ObjC <code>NS_ENUM</code>s, or Python <code>IntEnum</code>s.</li>
-<li><a href="#flags"><strong>Flags</strong></a> become C++ enum classes with convenient bit-oriented operators, Java enums with <code>EnumSet</code>, ObjC <code>NS_OPTIONS</code>, or Python <code>IntFlag</code>s.</li>
+<li><a href="#enums"><strong>Enums</strong></a> become C++ enum classes, Java enums, ObjC <code>NS_ENUM</code>s, Python <code>IntEnum</code>s, or C# <code>System.Enum</code>s.</li>
+<li><a href="#flags"><strong>Flags</strong></a> become C++ enum classes with convenient bit-oriented operators, Java enums with <code>EnumSet</code>, 
+  ObjC <code>NS_OPTIONS</code>, Python <code>IntFlag</code>s, or C# <code>System.Enum</code>s with the <a href="https://docs.microsoft.com/en-us/dotnet/api/system.flagsattribute?view=net-5.0"><code>[Flags]</code> Attribute</a>.</li>
 <li><a href="#records"><strong>Records</strong></a> are pure-data value objects.</li>
 <li><a href="#interfaces"><strong>Interfaces</strong></a> are objects with defined methods to call (in C++, passed by <code>shared_ptr</code>). Djinni
   produces code allowing an interface implemented in C++ to be transparently used from ObjC,
-  Java, or Python and vice versa.</li>
+  Java, Python or C#, and vice versa.</li>
 </ul>
 <h3 id="enums">Enums<a class="headerlink" href="#enums" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>my_enum = enum {
@@ -1103,7 +1106,7 @@ will only be processed once.</p>
 }
 </code></pre></div>
 <p>Enums are translated to C++ <code>enum class</code>es with underlying type <code>int</code>, ObjC <code>NS_ENUM</code>s with
-underlying type <code>NSInteger</code>, Java enums, and Python <code>IntEnum</code>s.</p>
+underlying type <code>NSInteger</code>, Java enums, Python <code>IntEnum</code>s, and C# <code>System.Enum</code>s.</p>
 <h3 id="flags">Flags<a class="headerlink" href="#flags" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>my_flags = flags {
     flag1;
@@ -1115,8 +1118,8 @@ underlying type <code>NSInteger</code>, Java enums, and Python <code>IntEnum</co
 </code></pre></div>
 <p>Flags are translated to C++ <code>enum class</code>es with underlying type <code>unsigned</code> and a generated set of
 overloaded bitwise operators for convenience, ObjC <code>NS_OPTIONS</code> with underlying type <code>NSUInteger</code>,
-Java <code>EnumSet&lt;&gt;</code>, and Python <code>IntFlag</code>. Contrary to the above enums, the enumerants of flags
-represent single bits instead of integral values.</p>
+Java <code>EnumSet&lt;&gt;</code>, Python <code>IntFlag</code>, and C# <code>System.Enum</code>s with the <a href="https://docs.microsoft.com/en-us/dotnet/api/system.flagsattribute?view=net-5.0"><code>[Flags]</code> Attribute</a>. 
+Contrary to the above enums, the enumerants of flags represent single bits instead of integral values.</p>
 <p>In the above example the elements marked with <code>none</code> and <code>all</code> are given special meaning.  In C++,
 ObjC, and Python the <code>no_flags</code> option is generated with a value that has no bits set (i.e. <code>0</code>),
 and <code>all_flags</code> is generated as a bitwise-or combination of all other values. In Java these special
@@ -1144,7 +1147,7 @@ options are not generated as one can just use <code>EnumSet.noneOf()</code> and 
 records (so a record cannot contain itself).</p>
 <h4 id="extensions">Extensions<a class="headerlink" href="#extensions" title="Permanent link">&para;</a></h4>
 <p>To support extra fields and/or methods, a record can be "extended" in any language. To extend a
-record in a language, you can add a <code>+c</code> (C++), <code>+j</code> (Java), <code>+o</code> (ObjC), or <code>+p</code> (Python) flag
+record in a language, you can add a <code>+c</code> (C++), <code>+j</code> (Java), <code>+o</code> (ObjC), <code>+p</code> (Python), or <code>+s</code> (C#) flag
 after the record tag. The generated type will have a <code>Base</code> suffix, and you should create a derived
 type without the suffix that extends the record type.</p>
 <p>The derived type must be constructible in the same way as the <code>Base</code> type. Interfaces will
@@ -1157,7 +1160,7 @@ always use the derived type.</p>
 </code></pre></div>
 <p>For record types, Haskell-style "deriving" declarations are supported to generate some common
 methods. Djinni is capable of generating equality and order comparators, implemented as operator
-overloading in C++ and standard comparison functions in Java, Objective-C, and Python.</p>
+overloading in C++ and standard comparison functions in Java, Objective-C, Python and C#.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul>
@@ -1179,44 +1182,47 @@ my_cpp_interface = interface +c {
     const version: i32 = 1;
 }
 
-# This interface will be implemented in Java, ObjC, and Python and can be called from C++.
-my_client_interface = interface +j +o +p {
+# This interface will be implemented in Java, ObjC, Python and C# and can be called from C++.
+my_client_interface = interface +j +o +p +s {
     log_string(str: string): bool;
 }
 </code></pre></div>
 <p>Interfaces are objects with defined methods to call (in C++, passed by <code>shared_ptr</code>). Djinni
 produces code allowing an interface implemented in C++ to be transparently used from ObjC,
-Java or Python and vice versa.</p>
+Java Python or C# and vice versa.</p>
 <h4 id="special-methods-for-c-only">Special Methods for C++ Only<a class="headerlink" href="#special-methods-for-c-only" title="Permanent link">&para;</a></h4>
-<p><code>+c</code> interfaces (implementable only in C++) can have methods flagged with the special keywords const and static which have special effects in C++:</p>
+<p><code>+c</code> interfaces (implementable only in C++) can have methods flagged with the special keywords const and static which 
+have special effects in C++:</p>
 <p>special_methods = interface +c {
        const accessor_method();
        static factory_method();
    }</p>
 <ul>
 <li><code>const</code> methods will be declared as const in C++, though this cannot be enforced on callers in other languages, which lack this feature.</li>
-<li><code>static</code> methods will become a static method of the C++ class, which can be called from other languages without an object.  This is often useful for factory methods to act as a cross-language constructor.</li>
+<li><code>static</code> methods will become a static method of the C++ class, which can be called from other languages without an object.<br />
+  This is often useful for factory methods to act as a cross-language constructor.</li>
 </ul>
 <h4 id="exception-handling">Exception Handling<a class="headerlink" href="#exception-handling" title="Permanent link">&para;</a></h4>
 <p>When an interface implemented in C++ throws a <code>std::exception</code>, it will be translated to a
-<code>java.lang.RuntimeException</code> in Java, an <code>NSException</code> in Objective-C or a <code>RuntimeError</code> in Python.
+<code>java.lang.RuntimeException</code> in Java, an <code>NSException</code> in Objective-C, a <code>RuntimeError</code> in Python, 
+or a <code>System.Exception</code> in C#.
 The <code>what()</code> message will be translated as well.</p>
 <h4 id="constants">Constants<a class="headerlink" href="#constants" title="Permanent link">&para;</a></h4>
-<p>Constants can be defined within interfaces and records. In Java, Python and C++ they are part of the
+<p>Constants can be defined within interfaces and records. In Java, Python, C# and C++ they are part of the
 generated class; and in Objective-C, constant names are globals with the name of the
 interface/record prefixed. Example:</p>
-<div class="highlight"><pre><span></span><code>record_with_const = record +c +j +o +p {
+<div class="highlight"><pre><span></span><code>record_with_const = record +c +j +o +p +s {
     const const_value: i32 = 8;
 }
 </code></pre></div>
 <p>will be <code>RecordWithConst::CONST_VALUE</code> in C++, <code>RecordWithConst.CONST_VALUE</code> in Java,
-<code>RecordWithConst.CONST_VALUE</code> in Python, and <code>RecordWithConstConstValue</code> in Objective-C.</p>
+<code>RecordWithConst.CONST_VALUE</code> in Python, <code>RecordWithConst.ConstValue</code> in C#, and <code>RecordWithConstConstValue</code> in Objective-C.</p>
 <h2 id="comments">Comments<a class="headerlink" href="#comments" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code># This is a comment
 </code></pre></div>
-<p>If comments are are placed <strong>on top or inside a type definition</strong>, they will be converted to
+<p>If comments are placed <strong>on top or inside a type definition</strong>, they will be converted to
 <strong>Javadoc / Doxygen compatible</strong> comments in the generated Java/C++/Objective-C interfaces, or a
-Python <strong>docstring</strong>.</p>
+Python <strong>docstring</strong>. Comments are currently not available in C#.</p>
                 
                   
                     
@@ -1225,7 +1231,7 @@ Python <strong>docstring</strong>.</p>
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 18, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 23, 2021</span>
     
   </small>
 </div>
