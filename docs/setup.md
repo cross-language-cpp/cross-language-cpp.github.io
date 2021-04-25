@@ -18,8 +18,8 @@ The support-lib will be available for multiple package managers soon. Stay tuned
 
 For syntax checking and highlighting of the Djinni-IDL install the plugin for your IDE:
 
-- **VS Code**: ([download](https://marketplace.visualstudio.com/items?itemName=patrikminder.djinni-syntax-highlighting))
-- **IntelliJ IDEA**: ([download](https://plugins.jetbrains.com/plugin/15347-djinni-idl-file-support), [documentation](/djinni-intellij-plugin/getting-started/))
+- **VS Code**: ([download](https://marketplace.visualstudio.com/items?itemName=cross-language-cpp.djinni-syntax-highlighting), [documentation](/vscode-djinni/))
+- **IntelliJ IDEA**: ([download](https://plugins.jetbrains.com/plugin/15347-djinni-idl-file-support), [documentation](/djinni-intellij-plugin/))
 
 
 

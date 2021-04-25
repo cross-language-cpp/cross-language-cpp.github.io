@@ -21,8 +21,6 @@ jobs:
           python-version: 3.x
       - name: Install Python dependencies
         run: pip install -r requirements.txt
-      - name: Install PlantUML
-        run: sudo apt-get -y install plantuml
       - name: Substitute environment variables in mkdocs.yml
         run: ./configure.sh
       - name: Deploy mkdocs to github pages

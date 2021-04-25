@@ -37,19 +37,12 @@
 
     .tx-container {
       text-align: center;
-      padding-bottom: 5rem;
       padding-top: 1.8rem;
       background-color: var(--md-primary-fg-color);
-      background-image: url(assets/hero_background.svg);
+      
       background-repeat: no-repeat;
       background-position: bottom;
       background-size: 101%;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      .tx-container {
-        background-image: url(assets/hero_background_dark.svg);
-      }
     }
 
     .tx-hero {
@@ -124,7 +117,7 @@
 
         <!-- Hero content -->
         <div class="tx-hero__content">
-          <h1>Integrate <b>C++</b> code into<br>your <b>Java</b> or <b>Objective-C</b> application!</h1>
+          <h1>Integrate <b>C++</b> code into<br>your <b>Java</b>, <b>Kotlin</b>, <b>Objective-C</b>, <b>Swift</b>, <b>Python</b> or <b>C#</b> application!</h1>
           <p>{{ config.site_description }}</p>
           <a
             href="{{ page.next_page.url | url }}"
@@ -139,12 +132,23 @@
             class="md-button"
             target="blank"
           >
+          <img class="twemoji" src="assets/github.svg"/>&nbsp;&nbsp;
           Contribute
+          </a>
+          <a
+            href="https://mobilecpp.slack.com/"
+            title="Chat on Slack"
+            class="md-button"
+            target="blank"
+          >
+          <img class="twemoji" src="assets/slack.svg"/>&nbsp;&nbsp;
+          Slack
           </a>
         </div>
       </div>
     </div>
   </section>
+  <img src="assets/hero_background_new.svg" />
 {% endblock %}
 
 <!-- Content -->

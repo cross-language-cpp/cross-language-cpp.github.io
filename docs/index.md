@@ -9,40 +9,37 @@ hide:
 
 ## :clap: Simple IDL
 
-The [**Djinni-IDL**](djinni-generator/idl.md) provides a simple, yet powerful way to design your interfaces.
+The Djinni [**Interface Definition Language**](djinni-generator/idl.md) provides a simple, yet powerful way to design your interfaces.
 
 ---
 
 ## :electric_plug: IDE Integration
 
-Plugins for the Djinni IDL are available for [**IntelliJ IDEA**](djinni-intellij-plugin/index.md) & [**VS Code**](vscode-djinni/index.md)
+Plugins for Djinni are available for [**IntelliJ IDEA**](djinni-intellij-plugin/index.md) & [**VS Code**](vscode-djinni/index.md)
 
 ---
 
-## :rocket: Ready for the Future
+## :rocket: Calls out of C++
 
-Djinni is also compatible with modern technologies. Call your C++ Code from **Kotlin** and **Swift** to have even more fun!
+With Djinni you can implement interfaces in any target language and call the implementation from C++!
 
 
 ---
 
-## :arrow_up_down: Works in both directions
+## :boom: Can Target any Operating System
 
-Call in and out of C++ with ease:
+Djinni comes with support for native app development on every popular OS:
 
-```plantuml
-@startuml
-digraph world {
-graph [truecolor=true bgcolor=transparent]
-{rank=same; Java "Obj-C";}
-Java, "C++", "Obj-C" [ shape=box, style="rounded" ]
-"C++" [ width=1.75 ]
+![Djinni architecture](assets/overview.drawio.svg)
 
-	Java -> "C++" [dir=both];
-	"C++" -> "Obj-C" [dir=both];
-}
-@enduml
-```
+---
+
+## :earth_americas: Maintained by a Small, but Active Community
+
+Djinni was originally developed by Dropbox in 2014.<br>
+Since June 2020 it is independently maintained by a small group of individuals from all over the globe.
+
+Get in contact with us on the [Mobile C++ Slack](https://mobilecpp.slack.com/)! :blush:
 
 <br>
 <br>
