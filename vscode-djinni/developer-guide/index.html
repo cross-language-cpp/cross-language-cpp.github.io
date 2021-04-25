@@ -635,13 +635,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" checked>
       
       <label class="md-nav__link" for="__nav_5_2">
-        VS Code Extension <code>v1.0.5</code>
+        VS Code Extension <code>v1.1.0</code>
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="VS Code Extension <code>v1.0.5</code>" data-md-level="2">
+      <nav class="md-nav" aria-label="VS Code Extension <code>v1.1.0</code>" data-md-level="2">
         <label class="md-nav__title" for="__nav_5_2">
           <span class="md-nav__icon md-icon"></span>
-          VS Code Extension <code>v1.0.5</code>
+          VS Code Extension <code>v1.1.0</code>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -881,10 +881,8 @@ npm run package <span class="c1"># builds the .vsix package</span>
 <h2 id="github-release-process">Github Release Process<a class="headerlink" href="#github-release-process" title="Permanent link">&para;</a></h2>
 <p>To release a new extension version, the following steps must be followed:</p>
 <ol>
-<li>Create a new release-tag. Set a meaningful version number and describe what has changed in the new version. The version must be parseable by <a href="https://docs.npmjs.com/cli/v6/using-npm/semver">semver</a>! If you are not sure about that, you can check it:
-   <div class="highlight"><pre><span></span><code>npm install -g semver <span class="c1"># install semver</span>
-semver &lt;versiontag&gt; <span class="c1"># check if the version can be parsed</span>
-</code></pre></div></li>
+<li>Create a <a href="https://github.com/cross-language-cpp/vscode-djinni/releases/new">new release</a> on Github like <a href="https://docs.github.com/en/github/administering-a-repository/managing-releases-in-a-repository">described here</a>. 
+   Set a tag version following <a href="https://semver.org/">semantic versioning</a> rules (<code>v&lt;MAJOR&gt;.&lt;MINOR&gt;.&lt;PATCH&gt;</code>) and describe what has changed in the new version.</li>
 <li>Wait. Github will automatically build the extension, publish it to the <a href="https://marketplace.visualstudio.com/publishers/cross-language-cpp">Visual Studio Marketplace</a> &amp; upload the packaged extension to the release.</li>
 </ol>
 <p>That's it! <img alt="😊" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f60a.svg" title=":blush:" /></p>
@@ -896,7 +894,7 @@ semver &lt;versiontag&gt; <span class="c1"># check if the version can be parsed<
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 31, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 15, 2021</span>
     
   </small>
 </div>
