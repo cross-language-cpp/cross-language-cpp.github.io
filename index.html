@@ -52,7 +52,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Djinni is a tool for generating cross-language type declarations and interface bindings.  It's designed to connect C++ with either Java or Objective-C.">
+        <meta name="description" content="Djinni is a tool for generating cross-language type declarations and interface bindings.  It's designed to connect C++ with either Java, Objective-C, Python or C#.">
       
       
       
@@ -98,7 +98,7 @@
   <!-- Open graph meta tags -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Djinni" />
-  <meta property="og:description" content="Djinni is a tool for generating cross-language type declarations and interface bindings.  It's designed to connect C++ with either Java or Objective-C." />
+  <meta property="og:description" content="Djinni is a tool for generating cross-language type declarations and interface bindings.  It's designed to connect C++ with either Java, Objective-C, Python or C#." />
   <meta property="og:url" content="None" />
 
 
@@ -107,13 +107,17 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
     <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -127,14 +131,6 @@
       
     </div>
     <div data-md-component="announce">
-      
-        <aside class="md-announce">
-          <div class="md-announce__inner md-grid md-typeset">
-            
-    🚧 We are currently migrating djinni <a href="https://github.com/cross-language-cpp/djinni/issues/17" target="blank">to a new project structure</a>. Be aware that this documentation may not be complete yet!
-
-          </div>
-        </aside>
       
     </div>
     
@@ -164,6 +160,28 @@
         </div>
       </div>
     </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="" type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="" type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31z"/></svg>
+            </label>
+          
+        
+      </form>
     
     
     
@@ -328,19 +346,13 @@
 
     .tx-container {
       text-align: center;
-      padding-bottom: 5rem;
       padding-top: 1.8rem;
+      padding-bottom: 0.5rem;
       background-color: var(--md-primary-fg-color);
-      background-image: url(assets/hero_background.svg);
+      
       background-repeat: no-repeat;
       background-position: bottom;
       background-size: 101%;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      .tx-container {
-        background-image: url(assets/hero_background_dark.svg);
-      }
     }
 
     .tx-hero {
@@ -406,6 +418,21 @@
     .md-content article h1, .md-content .headerlink, hr:last-of-type, .md-source-date {
       display: none;
     }
+
+    .hero-bottom-image {
+      overflow: hidden;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -o-user-select: none;
+      user-select: none;
+    }
+
+    @media screen and (max-width: 800px) {
+      .hero-bottom-image {
+        margin-left: -600px;
+      }
+    }
   </style>
 
   <!-- Hero for landing page -->
@@ -415,8 +442,8 @@
 
         <!-- Hero content -->
         <div class="tx-hero__content">
-          <h1>Integrate <b>C++</b> code into<br>your <b>Java</b> or <b>Objective-C</b> application!</h1>
-          <p>Djinni is a tool for generating cross-language type declarations and interface bindings.  It's designed to connect C++ with either Java or Objective-C.</p>
+          <h1>Integrate <b>C++</b> code into<br>your <b>Java</b>, <b>Kotlin</b>, <b>Objective-C</b>, <b>Swift</b>, <b>Python</b> or <b>C#</b> application!</h1>
+          <p>Djinni is a tool for generating cross-language type declarations and interface bindings.  It's designed to connect C++ with either Java, Objective-C, Python or C#.</p>
           <a
             href="overview/"
             title="Overview"
@@ -430,12 +457,23 @@
             class="md-button"
             target="blank"
           >
+          <img class="twemoji" src="assets/github.svg"/>&nbsp;&nbsp;
           Contribute
+          </a>
+          <a
+            href="https://mobilecpp.slack.com/"
+            title="Chat on Slack"
+            class="md-button"
+            target="blank"
+          >
+          <img class="twemoji" src="assets/slack.svg"/>&nbsp;&nbsp;
+          Slack
           </a>
         </div>
       </div>
     </div>
   </section>
+  <img class="hero-bottom-image" src="assets/hero_background_new.svg" />
 
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
@@ -515,15 +553,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ready-for-the-future" class="md-nav__link">
-    Ready for the Future
+  <a href="#blurs-the-line-between-languages" class="md-nav__link">
+    Blurs the Line Between Languages
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#works-in-both-directions" class="md-nav__link">
-    Works in both directions
+  <a href="#can-target-any-operating-system" class="md-nav__link">
+    Can Target any Operating System
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintained-by-a-small-but-active-community" class="md-nav__link">
+    Maintained by a Small, but Active Community
   </a>
   
 </li>
@@ -984,15 +1029,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ready-for-the-future" class="md-nav__link">
-    Ready for the Future
+  <a href="#blurs-the-line-between-languages" class="md-nav__link">
+    Blurs the Line Between Languages
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#works-in-both-directions" class="md-nav__link">
-    Works in both directions
+  <a href="#can-target-any-operating-system" class="md-nav__link">
+    Can Target any Operating System
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintained-by-a-small-but-active-community" class="md-nav__link">
+    Maintained by a Small, but Active Community
   </a>
   
 </li>
@@ -1015,17 +1067,22 @@
                   <h1>Home</h1>
                 
                 <h2 id="simple-idl"><img alt="👏" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f44f.svg" title=":clap:" /> Simple IDL<a class="headerlink" href="#simple-idl" title="Permanent link">&para;</a></h2>
-<p>The <a href="djinni-generator/idl/"><strong>Djinni-IDL</strong></a> provides a simple, yet powerful way to design your interfaces.</p>
+<p>The Djinni <a href="djinni-generator/idl/"><strong>Interface Definition Language</strong></a> provides a simple, yet powerful way to design your interfaces.</p>
 <hr />
 <h2 id="ide-integration"><img alt="🔌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f50c.svg" title=":electric_plug:" /> IDE Integration<a class="headerlink" href="#ide-integration" title="Permanent link">&para;</a></h2>
-<p>Plugins for the Djinni IDL are available for <a href="djinni-intellij-plugin/"><strong>IntelliJ IDEA</strong></a> &amp; <a href="vscode-djinni/"><strong>VS Code</strong></a></p>
+<p>Plugins for Djinni are available for <a href="djinni-intellij-plugin/"><strong>IntelliJ IDEA</strong></a> &amp; <a href="vscode-djinni/"><strong>VS Code</strong></a></p>
 <hr />
-<h2 id="ready-for-the-future"><img alt="🚀" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f680.svg" title=":rocket:" /> Ready for the Future<a class="headerlink" href="#ready-for-the-future" title="Permanent link">&para;</a></h2>
-<p>Djinni is also compatible with modern technologies. Call your C++ Code from <strong>Kotlin</strong> and <strong>Swift</strong> to have even more fun!</p>
+<h2 id="blurs-the-line-between-languages"><img alt="🚀" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f680.svg" title=":rocket:" /> Blurs the Line Between Languages<a class="headerlink" href="#blurs-the-line-between-languages" title="Permanent link">&para;</a></h2>
+<p>With Djinni you can implement interfaces in any target language and call the implementation from C++!</p>
 <hr />
-<h2 id="works-in-both-directions"><img alt="↕" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2195.svg" title=":arrow_up_down:" /> Works in both directions<a class="headerlink" href="#works-in-both-directions" title="Permanent link">&para;</a></h2>
-<p>Call in and out of C++ with ease:</p>
-<p><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIKICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8IS0tIEdlbmVyYXRlZCBieSBncmFwaHZpeiB2ZXJzaW9uIDIuNDMuMCAoMCkKIC0tPgo8IS0tIFRpdGxlOiB3b3JsZCBQYWdlczogMSAtLT4KPHN2ZyB3aWR0aD0iMTM2cHQiIGhlaWdodD0iMTE2cHQiCiB2aWV3Qm94PSIwLjAwIDAuMDAgMTM2LjAwIDExNi4wMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CjxnIGlkPSJncmFwaDAiIGNsYXNzPSJncmFwaCIgdHJhbnNmb3JtPSJzY2FsZSgxIDEpIHJvdGF0ZSgwKSB0cmFuc2xhdGUoNCAxMTIpIj4KPHRpdGxlPndvcmxkPC90aXRsZT4KPCEtLSBKYXZhIC0tPgo8ZyBpZD0ibm9kZTEiIGNsYXNzPSJub2RlIj4KPHRpdGxlPkphdmE8L3RpdGxlPgo8cGF0aCBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBkPSJNNDIsLTEwOEM0MiwtMTA4IDEyLC0xMDggMTIsLTEwOCA2LC0xMDggMCwtMTAyIDAsLTk2IDAsLTk2IDAsLTg0IDAsLTg0IDAsLTc4IDYsLTcyIDEyLC03MiAxMiwtNzIgNDIsLTcyIDQyLC03MiA0OCwtNzIgNTQsLTc4IDU0LC04NCA1NCwtODQgNTQsLTk2IDU0LC05NiA1NCwtMTAyIDQ4LC0xMDggNDIsLTEwOCIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSIyNyIgeT0iLTg2LjMiIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+SmF2YTwvdGV4dD4KPC9nPgo8IS0tIEMrKyAtLT4KPGcgaWQ9Im5vZGUzIiBjbGFzcz0ibm9kZSI+Cjx0aXRsZT5DKys8L3RpdGxlPgo8cGF0aCBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBkPSJNMTE0LC0zNkMxMTQsLTM2IDEyLC0zNiAxMiwtMzYgNiwtMzYgMCwtMzAgMCwtMjQgMCwtMjQgMCwtMTIgMCwtMTIgMCwtNiA2LDAgMTIsMCAxMiwwIDExNCwwIDExNCwwIDEyMCwwIDEyNiwtNiAxMjYsLTEyIDEyNiwtMTIgMTI2LC0yNCAxMjYsLTI0IDEyNiwtMzAgMTIwLC0zNiAxMTQsLTM2Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjYzIiB5PSItMTQuMyIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250LXNpemU9IjE0LjAwIj5DKys8L3RleHQ+CjwvZz4KPCEtLSBKYXZhJiM0NTsmZ3Q7QysrIC0tPgo8ZyBpZD0iZWRnZTEiIGNsYXNzPSJlZGdlIj4KPHRpdGxlPkphdmEmIzQ1OyZndDtDKys8L3RpdGxlPgo8cGF0aCBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBkPSJNNDAuNDgsLTYyLjhDNDMuNDIsLTU3LjA4IDQ2LjUzLC01MS4wMyA0OS40NywtNDUuMyIvPgo8cG9seWdvbiBmaWxsPSJibGFjayIgc3Ryb2tlPSJibGFjayIgcG9pbnRzPSIzNy4zNiwtNjEuMiAzNS45LC03MS43IDQzLjU4LC02NC40IDM3LjM2LC02MS4yIi8+Cjxwb2x5Z29uIGZpbGw9ImJsYWNrIiBzdHJva2U9ImJsYWNrIiBwb2ludHM9IjUyLjc0LC00Ni42IDU0LjIsLTM2LjEgNDYuNTIsLTQzLjQgNTIuNzQsLTQ2LjYiLz4KPC9nPgo8IS0tIE9iaiYjNDU7QyAtLT4KPGcgaWQ9Im5vZGUyIiBjbGFzcz0ibm9kZSI+Cjx0aXRsZT5PYmomIzQ1O0M8L3RpdGxlPgo8cGF0aCBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBkPSJNMTE2LC0xMDhDMTE2LC0xMDggODQsLTEwOCA4NCwtMTA4IDc4LC0xMDggNzIsLTEwMiA3MiwtOTYgNzIsLTk2IDcyLC04NCA3MiwtODQgNzIsLTc4IDc4LC03MiA4NCwtNzIgODQsLTcyIDExNiwtNzIgMTE2LC03MiAxMjIsLTcyIDEyOCwtNzggMTI4LC04NCAxMjgsLTg0IDEyOCwtOTYgMTI4LC05NiAxMjgsLTEwMiAxMjIsLTEwOCAxMTYsLTEwOCIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSIxMDAiIHk9Ii04Ni4zIiBmb250LWZhbWlseT0iVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPk9iaiYjNDU7QzwvdGV4dD4KPC9nPgo8IS0tIEMrKyYjNDU7Jmd0O09iaiYjNDU7QyAtLT4KPGcgaWQ9ImVkZ2UyIiBjbGFzcz0iZWRnZSI+Cjx0aXRsZT5DKysmIzQ1OyZndDtPYmomIzQ1O0M8L3RpdGxlPgo8cGF0aCBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBkPSJNNzYuOSwtNDUuM0M3OS45MywtNTEuMDMgODMuMTMsLTU3LjA4IDg2LjE1LC02Mi44Ii8+Cjxwb2x5Z29uIGZpbGw9ImJsYWNrIiBzdHJva2U9ImJsYWNrIiBwb2ludHM9Ijc5LjgxLC00My4zMSA3Mi4wNCwtMzYuMSA3My42MiwtNDYuNTggNzkuODEsLTQzLjMxIi8+Cjxwb2x5Z29uIGZpbGw9ImJsYWNrIiBzdHJva2U9ImJsYWNrIiBwb2ludHM9IjgzLjA5LC02NC40OSA5MC44NSwtNzEuNyA4OS4yOCwtNjEuMjIgODMuMDksLTY0LjQ5Ii8+CjwvZz4KPC9nPgo8L3N2Zz4K" class="uml" alt="uml diagram" title="" /></p>
+<h2 id="can-target-any-operating-system"><img alt="💥" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4a5.svg" title=":boom:" /> Can Target any Operating System<a class="headerlink" href="#can-target-any-operating-system" title="Permanent link">&para;</a></h2>
+<p>Djinni comes with support for native app development on every popular OS:</p>
+<p><img alt="Djinni architecture" src="assets/overview.drawio.svg" /></p>
+<hr />
+<h2 id="maintained-by-a-small-but-active-community"><img alt="🌎" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f30e.svg" title=":earth_americas:" /> Maintained by a Small, but Active Community<a class="headerlink" href="#maintained-by-a-small-but-active-community" title="Permanent link">&para;</a></h2>
+<p>Djinni was originally developed by Dropbox in 2014.<br>
+Since June 2020 it is independently maintained by a small group of individuals from all over the globe.</p>
+<p>Get in contact with us on the <a href="https://mobilecpp.slack.com/">Mobile C++ Slack</a>! <img alt="😊" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f60a.svg" title=":blush:" /></p>
 <p><br>
 <br></p>
                 
@@ -1036,7 +1093,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 1, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 26, 2021</span>
     
   </small>
 </div>
