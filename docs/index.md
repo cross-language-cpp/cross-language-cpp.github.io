@@ -19,7 +19,7 @@ Plugins for Djinni are available for [**IntelliJ IDEA**](djinni-intellij-plugin/
 
 ---
 
-## :rocket: Calls out of C++
+## :rocket: Blurs the Line Between Languages
 
 With Djinni you can implement interfaces in any target language and call the implementation from C++!
 

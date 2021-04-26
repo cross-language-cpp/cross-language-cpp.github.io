@@ -38,6 +38,7 @@
     .tx-container {
       text-align: center;
       padding-top: 1.8rem;
+      padding-bottom: 0.5rem;
       background-color: var(--md-primary-fg-color);
       
       background-repeat: no-repeat;
@@ -108,6 +109,22 @@
     .md-content article h1, .md-content .headerlink, hr:last-of-type, .md-source-date {
       display: none;
     }
+
+    .hero-bottom-image {
+      overflow: hidden;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -o-user-select: none;
+      user-select: none;
+    }
+
+    @media screen and (max-width: 800px) {
+      .hero-bottom-image {
+        margin-right: -280px;
+        margin-left: -100px
+      }
+    }
   </style>
 
   <!-- Hero for landing page -->
@@ -148,7 +165,7 @@
       </div>
     </div>
   </section>
-  <img src="assets/hero_background_new.svg" />
+  <img class="hero-bottom-image" src="assets/hero_background_new.svg" />
 {% endblock %}
 
 <!-- Content -->
