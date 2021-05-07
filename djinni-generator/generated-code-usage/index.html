@@ -35,7 +35,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.4">
     
     
       
@@ -43,7 +43,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.e35208c4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bde7dde4.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
@@ -247,7 +247,7 @@
   
     <li class="md-tabs__item">
       <a href="../setup/" class="md-tabs__link md-tabs__link--active">
-        Generator <code>v0.5.0</code>
+        Generator <code>v1.0.0</code>
       </a>
     </li>
   
@@ -447,13 +447,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       <label class="md-nav__link" for="__nav_3">
-        Generator <code>v0.5.0</code>
+        Generator <code>v1.0.0</code>
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Generator <code>v0.5.0</code>" data-md-level="1">
+      <nav class="md-nav" aria-label="Generator <code>v1.0.0</code>" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Generator <code>v0.5.0</code>
+          Generator <code>v1.0.0</code>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -628,6 +628,18 @@
   
 </nav>
       
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modularization/" class="md-nav__link">
+        Modularization and Library Support
+      </a>
     </li>
   
 
@@ -1066,6 +1078,7 @@
 </tbody>
 </table>
 <p>(+) Generated only for types that contain constants.</p>
+<p>Additionally <code>djinni_jni_main.cpp</code> is generated to provide a default implementation for <code>JNI_OnLoad</code> and <code>JNI_OnUnload</code>, if <code>--jni-generate-main=true</code>.</p>
 <p>Add all generated source files to your build target, and link the C++ code against the <a href="https://github.com/cross-language-cpp/djinni-support-lib">djinni-support-lib</a>.</p>
 <h3 id="our-jni-approach">Our JNI approach<a class="headerlink" href="#our-jni-approach" title="Permanent link">&para;</a></h3>
 <p>JNI stands for <a href="http://docs.oracle.com/javase/6/docs/technotes/guides/jni/spec/jniTOC.html">Java Native Interface</a>, an extension of the Java language to allow interop with
@@ -1084,10 +1097,13 @@ somewhere in your code:</p>
 </code></pre></div>
 <p>If you package your native library in a jar, you can also use the <a href="https://github.com/cross-language-cpp/djinni-support-lib/blob/main/java/com/dropbox/djinni/NativeLibLoader.java"><code>NativeLibLoader</code></a>
 to help unpack and load your lib(s).</p>
-<p>When a native library is called, JNI calls a special function called <a href="https://github.com/cross-language-cpp/djinni-support-lib/blob/main/djinni/jni/djinni_main.cpp#L23"><code>JNI_OnLoad</code></a>.</p>
-<p>If your app doesn't use JNI except through Djinni, include <a href="https://github.com/cross-language-cpp/djinni-support-lib/blob/main/djinni/jni/djinni_main.cpp"><code>djinni/jni/djinni_main.cpp</code></a>. 
-It defines default <code>JNI_Onload</code> and <code>JNI_OnUnload</code> functions for Djinni.</p>
-<p>If your app also includes a non-Djinni JNI interface, you'll need to define your own <code>JNI_OnLoad</code> and <code>JNI_OnUnload</code> functions.</p>
+<p>Any library loaded from Java should provide the functions <code>JNI_OnLoad</code> and <code>JNI_OnUnload</code>.
+They are called by JNI when the library is loaded/unloaded.</p>
+<p>Djinni uses these functions to initialize &amp; cleanup internal structures.
+The generated file <code>djinni_jni_main.cpp</code> includes a default implementation of <code>JNI_Onload</code> and <code>JNI_OnUnload</code> functions 
+provided by the support library.</p>
+<p>If you are building a library that does not use JNI except through Djinni, this default should work well for you.
+If want to provide your own implementation of <code>JNI_Onload</code> and <code>JNI_OnUnload</code>, the generation of <code>djinni_jni_main.cpp</code> can be disabled by setting <code>--jni-generate-main=false</code>.</p>
 <h2 id="objective-c-c-project">Objective-C / C++ Project<a class="headerlink" href="#objective-c-c-project" title="Permanent link">&para;</a></h2>
 <h3 id="includes-build-target_1">Includes &amp; Build Target<a class="headerlink" href="#includes-build-target_1" title="Permanent link">&para;</a></h3>
 <p>Generated files for Objective-C / C++ are as follows (assuming prefix is <code>DB</code>):</p>
@@ -1333,7 +1349,8 @@ just needs to be added to your C# project as reference, and you can call your Dj
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 23, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 7, 2021</span>
+      
     
   </small>
 </div>
@@ -1372,13 +1389,13 @@ just needs to be added to your C# project as reference, and you can call your Dj
         </a>
       
       
-        <a href="../developer-guide/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../modularization/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Developer Guide
+              Modularization and Library Support
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1476,10 +1493,10 @@ just needs to be added to your C# project as reference, and you can call your Dj
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.4fa0e4ee.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.4ea5477f.min.js"></script>
+      <script src="../../assets/javascripts/bundle.1d3bfcf1.min.js"></script>
       
     
   </body>

@@ -35,7 +35,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.4">
     
     
       
@@ -43,7 +43,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.e35208c4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bde7dde4.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
@@ -247,7 +247,7 @@
   
     <li class="md-tabs__item">
       <a href="../setup/" class="md-tabs__link md-tabs__link--active">
-        Generator <code>v0.5.0</code>
+        Generator <code>v1.0.0</code>
       </a>
     </li>
   
@@ -447,13 +447,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       <label class="md-nav__link" for="__nav_3">
-        Generator <code>v0.5.0</code>
+        Generator <code>v1.0.0</code>
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Generator <code>v0.5.0</code>" data-md-level="1">
+      <nav class="md-nav" aria-label="Generator <code>v1.0.0</code>" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Generator <code>v0.5.0</code>
+          Generator <code>v1.0.0</code>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -664,6 +664,18 @@
     <li class="md-nav__item">
       <a href="../generated-code-usage/" class="md-nav__link">
         Use Generated Code
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modularization/" class="md-nav__link">
+        Modularization and Library Support
       </a>
     </li>
   
@@ -1152,7 +1164,7 @@
 </tr>
 <tr>
 <td><code>--idl-include-path &lt;path&gt; ...</code></td>
-<td>An include path to search for Djinni <code>@import</code> directives. Can specify multiple paths.</td>
+<td>An include path to search for Djinni <code>@import</code> and <code>@extern</code> directives. Can specify multiple paths.</td>
 </tr>
 </tbody>
 </table>
@@ -1302,6 +1314,10 @@
 <tr>
 <td><code>--jni-base-lib-include-prefix ...</code></td>
 <td>The JNI base support library's include path (default: <code>djinni/jni/</code>).</td>
+</tr>
+<tr>
+<td><code>--jni-generate-main &lt;true/false&gt;</code></td>
+<td>Generate a source file (<code>djinni_jni_main.cpp</code>) that includes the default <code>JNI_OnLoad</code> &amp; <code>JNI_OnUnload</code> implementation from the support library. (default: <code>true</code>)</td>
 </tr>
 </tbody>
 </table>
@@ -1460,11 +1476,11 @@
 <td>The namespace name to use for generated C++/CLI classes.</td>
 </tr>
 <tr>
-<td><code>--cppcli-include-cpp-prefix</code></td>
-<td>The prefix for #include of the main C++ header files from C++/CLI files.</td>
+<td><code>--cppcli-include-cpp-prefix &lt;prefix&gt;</code></td>
+<td>The prefix for <code>#include</code> of the main C++ header files from C++/CLI files.</td>
 </tr>
 <tr>
-<td><code>--cppcli-base-lib-include-prefix ...</code></td>
+<td><code>--cppcli-base-lib-include-prefix &lt;prefix&gt;</code></td>
 <td>The C++/CLI base support library's include path (default: <code>djinni/cppcli/</code>).</td>
 </tr>
 </tbody>
@@ -1752,7 +1768,8 @@ Nevertheless make sure to <strong>explicitly set</strong> text transformation st
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 23, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 7, 2021</span>
+      
     
   </small>
 </div>
@@ -1895,10 +1912,10 @@ Nevertheless make sure to <strong>explicitly set</strong> text transformation st
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.4fa0e4ee.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.4ea5477f.min.js"></script>
+      <script src="../../assets/javascripts/bundle.1d3bfcf1.min.js"></script>
       
     
   </body>
