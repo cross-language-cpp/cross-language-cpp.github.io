@@ -36,8 +36,6 @@ extra:
       name: mobilecpp
       link: https://mobilecpp.herokuapp.com/
 theme:
-
-theme:
   name: material
   custom_dir: overrides
   palette:

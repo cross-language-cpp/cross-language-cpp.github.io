@@ -10,12 +10,12 @@ This documentation covers of the following topics:
 - **Generator**: documentation of the [djinni-generator](https://github.com/cross-language-cpp/djinni-generator)
 - **Support-Lib**: documentation of the [djinni-support-lib](https://github.com/cross-language-cpp/djinni-support-lib)
 - **IntelliJ Plugin**:  documentation of the [djinni-intellij-plugin](https://github.com/cross-language-cpp/djinni-intellij-plugin)
+- **VS Code Extension**: documentation of the [vscode-djinni](https://github.com/cross-language-cpp/vscode-djinni) extension
 
 ## Build
 
 ### Build dependencies
 
-- plantuml
 - python3
 - bash
 
@@ -59,5 +59,4 @@ To consolidate multiple repositories into one documentation, the `mkdocs-monorep
 A few non-standard CSS-customizations have been made to the theme:
 
 - a custom color theme has been created
-- a rudimentary dark mode was implemented by overriding some color variables on the `media (prefers-color-scheme: dark)` selector.
 - the version of each submodule is injected into `mkdocs.yml` with `./configure.sh`. The version is displayed as a small tag in the sidebar navigation.
