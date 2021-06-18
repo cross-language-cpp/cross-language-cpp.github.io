@@ -39,7 +39,7 @@
     
     
       
-        <title>About IntelliJ IDEA Plugin - Djinni</title>
+        <title>Using the Generator - Djinni</title>
       
     
     
@@ -78,7 +78,7 @@
 
   <!-- Open graph meta tags -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Djinni - About IntelliJ IDEA Plugin" />
+  <meta property="og:title" content="Djinni - Using the Generator" />
   <meta property="og:description" content="Djinni is a tool for generating cross-language type declarations and interface bindings.  It's designed to connect C++ with either Java, Objective-C, Python or C#." />
   <meta property="og:url" content="None" />
 
@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#about-intellij-idea-plugin" class="md-skip">
+        <a href="#using-the-generator" class="md-skip">
           Skip to content
         </a>
       
@@ -135,7 +135,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              About IntelliJ IDEA Plugin
+              Using the Generator
             
           </span>
         </div>
@@ -240,13 +240,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../djinni-generator/setup.html" class="md-tabs__link">
+      <a href="setup.html" class="md-tabs__link md-tabs__link--active">
         Generator <code>v1.1.0</code>
       </a>
     </li>
@@ -272,8 +274,6 @@
         
   
   
-    
-  
 
 
   
@@ -285,7 +285,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="index.html" class="md-tabs__link md-tabs__link--active">
+      <a href="../djinni-intellij-plugin/index.html" class="md-tabs__link">
         IDE Integration
       </a>
     </li>
@@ -439,12 +439,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       <label class="md-nav__link" for="__nav_3">
         Generator <code>v1.1.0</code>
@@ -462,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../djinni-generator/setup.html" class="md-nav__link">
+      <a href="setup.html" class="md-nav__link">
         Generator Setup
       </a>
     </li>
@@ -474,7 +476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../djinni-generator/idl.html" class="md-nav__link">
+      <a href="idl.html" class="md-nav__link">
         Interface Definition Language (IDL)
       </a>
     </li>
@@ -484,11 +486,175 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../djinni-generator/cli-usage.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Using the Generator
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="cli-usage.html" class="md-nav__link md-nav__link--active">
         Using the Generator
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#all-arguments" class="md-nav__link">
+    All Arguments
+  </a>
+  
+    <nav class="md-nav" aria-label="All Arguments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    General
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java" class="md-nav__link">
+    Java
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    C++
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jni" class="md-nav__link">
+    JNI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objective-c" class="md-nav__link">
+    Objective-C
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objective-c_1" class="md-nav__link">
+    Objective-C++
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ccli" class="md-nav__link">
+    C++/CLI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yaml-generation" class="md-nav__link">
+    Yaml Generation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other" class="md-nav__link">
+    Other
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identifier-style" class="md-nav__link">
+    Identifier Style
+  </a>
+  
+    <nav class="md-nav" aria-label="Identifier Style">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c_1" class="md-nav__link">
+    C++
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java_1" class="md-nav__link">
+    Java
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objective-c_2" class="md-nav__link">
+    Objective C
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python_1" class="md-nav__link">
+    Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ccli_1" class="md-nav__link">
+    C++/CLI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -498,7 +664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../djinni-generator/generated-code-usage.html" class="md-nav__link">
+      <a href="generated-code-usage.html" class="md-nav__link">
         Use Generated Code
       </a>
     </li>
@@ -510,7 +676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../djinni-generator/modularization.html" class="md-nav__link">
+      <a href="modularization.html" class="md-nav__link">
         Modularization and Library Support
       </a>
     </li>
@@ -522,7 +688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../djinni-generator/developer-guide.html" class="md-nav__link">
+      <a href="developer-guide.html" class="md-nav__link">
         Developer Guide
       </a>
     </li>
@@ -607,14 +773,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       <label class="md-nav__link" for="__nav_5">
         IDE Integration
@@ -630,14 +794,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
       
       <label class="md-nav__link" for="__nav_5_1">
         IntelliJ IDEA Plugin <code>v0.11.0</code>
@@ -653,21 +815,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../djinni-intellij-plugin/index.html" class="md-nav__link">
         About IntelliJ IDEA Plugin
       </a>
-      
     </li>
   
 
@@ -677,7 +829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="developer-guide.html" class="md-nav__link">
+      <a href="../djinni-intellij-plugin/developer-guide.html" class="md-nav__link">
         Developer Guide
       </a>
     </li>
@@ -808,6 +960,145 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#all-arguments" class="md-nav__link">
+    All Arguments
+  </a>
+  
+    <nav class="md-nav" aria-label="All Arguments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    General
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java" class="md-nav__link">
+    Java
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    C++
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jni" class="md-nav__link">
+    JNI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objective-c" class="md-nav__link">
+    Objective-C
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objective-c_1" class="md-nav__link">
+    Objective-C++
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ccli" class="md-nav__link">
+    C++/CLI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yaml-generation" class="md-nav__link">
+    Yaml Generation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other" class="md-nav__link">
+    Other
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identifier-style" class="md-nav__link">
+    Identifier Style
+  </a>
+  
+    <nav class="md-nav" aria-label="Identifier Style">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c_1" class="md-nav__link">
+    C++
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java_1" class="md-nav__link">
+    Java
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objective-c_2" class="md-nav__link">
+    Objective C
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python_1" class="md-nav__link">
+    Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ccli_1" class="md-nav__link">
+    C++/CLI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -820,11 +1111,661 @@
   
                 
                 
-                <h1 id="about-intellij-idea-plugin">About IntelliJ IDEA Plugin<a class="headerlink" href="#about-intellij-idea-plugin" title="Permanent link">&para;</a></h1>
-<p>Adds basic navigation, code-completion and error highlighting support for .djinni IDL files.</p>
-<hr />
-<p>Get the plugin in the Jetbrains Marketplace:</p>
-<iframe frameborder="none" width="384px" height="319px" src="https://plugins.jetbrains.com/embeddable/card/15347"></iframe>
+                <h1 id="using-the-generator">Using the Generator<a class="headerlink" href="#using-the-generator" title="Permanent link">&para;</a></h1>
+<p>When the Djinni file(s) are ready, from the command line you can run:</p>
+<div class="highlight"><pre><span></span><code>djinni <span class="se">\</span>
+   --java-out JAVA_OUTPUT_FOLDER <span class="se">\</span>
+   --java-package com.example.jnigenpackage <span class="se">\</span>
+   --java-cpp-exception DbxException <span class="se">\ </span><span class="c1"># Choose between a customized C++ exception in Java and java.lang.RuntimeException (the default).</span>
+   --ident-java-field mFooBar <span class="se">\ </span><span class="c1"># Optional, this adds an &quot;m&quot; in front of Java field names</span>
+   <span class="se">\</span>
+   --cpp-out CPP_OUTPUT_FOLDER <span class="se">\</span>
+   <span class="se">\</span>
+   --jni-out JNI_OUTPUT_FOLDER <span class="se">\</span>
+   --ident-jni-class NativeFooBar <span class="se">\ </span><span class="c1"># This adds a &quot;Native&quot; prefix to JNI class</span>
+   --ident-jni-file NativeFooBar <span class="se">\ </span><span class="c1"># This adds a prefix to the JNI filenames otherwise the cpp and jni filenames are the same.</span>
+   <span class="se">\</span>
+   --objc-out OBJC_OUTPUT_FOLDER <span class="se">\</span>
+   --objc-type-prefix DB <span class="se">\ </span><span class="c1"># Apple suggests Objective-C classes have a prefix for each defined type.</span>
+   <span class="se">\</span>
+   --objcpp-out OBJC_OUTPUT_FOLDER <span class="se">\</span>
+   <span class="se">\</span>
+   --py-out PYTHON_OUTPUT_FOLDER <span class="se">\</span>
+   --pycffi-out CFFI_OUTPUT_FOLDER <span class="se">\ </span><span class="c1"># Required for Python support</span>
+   --pycffi-package-name PyCFFIlib <span class="se">\</span>
+   --pycffi-dynamic-lib-list mylib <span class="se">\</span>
+   --c-wrapper-out C_WRAPPER_OUTPUT_FOLDER <span class="se">\ </span><span class="c1"># Required for Python support</span>
+   <span class="se">\</span>
+   --idl MY_PROJECT.djinni
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If a language's output folder is not specified, that language will not be generated.</p>
+</div>
+<h2 id="all-arguments">All Arguments<a class="headerlink" href="#all-arguments" title="Permanent link">&para;</a></h2>
+<h3 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--help</code></td>
+<td>Print help</td>
+</tr>
+<tr>
+<td><code>--version</code></td>
+<td>Print version</td>
+</tr>
+<tr>
+<td><code>--idl &lt;in-file&gt;</code></td>
+<td>The IDL file with the type definitions, typically with extension <code>.djinni</code>.</td>
+</tr>
+<tr>
+<td><code>--idl-include-path &lt;path&gt; ...</code></td>
+<td>An include path to search for Djinni <code>@import</code> and <code>@extern</code> directives. Can specify multiple paths.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="java">Java<a class="headerlink" href="#java" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--java-out &lt;out-folder&gt;</code></td>
+<td>The output for the Java files (Generator disabled if unspecified).</td>
+</tr>
+<tr>
+<td><code>--java-package ...</code></td>
+<td>The package name to use for generated Java classes.</td>
+</tr>
+<tr>
+<td><code>--java-class-access-modifier &lt;public/package&gt;</code></td>
+<td>The access modifier to use for generated Java classes (default: <code>public</code>).</td>
+</tr>
+<tr>
+<td><code>--java-cpp-exception &lt;exception-class&gt;</code></td>
+<td>The type for translated C++ exceptions in Java (default: <code>java.lang.RuntimeException</code> that is not checked)</td>
+</tr>
+<tr>
+<td><code>--java-annotation &lt;annotation-class&gt;</code></td>
+<td>Java annotation (<code>@Foo</code>) to place on all generated Java classes</td>
+</tr>
+<tr>
+<td><code>--java-generate-interfaces &lt;true/false&gt;</code></td>
+<td>Whether Java interfaces should be used instead of abstract classes where possible (default: <code>false</code>).</td>
+</tr>
+<tr>
+<td><code>--java-nullable-annotation &lt;nullable-annotation-class&gt;</code></td>
+<td>Java annotation (<code>@Nullable</code>) to place on all fields and return values that are optional</td>
+</tr>
+<tr>
+<td><code>--java-nonnull-annotation &lt;nonnull-annotation-class&gt;</code></td>
+<td>Java annotation (<code>@Nonnull</code>) to place on all fields and return values that are not optional</td>
+</tr>
+<tr>
+<td><code>--java-implement-android-os-parcelable &lt;true/false&gt;</code></td>
+<td>all generated java classes will implement the interface <code>android.os.Parcelable</code></td>
+</tr>
+<tr>
+<td><code>--java-use-final-for-record &lt;use-final-for-record&gt;</code></td>
+<td>Whether generated Java classes for records should be marked <code>final</code> (default: <code>true</code>).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="c">C++<a class="headerlink" href="#c" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--cpp-out &lt;out-folder&gt;</code></td>
+<td>The output folder for C++ files (Generator disabled if unspecified).</td>
+</tr>
+<tr>
+<td><code>--cpp-header-out &lt;out-folder&gt;</code></td>
+<td>The output folder for C++ header files (default: the same as <code>--cpp-out</code>).</td>
+</tr>
+<tr>
+<td><code>--cpp-include-prefix &lt;prefix&gt;</code></td>
+<td>The prefix for <code>#includes</code> of header files from C++ files.</td>
+</tr>
+<tr>
+<td><code>--cpp-namespace ...</code></td>
+<td>The namespace name to use for generated C++ classes.</td>
+</tr>
+<tr>
+<td><code>--cpp-ext &lt;ext&gt;</code></td>
+<td>The filename extension for C++ files (default: <code>cpp</code>).</td>
+</tr>
+<tr>
+<td><code>--hpp-ext &lt;ext&gt;</code></td>
+<td>The filename extension for C++ header files (default: <code>hpp</code>).</td>
+</tr>
+<tr>
+<td><code>--cpp-optional-template &lt;template&gt;</code></td>
+<td>The template to use for optional values (default: <code>std::optional</code>)</td>
+</tr>
+<tr>
+<td><code>--cpp-optional-header &lt;header&gt;</code></td>
+<td>The header to use for optional values (default: <code>&lt;optional&gt;</code>)</td>
+</tr>
+<tr>
+<td><code>--cpp-enum-hash-workaround &lt;true/false&gt;</code></td>
+<td>Work around LWG-2148 by generating <code>std::hash</code> specializations for C++ enums (default: <code>true</code>)</td>
+</tr>
+<tr>
+<td><code>--cpp-nn-header &lt;header&gt;</code></td>
+<td>The header to use for non-nullable pointers</td>
+</tr>
+<tr>
+<td><code>--cpp-nn-type &lt;header&gt;</code></td>
+<td>The type to use for non-nullable pointers (as a substitute for <code>std::shared_ptr</code>)</td>
+</tr>
+<tr>
+<td><code>--cpp-nn-check-expression &lt;header&gt;</code></td>
+<td>The expression to use for building non-nullable pointers</td>
+</tr>
+<tr>
+<td><code>--cpp-use-wide-strings &lt;true/false&gt;</code></td>
+<td>Use wide strings in C++ code (default: <code>false</code>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="jni">JNI<a class="headerlink" href="#jni" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--jni-out &lt;out-folder&gt;</code></td>
+<td>The folder for the JNI C++ output files (Generator disabled if unspecified).</td>
+</tr>
+<tr>
+<td><code>--jni-header-out &lt;out-folder&gt;</code></td>
+<td>The folder for the JNI C++ header files (default: the same as <code>--jni-out</code>).</td>
+</tr>
+<tr>
+<td><code>--jni-include-prefix &lt;prefix&gt;</code></td>
+<td>The prefix for <code>#includes</code> of JNI header files from JNI C++ files.</td>
+</tr>
+<tr>
+<td><code>--jni-include-cpp-prefix &lt;prefix&gt;</code></td>
+<td>The prefix for <code>#includes</code> of the main header files from JNI C++ files.</td>
+</tr>
+<tr>
+<td><code>--jni-namespace ...</code></td>
+<td>The namespace name to use for generated JNI C++ classes.</td>
+</tr>
+<tr>
+<td><code>--jni-base-lib-include-prefix ...</code></td>
+<td>The JNI base support library's include path (default: <code>djinni/jni/</code>).</td>
+</tr>
+<tr>
+<td><code>--jni-generate-main &lt;true/false&gt;</code></td>
+<td>Generate a source file (<code>djinni_jni_main.cpp</code>) that includes the default <code>JNI_OnLoad</code> &amp; <code>JNI_OnUnload</code> implementation from the support library. (default: <code>true</code>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="objective-c">Objective-C<a class="headerlink" href="#objective-c" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--objc-out &lt;out-folder&gt;</code></td>
+<td>The output folder for Objective-C files (Generator disabled if unspecified).</td>
+</tr>
+<tr>
+<td><code>--objc-header-out &lt;out-folder&gt;</code></td>
+<td>The output folder for Objective-C header files (default: the same as <code>--objc-out</code>).</td>
+</tr>
+<tr>
+<td><code>--objc-h-ext &lt;ext&gt;</code></td>
+<td>The filename extension for Objective-C[++] header files (default: <code>h</code>)</td>
+</tr>
+<tr>
+<td><code>--objc-type-prefix &lt;pre&gt;</code></td>
+<td>The prefix for Objective-C data types (usually two or three letters)</td>
+</tr>
+<tr>
+<td><code>--objc-include-prefix &lt;prefix&gt;</code></td>
+<td>The prefix for <code>#import</code> of header files from Objective-C files.</td>
+</tr>
+<tr>
+<td><code>--objc-swift-bridging-header &lt;name&gt;</code></td>
+<td>The name of Objective-C Bridging Header used in XCode's Swift projects. The output folder is <code>--objc-header-out</code>.</td>
+</tr>
+<tr>
+<td><code>--objc-closed-enums &lt;true/false&gt;</code></td>
+<td>All generated Objective-C enums will be <code>NS_CLOSED_ENUM</code> (default: <code>false</code>).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="objective-c_1">Objective-C++<a class="headerlink" href="#objective-c_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--objcpp-out &lt;out-folder&gt;</code></td>
+<td>The output folder for private Objective-C++ files (Generator disabled if unspecified).</td>
+</tr>
+<tr>
+<td><code>--objcpp-header-out &lt;out-folder&gt;</code></td>
+<td>The folder for the Objective-C++ header files (default: the same as --objcpp-out).</td>
+</tr>
+<tr>
+<td><code>--objcpp-ext &lt;ext&gt;</code></td>
+<td>The filename extension for Objective-C++ files (default: <code>mm</code>)</td>
+</tr>
+<tr>
+<td><code>--objcpp-include-prefix &lt;prefix&gt;</code></td>
+<td>The prefix for <code>#import</code> of Objective-C++ header files from Objective-C++ files.</td>
+</tr>
+<tr>
+<td><code>--objcpp-include-cpp-prefix &lt;prefix&gt;</code></td>
+<td>The prefix for <code>#include</code> of the main C++ header files from Objective-C++ files.</td>
+</tr>
+<tr>
+<td><code>--objcpp-include-objc-prefix &lt;prefix&gt;</code></td>
+<td>The prefix for <code>#import</code> of the Objective-C header files from Objective-C++ files (default: the same as <code>--objcpp-include-prefix</code>)</td>
+</tr>
+<tr>
+<td><code>--cpp-extended-record-include-prefix &lt;prefix&gt;</code></td>
+<td>The prefix path for <code>#include</code> of the extended record C++ header (<code>.hpp</code>) files</td>
+</tr>
+<tr>
+<td><code>--objc-extended-record-include-prefix &lt;prefix&gt;</code></td>
+<td>The prefix path for <code>#import</code> of the extended record Objective-C header (<code>.h</code>) files</td>
+</tr>
+<tr>
+<td><code>--objcpp-namespace &lt;prefix&gt;</code></td>
+<td>The namespace name to use for generated Objective-C++ classes.</td>
+</tr>
+<tr>
+<td><code>--objc-base-lib-include-prefix ...</code></td>
+<td>The Objective-C base support library's include path (default: <code>djinni/objc/</code>).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="python">Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--py-out &lt;out-folder&gt;</code></td>
+<td>The output folder for Python files (Generator disabled if unspecified).</td>
+</tr>
+<tr>
+<td><code>--pycffi-out &lt;out-folder&gt;</code></td>
+<td>The output folder for PyCFFI files (Generator disabled if unspecified).</td>
+</tr>
+<tr>
+<td><code>--pycffi-package-name ...</code></td>
+<td>The package name to use for the generated PyCFFI classes.</td>
+</tr>
+<tr>
+<td><code>--pycffi-dynamic-lib-list ...</code></td>
+<td>The names of the dynamic libraries to be linked with PyCFFI.</td>
+</tr>
+<tr>
+<td><code>--c-wrapper-out &lt;out-folder&gt;</code></td>
+<td>The output folder for C wrapper files (Generator disabled if unspecified).</td>
+</tr>
+<tr>
+<td><code>--c-wrapper-header-out &lt;out-folder&gt;</code></td>
+<td>The output folder for C wrapper header files (default: the same as <code>--c-wrapper-out</code>).</td>
+</tr>
+<tr>
+<td><code>--c-wrapper-include-prefix &lt;prefix&gt;</code></td>
+<td>The prefix for #includes of C wrapper header files from C wrapper C++ files.</td>
+</tr>
+<tr>
+<td><code>--c-wrapper-include-cpp-prefix &lt;prefix&gt;</code></td>
+<td>The prefix for #includes of C++ header files from C wrapper C++ files.</td>
+</tr>
+<tr>
+<td><code>--c-wrapper-base-lib-include-prefix &lt;prefix&gt;</code></td>
+<td>The C wrapper base support library's include path (default: <code>djinni/cwrapper/</code>).</td>
+</tr>
+<tr>
+<td><code>--py-import-prefix &lt;import-prefix&gt;</code></td>
+<td>The import prefix used within python generated files (default: "")</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ccli">C++/CLI<a class="headerlink" href="#ccli" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--cppcli-out &lt;out-folder&gt;</code></td>
+<td>The output folder for C++/CLI files (Generator disabled if unspecified).</td>
+</tr>
+<tr>
+<td><code>--cppcli-namespace ...</code></td>
+<td>The namespace name to use for generated C++/CLI classes.</td>
+</tr>
+<tr>
+<td><code>--cppcli-include-cpp-prefix &lt;prefix&gt;</code></td>
+<td>The prefix for <code>#include</code> of the main C++ header files from C++/CLI files.</td>
+</tr>
+<tr>
+<td><code>--cppcli-base-lib-include-prefix &lt;prefix&gt;</code></td>
+<td>The C++/CLI base support library's include path (default: <code>djinni/cppcli/</code>).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="yaml-generation">Yaml Generation<a class="headerlink" href="#yaml-generation" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--yaml-out &lt;out-folder&gt;</code></td>
+<td>The output folder for YAML files (Generator disabled if unspecified).</td>
+</tr>
+<tr>
+<td><code>--yaml-out-file &lt;out-file&gt;</code></td>
+<td>If specified all types are merged into a single YAML file instead of generating one file per type (relative to <code>--yaml-out</code>).</td>
+</tr>
+<tr>
+<td><code>--yaml-prefix &lt;pre&gt;</code></td>
+<td>The prefix to add to type names stored in YAML files (default: "").</td>
+</tr>
+</tbody>
+</table>
+<h3 id="other">Other<a class="headerlink" href="#other" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--list-in-files &lt;list-in-files&gt;</code></td>
+<td>Optional file in which to write the list of input files parsed.</td>
+</tr>
+<tr>
+<td><code>--list-out-files &lt;list-out-files&gt;</code></td>
+<td>Optional file in which to write the list of output files produced.</td>
+</tr>
+<tr>
+<td><code>--skip-generation &lt;true/false&gt;</code></td>
+<td>Way of specifying if file generation should be skipped (default: <code>false</code>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="identifier-style">Identifier Style<a class="headerlink" href="#identifier-style" title="Permanent link">&para;</a></h3>
+<p>The <em>Identifier Style</em> is a text conversion hint on how to generate names from the djinni idl file.</p>
+<p>Possible values: <code>FooBar</code>, <code>fooBar</code>, <code>foo_bar</code>, <code>FOO_BAR</code>, <code>m_fooBar</code>.</p>
+<h4 id="c_1">C++<a class="headerlink" href="#c_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--ident-cpp-enum</code></td>
+<td><code>FOO_BAR</code></td>
+</tr>
+<tr>
+<td><code>--ident-cpp-field</code></td>
+<td><code>foo_bar</code></td>
+</tr>
+<tr>
+<td><code>--ident-cpp-method</code></td>
+<td><code>foo_bar</code></td>
+</tr>
+<tr>
+<td><code>--ident-cpp-type</code></td>
+<td><code>FooBar</code></td>
+</tr>
+<tr>
+<td><code>--ident-cpp-enum-type</code></td>
+<td><code>FooBar</code></td>
+</tr>
+<tr>
+<td><code>--ident-cpp-type-param</code></td>
+<td><code>FooBar</code></td>
+</tr>
+<tr>
+<td><code>--ident-cpp-local</code></td>
+<td><code>foo_bar</code></td>
+</tr>
+<tr>
+<td><code>--ident-cpp-file</code></td>
+<td><code>foo_bar</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="java_1">Java<a class="headerlink" href="#java_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--ident-java-enum</code></td>
+<td><code>FOO_BAR</code></td>
+</tr>
+<tr>
+<td><code>--ident-java-field</code></td>
+<td><code>fooBar</code></td>
+</tr>
+<tr>
+<td><code>--ident-java-type</code></td>
+<td><code>FooBar</code></td>
+</tr>
+<tr>
+<td><code>--ident-jni-class</code></td>
+<td><code>FooBar</code></td>
+</tr>
+<tr>
+<td><code>--ident-jni-file</code></td>
+<td><code>foo_bar</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="objective-c_2">Objective C<a class="headerlink" href="#objective-c_2" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--ident-objc-enum</code></td>
+<td><code>FooBar</code></td>
+</tr>
+<tr>
+<td><code>--ident-objc-field</code></td>
+<td><code>fooBar</code></td>
+</tr>
+<tr>
+<td><code>--ident-objc-method</code></td>
+<td><code>fooBar</code></td>
+</tr>
+<tr>
+<td><code>--ident-objc-type</code></td>
+<td><code>FooBar</code></td>
+</tr>
+<tr>
+<td><code>--ident-objc-type-param</code></td>
+<td><code>FooBar</code></td>
+</tr>
+<tr>
+<td><code>--ident-objc-local</code></td>
+<td><code>fooBar</code></td>
+</tr>
+<tr>
+<td><code>--ident-objc-file</code></td>
+<td><code>FooBar</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="python_1">Python<a class="headerlink" href="#python_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--ident-py-type</code></td>
+<td><code>foo_bar</code></td>
+</tr>
+<tr>
+<td><code>--ident-py-class-name</code></td>
+<td><code>FooBar</code></td>
+</tr>
+<tr>
+<td><code>--ident-py-type-param</code></td>
+<td><code>foo_bar</code></td>
+</tr>
+<tr>
+<td><code>--ident-py-method</code></td>
+<td><code>foo_bar</code></td>
+</tr>
+<tr>
+<td><code>--ident-py-field</code></td>
+<td><code>foo_bar</code></td>
+</tr>
+<tr>
+<td><code>--ident-py-local</code></td>
+<td><code>foo_bar</code></td>
+</tr>
+<tr>
+<td><code>--ident-py-enum</code></td>
+<td><code>Foo_Bar</code></td>
+</tr>
+<tr>
+<td><code>--ident-py-const</code></td>
+<td><code>FOO_BAR</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="ccli_1">C++/CLI<a class="headerlink" href="#ccli_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--ident-cppcli-type</code></td>
+<td><code>FooBar</code></td>
+</tr>
+<tr>
+<td><code>--ident-cppcli-type-param</code></td>
+<td><code>FooBar</code></td>
+</tr>
+<tr>
+<td><code>--ident-cppcli-property</code></td>
+<td><code>FooBar</code></td>
+</tr>
+<tr>
+<td><code>--ident-cppcli-method</code></td>
+<td><code>FooBar</code></td>
+</tr>
+<tr>
+<td><code>--ident-cppcli-local</code></td>
+<td><code>fooBar</code></td>
+</tr>
+<tr>
+<td><code>--ident-cppcli-enum</code></td>
+<td><code>FooBar</code></td>
+</tr>
+<tr>
+<td><code>--ident-cppcli-const</code></td>
+<td><code>FooBar</code></td>
+</tr>
+<tr>
+<td><code>--ident-cppcli-file</code></td>
+<td><code>FooBar</code></td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<p>The djinni idl for an enum</p>
+<div class="highlight"><pre><span></span><code>SomeEnum = enum {
+    Value;
+}
+</code></pre></div>
+<p>transforms per default to the following Java code</p>
+<p><div class="highlight"><pre><span></span><code>public enum SomeEnum {
+    VALUE,
+    ;
+}
+</code></pre></div>
+As you see, <em>VALUE</em> is now in upper case letters.</p>
+<p>If you use <code>--ident-java-enum foo_bar</code> then <em>Value</em> will not be transformed into upper case and the following Java code will be generated.</p>
+<div class="highlight"><pre><span></span><code>public enum SomeEnum {
+    Value,
+    ;
+}
+</code></pre></div>
+<p>This way you can adopt code generation to some extend to your existing coding style.</p>
+<p>The best way to find out how that works is playing around with different values for different identifier options.</p>
+<p><strong>If you wish no text transformation to happen, use the <code>foo_bar</code> style.</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some identifiers do have text transformation enabled by default.
+Nevertheless make sure to <strong>explicitly set</strong> text transformation styles if you need them! All text transformation may be disabled by default in a future release of the generator.</p>
+</div>
                 
                   
                     
@@ -833,7 +1774,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 1, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 13, 2021</span>
       
     
   </small>
@@ -859,7 +1800,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../djinni-support-lib/developer-guide.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Developer guide" rel="prev">
+        <a href="idl.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Interface Definition Language (IDL)" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -868,20 +1809,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Developer guide
+              Interface Definition Language (IDL)
             </div>
           </div>
         </a>
       
       
         
-        <a href="developer-guide.html" class="md-footer__link md-footer__link--next" aria-label="Next: Developer Guide" rel="next">
+        <a href="generated-code-usage.html" class="md-footer__link md-footer__link--next" aria-label="Next: Use Generated Code" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Developer Guide
+              Use Generated Code
             </div>
           </div>
           <div class="md-footer__button md-icon">

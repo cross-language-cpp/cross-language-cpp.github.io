@@ -34,19 +34,19 @@
       
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.4">
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
     
     
       
-        <title>Python Support - Djinni</title>
+        <title>Modularization and Library Support - Djinni</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.bde7dde4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
         
       
     
@@ -61,10 +61,12 @@
     
     
     
-      <link rel="stylesheet" href="../../stylesheets/theme.css">
+      <link rel="stylesheet" href="../stylesheets/theme.css">
     
     
       
+
+
     
     
 
@@ -76,7 +78,7 @@
 
   <!-- Open graph meta tags -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Djinni - Python Support" />
+  <meta property="og:title" content="Djinni - Modularization and Library Support" />
   <meta property="og:description" content="Djinni is a tool for generating cross-language type declarations and interface bindings.  It's designed to connect C++ with either Java, Objective-C, Python or C#." />
   <meta property="og:url" content="None" />
 
@@ -94,7 +96,7 @@
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
-    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
       <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
@@ -104,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#python-support" class="md-skip">
+        <a href="#modularization-and-library-support" class="md-skip">
           Skip to content
         </a>
       
@@ -115,9 +117,9 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Djinni" class="md-header__button md-logo" aria-label="Djinni" data-md-component="logo">
+    <a href="../index.html" title="Djinni" class="md-header__button md-logo" aria-label="Djinni" data-md-component="logo">
       
-  <img src="../../assets/logo.svg" alt="logo">
+  <img src="../assets/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -133,7 +135,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Python Support
+              Modularization and Library Support
             
           </span>
         </div>
@@ -144,7 +146,7 @@
         
           
           
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="" type="radio" name="__palette" id="__palette_1">
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22z"/></svg>
@@ -153,7 +155,7 @@
         
           
           
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="" type="radio" name="__palette" id="__palette_2">
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
             <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31z"/></svg>
@@ -213,7 +215,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../.." class="md-tabs__link">
+    <a href="../index.html" class="md-tabs__link">
       Home
     </a>
   </li>
@@ -228,24 +230,8 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../overview/" class="md-tabs__link">
+      <a href="../overview.html" class="md-tabs__link">
         Getting Started
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../djinni-generator/setup/" class="md-tabs__link">
-        Generator <code>v1.0.0</code>
       </a>
     </li>
   
@@ -262,7 +248,23 @@
   
   
     <li class="md-tabs__item">
-      <a href="../install/" class="md-tabs__link md-tabs__link--active">
+      <a href="setup.html" class="md-tabs__link md-tabs__link--active">
+        Generator <code>v1.1.0</code>
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../djinni-support-lib/install.html" class="md-tabs__link">
         Support Lib <code>v1.0.0</code>
       </a>
     </li>
@@ -283,7 +285,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../djinni-intellij-plugin/" class="md-tabs__link">
+      <a href="../djinni-intellij-plugin/index.html" class="md-tabs__link">
         IDE Integration
       </a>
     </li>
@@ -301,7 +303,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../icon_resources/" class="md-tabs__link">
+      <a href="../icon_resources.html" class="md-tabs__link">
         Resources
       </a>
     </li>
@@ -328,9 +330,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Djinni" class="md-nav__button md-logo" aria-label="Djinni" data-md-component="logo">
+    <a href="../index.html" title="Djinni" class="md-nav__button md-logo" aria-label="Djinni" data-md-component="logo">
       
-  <img src="../../assets/logo.svg" alt="logo">
+  <img src="../assets/logo.svg" alt="logo">
 
     </a>
     Djinni
@@ -346,7 +348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         Home
       </a>
     </li>
@@ -382,7 +384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../overview/" class="md-nav__link">
+      <a href="../overview.html" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -394,7 +396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setup/" class="md-nav__link">
+      <a href="../setup.html" class="md-nav__link">
         Setup
       </a>
     </li>
@@ -406,7 +408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../example/" class="md-nav__link">
+      <a href="../example.html" class="md-nav__link">
         Example
       </a>
     </li>
@@ -418,110 +420,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/" class="md-nav__link">
+      <a href="../contributing.html" class="md-nav__link">
         Contributing
-      </a>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
-      
-      <label class="md-nav__link" for="__nav_3">
-        Generator <code>v1.0.0</code>
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Generator <code>v1.0.0</code>" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          Generator <code>v1.0.0</code>
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../djinni-generator/setup/" class="md-nav__link">
-        Generator Setup
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../djinni-generator/idl/" class="md-nav__link">
-        Interface Definition Language (IDL)
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../djinni-generator/cli-usage/" class="md-nav__link">
-        Using the Generator
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../djinni-generator/generated-code-usage/" class="md-nav__link">
-        Use Generated Code
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../djinni-generator/modularization/" class="md-nav__link">
-        Modularization and Library Support
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../djinni-generator/developer-guide/" class="md-nav__link">
-        Developer Guide
       </a>
     </li>
   
@@ -546,16 +446,16 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
-      <label class="md-nav__link" for="__nav_4">
-        Support Lib <code>v1.0.0</code>
+      <label class="md-nav__link" for="__nav_3">
+        Generator <code>v1.1.0</code>
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Support Lib <code>v1.0.0</code>" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
+      <nav class="md-nav" aria-label="Generator <code>v1.1.0</code>" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Support Lib <code>v1.0.0</code>
+          Generator <code>v1.1.0</code>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -564,8 +464,44 @@
   
   
     <li class="md-nav__item">
-      <a href="../install/" class="md-nav__link">
-        Installing the Support-Lib
+      <a href="setup.html" class="md-nav__link">
+        Generator Setup
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="idl.html" class="md-nav__link">
+        Interface Definition Language (IDL)
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cli-usage.html" class="md-nav__link">
+        Using the Generator
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="generated-code-usage.html" class="md-nav__link">
+        Use Generated Code
       </a>
     </li>
   
@@ -586,12 +522,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Python Support
+          Modularization and Library Support
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Python Support
+      <a href="modularization.html" class="md-nav__link md-nav__link--active">
+        Modularization and Library Support
       </a>
       
         
@@ -609,22 +545,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pre-requisites" class="md-nav__link">
-    Pre-requisites
+  <a href="#yaml-file-structure" class="md-nav__link">
+    YAML file structure
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#test-suite" class="md-nav__link">
-    Test Suite
+  <a href="#usage" class="md-nav__link">
+    Usage
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#known-limitations" class="md-nav__link">
-    Known limitations
+  <a href="#defining-custom-types" class="md-nav__link">
+    Defining custom types
   </a>
   
 </li>
@@ -642,7 +578,73 @@
   
   
     <li class="md-nav__item">
-      <a href="../developer-guide/" class="md-nav__link">
+      <a href="developer-guide.html" class="md-nav__link">
+        Developer Guide
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Support Lib <code>v1.0.0</code>
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Support Lib <code>v1.0.0</code>" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Support Lib <code>v1.0.0</code>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../djinni-support-lib/install.html" class="md-nav__link">
+        Installing the Support-Lib
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../djinni-support-lib/python-support.html" class="md-nav__link">
+        Python Support
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../djinni-support-lib/developer-guide.html" class="md-nav__link">
         Developer guide
       </a>
     </li>
@@ -705,7 +707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../djinni-intellij-plugin/" class="md-nav__link">
+      <a href="../djinni-intellij-plugin/index.html" class="md-nav__link">
         About IntelliJ IDEA Plugin
       </a>
     </li>
@@ -717,7 +719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../djinni-intellij-plugin/developer-guide/" class="md-nav__link">
+      <a href="../djinni-intellij-plugin/developer-guide.html" class="md-nav__link">
         Developer Guide
       </a>
     </li>
@@ -756,7 +758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vscode-djinni/" class="md-nav__link">
+      <a href="../vscode-djinni/index.html" class="md-nav__link">
         About VS Code Extension
       </a>
     </li>
@@ -768,7 +770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vscode-djinni/developer-guide/" class="md-nav__link">
+      <a href="../vscode-djinni/developer-guide.html" class="md-nav__link">
         Developer Guide
       </a>
     </li>
@@ -816,7 +818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../icon_resources/" class="md-nav__link">
+      <a href="../icon_resources.html" class="md-nav__link">
         Djinni Logo Resources
       </a>
     </li>
@@ -855,22 +857,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pre-requisites" class="md-nav__link">
-    Pre-requisites
+  <a href="#yaml-file-structure" class="md-nav__link">
+    YAML file structure
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#test-suite" class="md-nav__link">
-    Test Suite
+  <a href="#usage" class="md-nav__link">
+    Usage
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#known-limitations" class="md-nav__link">
-    Known limitations
+  <a href="#defining-custom-types" class="md-nav__link">
+    Defining custom types
   </a>
   
 </li>
@@ -889,35 +891,153 @@
   
                 
                 
-                <h1 id="python-support">Python Support<a class="headerlink" href="#python-support" title="Permanent link">&para;</a></h1>
-<p>Python support in Djinni is experimental, but ready to try out.  It can generate code for bridging
-C++ with Python 3.</p>
-<p>For more information, you can check out the talk from CppCon 2015.
-<a href="https://bit.ly/djinnitalk2">Slides</a> and <a href="https://bit.ly/djinnivideo2">video</a> are avilable online.</p>
-<h2 id="pre-requisites">Pre-requisites<a class="headerlink" href="#pre-requisites" title="Permanent link">&para;</a></h2>
-<p>Djinni generates code which should work with Python 3.  Python support has only been tested on macOS
-with the clang compiler.  ~~It's been designed to work on any platform, and the known issues are in
-the build scripts rather than the generated code itself.~~ <em>(We're now using CMake to build all
-bindings but it still requires testing in platforms other than macOS.)</em></p>
-<p>The Python support generated by Djinni makes use of a few non-default Python extensions, as does the
-test suite.  You can install them as follows:</p>
-<div class="highlight"><pre><span></span><code>  sudo pip3 install cffi
-  sudo pip3 install future
-  sudo pip3 install pytest
+                <h1 id="modularization-and-library-support">Modularization and Library Support<a class="headerlink" href="#modularization-and-library-support" title="Permanent link">&para;</a></h1>
+<p>When generating the interface for your project and wish to make it available to other users in all of
+C++/Objective-C/Java/C# you can tell Djinni to generate a special YAML file as part of the code generation process.
+This file then contains all the information Djinni requires to include your types in a different project.
+Instructing Djinni to create these YAML files is controlled by the <a href="cli-usage.html#yaml-generation">YAML generation parameters</a>.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>External types defined in YAML are not yet supported for Python.</p>
+</div>
+<h2 id="yaml-file-structure">YAML file structure<a class="headerlink" href="#yaml-file-structure" title="Permanent link">&para;</a></h2>
+<p>Such a YAML file looks as follows:</p>
+<div class="highlight"><pre><span></span><code><span class="nn">---</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mylib_record1</span>
+<span class="nt">typedef</span><span class="p">:</span> <span class="s">&#39;record</span><span class="nv"> </span><span class="s">+c</span><span class="nv"> </span><span class="s">deriving(eq,</span><span class="nv"> </span><span class="s">ord)&#39;</span>
+<span class="nt">params</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
+<span class="nt">prefix</span><span class="p">:</span> <span class="s">&#39;mylib&#39;</span>
+<span class="nt">cpp</span><span class="p">:</span>
+  <span class="nt">typename</span><span class="p">:</span> <span class="s">&#39;::mylib::Record1&#39;</span>
+  <span class="nt">header</span><span class="p">:</span> <span class="s">&#39;&quot;MyLib/Record1.hpp&quot;&#39;</span>
+  <span class="nt">byValue</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="nt">objc</span><span class="p">:</span>
+  <span class="nt">typename</span><span class="p">:</span> <span class="s">&#39;MLBRecord1&#39;</span>
+  <span class="nt">header</span><span class="p">:</span> <span class="s">&#39;&quot;MLB/MLBRecord1.h&quot;&#39;</span>
+  <span class="nt">boxed</span><span class="p">:</span> <span class="s">&#39;MLBRecord1&#39;</span>
+  <span class="nt">pointer</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="nt">hash</span><span class="p">:</span> <span class="s">&#39;%s.hash&#39;</span>
+<span class="nt">objcpp</span><span class="p">:</span>
+  <span class="nt">translator</span><span class="p">:</span> <span class="s">&#39;::mylib::djinni::objc::Record1&#39;</span>
+  <span class="nt">header</span><span class="p">:</span> <span class="s">&#39;&quot;mylib/djinni/objc/Record1.hpp&quot;&#39;</span>
+<span class="nt">java</span><span class="p">:</span>
+  <span class="nt">typename</span><span class="p">:</span> <span class="s">&#39;com.example.mylib.Record1&#39;</span>
+  <span class="nt">boxed</span><span class="p">:</span> <span class="s">&#39;com.example.mylib.Record1&#39;</span>
+  <span class="nt">reference</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="nt">generic</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="nt">hash</span><span class="p">:</span> <span class="s">&#39;%s.hashCode()&#39;</span>
+<span class="nt">jni</span><span class="p">:</span>
+  <span class="nt">translator</span><span class="p">:</span> <span class="s">&#39;::mylib::djinni::jni::Record1&#39;</span>
+  <span class="nt">header</span><span class="p">:</span> <span class="s">&#39;&quot;Duration-jni.hpp&quot;&#39;</span>
+  <span class="nt">typename</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">jobject</span>
+  <span class="nt">typeSignature</span><span class="p">:</span> <span class="s">&#39;Lcom/example/mylib/Record1;&#39;</span>
+<span class="nt">cs</span><span class="p">:</span>
+  <span class="nt">translator</span><span class="p">:</span> <span class="s">&#39;::djinni::Record1_h&#39;</span>
+  <span class="nt">header</span><span class="p">:</span> <span class="s">&#39;&quot;Record1-cs.hpp&quot;&#39;</span>
+  <span class="nt">typename</span><span class="p">:</span> <span class="s">&#39;Record1^&#39;</span>
+  <span class="nt">reference</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="nn">---</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mylib_interface1</span>
+<span class="nt">typedef</span><span class="p">:</span> <span class="s">&#39;interface</span><span class="nv"> </span><span class="s">+j</span><span class="nv"> </span><span class="s">+o</span><span class="nv"> </span><span class="s">+s&#39;</span>
+    <span class="l l-Scalar l-Scalar-Plain">(...)</span>
+<span class="nn">---</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mylib_enum1</span>
+<span class="nt">typedef</span><span class="p">:</span> <span class="s">&#39;enum&#39;</span>
+    <span class="l l-Scalar l-Scalar-Plain">(...)</span>
 </code></pre></div>
-<h2 id="test-suite">Test Suite<a class="headerlink" href="#test-suite" title="Permanent link">&para;</a></h2>
-<p>Because of the known limitations described below, the Python test suite does not use all of the same
-inputs as the other languages.  As a result, you'll see a separate <code>pycpp</code> directory in
-generated-src.  This contains output of the standard C++ generator, but for the specific input files
-used by the Python test suite.</p>
-<h2 id="known-limitations">Known limitations<a class="headerlink" href="#known-limitations" title="Permanent link">&para;</a></h2>
+<p>Each document in the YAML file describes one extern type.</p>
+<p>You can also check these files for some real working examples of what you can do with it:</p>
 <ul>
-<li>Proxy caching is not yet implemented.  In addition to some inefficiency, this means that the same
-object passed across the language boundary twice is not guaranteed to appear as a single object on
-the other side.</li>
-<li>The support library code makes direct reference to <optional> types rather than respecting the
-command-line choice of a different optional library.</li>
+<li><a href="https://github.com/cross-language-cpp/djinni-support-lib/blob/main/test-suite/djinni/vendor/third-party/date.yaml"><code>date.yaml</code></a></li>
+<li><a href="https://github.com/cross-language-cpp/djinni-support-lib/blob/main/test-suite/djinni/vendor/third-party/duration.yaml"><code>duration.yaml</code></a></li>
 </ul>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<p>To use a library type in your project simply include it in your IDL file and refer to it using its name identifier:</p>
+<div class="highlight"><pre><span></span><code>@extern &quot;mylib.yaml&quot;
+
+client_interface = interface +c {
+  foo(): mylib_record1;
+}
+</code></pre></div>
+<h2 id="defining-custom-types">Defining custom types<a class="headerlink" href="#defining-custom-types" title="Permanent link">&para;</a></h2>
+<p>The YAML files can be created by hand as long as you follow the required format.
+This allows you to support types not generated by Djinni.</p>
+<p>See <a href="https://github.com/cross-language-cpp/djinni-support-lib/blob/main/test-suite/djinni/vendor/third-party/duration.yaml"><code>duration.yaml</code></a>
+and the accompanying translators in <a href="https://github.com/cross-language-cpp/djinni-support-lib/blob/main/test-suite/handwritten-src/cpp/Duration-objc.hpp"><code>Duration-objc.hpp</code></a>,
+<a href="https://github.com/cross-language-cpp/djinni-support-lib/blob/main/test-suite/handwritten-src/cpp/Duration-jni.hpp"><code>Duration-jni.hpp</code></a>
+and <a href="https://github.com/cross-language-cpp/djinni-support-lib/blob/main/test-suite/handwritten-src/cpp/Duration-cs.hpp"><code>Duration-cs.hpp</code></a> for an advanced example.</p>
+<p>Handwritten translators implement the following concept:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// For C++ &lt;-&gt; Objective-C</span>
+<span class="k">struct</span> <span class="nc">Record1</span>
+<span class="p">{</span>
+    <span class="k">using</span> <span class="n">CppType</span> <span class="o">=</span> <span class="o">::</span><span class="n">mylib</span><span class="o">::</span><span class="n">Record1</span><span class="p">;</span>
+    <span class="k">using</span> <span class="n">ObjcType</span> <span class="o">=</span> <span class="n">MLBRecord1</span><span class="o">*</span><span class="p">;</span>
+
+    <span class="k">static</span> <span class="n">CppType</span> <span class="nf">toCpp</span><span class="p">(</span><span class="n">ObjcType</span> <span class="n">o</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="cm">/* your magic here */</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">static</span> <span class="n">ObjcType</span> <span class="nf">fromCpp</span><span class="p">(</span><span class="n">CppType</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="cm">/* your magic here */</span><span class="p">;</span> <span class="p">}</span>
+
+    <span class="c1">// Option 1: use this if no boxing is required</span>
+    <span class="k">using</span> <span class="n">Boxed</span> <span class="o">=</span> <span class="n">Record1</span><span class="p">;</span>
+    <span class="c1">// Option 2: or this if you do need dedicated boxing behavior</span>
+    <span class="k">struct</span> <span class="nc">Boxed</span>
+    <span class="p">{</span>
+        <span class="k">using</span> <span class="n">ObjcType</span> <span class="o">=</span> <span class="n">MLBRecord1Special</span><span class="o">*</span><span class="p">;</span>
+        <span class="k">static</span> <span class="n">CppType</span> <span class="nf">toCpp</span><span class="p">(</span><span class="n">ObjcType</span> <span class="n">o</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="cm">/* your magic here */</span><span class="p">;</span> <span class="p">}</span>
+        <span class="k">static</span> <span class="n">ObjcType</span> <span class="nf">fromCpp</span><span class="p">(</span><span class="n">CppType</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="cm">/* your magic here */</span><span class="p">;</span> <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">// For C++ &lt;-&gt; JNI</span>
+<span class="cp">#include</span> <span class="cpf">&quot;djinni_support.hpp&quot;</span><span class="cp"></span>
+<span class="k">struct</span> <span class="nc">Record1</span>
+<span class="p">{</span>
+    <span class="k">using</span> <span class="n">CppType</span> <span class="o">=</span> <span class="o">::</span><span class="n">mylib</span><span class="o">::</span><span class="n">Record1</span><span class="p">;</span>
+    <span class="k">using</span> <span class="n">JniType</span> <span class="o">=</span> <span class="n">jobject</span><span class="p">;</span>
+
+    <span class="k">static</span> <span class="n">CppType</span> <span class="nf">toCpp</span><span class="p">(</span><span class="n">JniType</span> <span class="n">j</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="cm">/* your magic here */</span><span class="p">;</span> <span class="p">}</span>
+    <span class="c1">// The return type *must* be LocalRef&lt;T&gt; if T is not a primitive!</span>
+    <span class="k">static</span> <span class="o">::</span><span class="n">djinni</span><span class="o">::</span><span class="n">LocalRef</span><span class="o">&lt;</span><span class="n">jobject</span><span class="o">&gt;</span> <span class="n">JniType</span> <span class="n">fromCpp</span><span class="p">(</span><span class="n">CppType</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="cm">/* your magic here */</span><span class="p">;</span> <span class="p">}</span>
+
+    <span class="k">using</span> <span class="n">Boxed</span> <span class="o">=</span> <span class="n">Record1</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">// For C++ &lt;-&gt; C++/CLI</span>
+<span class="k">public</span> <span class="n">ref</span> <span class="k">class</span> <span class="nc">Record1</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// Record1 public properties</span>
+<span class="nl">internal</span><span class="p">:</span>
+    <span class="k">using</span> <span class="n">CppType</span> <span class="o">=</span> <span class="o">::</span><span class="n">mylib</span><span class="o">::</span><span class="n">Record1</span><span class="p">;</span>
+    <span class="k">using</span> <span class="n">CsType</span> <span class="o">=</span> <span class="n">Record1</span><span class="o">^</span><span class="p">;</span>
+    <span class="k">static</span> <span class="n">CppType</span> <span class="nf">ToCpp</span><span class="p">(</span><span class="n">CsType</span> <span class="n">cs</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="cm">/* your magic here */</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">static</span> <span class="n">CsType</span> <span class="nf">FromCpp</span><span class="p">(</span><span class="k">const</span> <span class="n">CppType</span><span class="o">&amp;</span> <span class="n">cs</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="cm">/* your magic here */</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">private</span><span class="o">:</span>
+    <span class="c1">// Record1 properties&#39; backing fields</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>For <code>interface</code> classes the <code>CppType</code> alias is expected to be a <code>std::shared_ptr&lt;T&gt;</code>.</p>
+<p>Be sure to put the translators into representative and distinct namespaces.</p>
+<p>If your type is generic the translator takes the same number of template parameters.
+At usage each is instantiated with the translators of the respective type argument.</p>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">A</span><span class="p">,</span> <span class="k">class</span> <span class="nc">B</span><span class="o">&gt;</span>
+<span class="k">struct</span> <span class="nc">Record1</span>
+<span class="p">{</span>
+    <span class="k">using</span> <span class="n">CppType</span> <span class="o">=</span> <span class="o">::</span><span class="n">mylib</span><span class="o">::</span><span class="n">Record1</span><span class="o">&lt;</span><span class="k">typename</span> <span class="nc">A</span><span class="o">::</span><span class="n">CppType</span><span class="p">,</span> <span class="k">typename</span> <span class="nc">B</span><span class="o">::</span><span class="n">CppType</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="k">using</span> <span class="n">ObjcType</span> <span class="o">=</span> <span class="n">MLBRecord1</span><span class="o">*</span><span class="p">;</span>
+
+    <span class="k">static</span> <span class="n">CppType</span> <span class="nf">toCpp</span><span class="p">(</span><span class="n">ObjcType</span> <span class="n">o</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// Use A::toCpp() and B::toCpp() if necessary</span>
+        <span class="k">return</span> <span class="cm">/* your magic here */</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">static</span> <span class="n">ObjcType</span> <span class="nf">fromCpp</span><span class="p">(</span><span class="n">CppType</span> <span class="n">c</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// Use A::fromCpp() and B::fromCpp() if necessary</span>
+        <span class="k">return</span> <span class="cm">/* your magic here */</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">using</span> <span class="n">Boxed</span> <span class="o">=</span> <span class="n">Record1</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div>
                 
                   
                     
@@ -926,7 +1046,7 @@ command-line choice of a different optional library.</li>
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 25, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 2, 2021</span>
       
     
   </small>
@@ -951,7 +1071,8 @@ command-line choice of a different optional library.</li>
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../install/" class="md-footer__link md-footer__link--prev" rel="prev">
+        
+        <a href="generated-code-usage.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Use Generated Code" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -960,19 +1081,20 @@ command-line choice of a different optional library.</li>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Installing the Support-Lib
+              Use Generated Code
             </div>
           </div>
         </a>
       
       
-        <a href="../developer-guide/" class="md-footer__link md-footer__link--next" rel="next">
+        
+        <a href="developer-guide.html" class="md-footer__link md-footer__link--next" aria-label="Next: Developer Guide" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Developer guide
+              Developer Guide
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1070,10 +1192,10 @@ command-line choice of a different optional library.</li>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.4fa0e4ee.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.1d3bfcf1.min.js"></script>
+      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
       
     
   </body>
