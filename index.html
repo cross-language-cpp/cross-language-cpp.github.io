@@ -58,7 +58,7 @@
       
       
       <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.1">
     
     
       
@@ -66,10 +66,10 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.ca7ac06f.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.1118c9be.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.f1a3b89f.min.css">
+        <link rel="stylesheet" href="assets/stylesheets/palette.ba0d045b.min.css">
         
       
     
@@ -138,7 +138,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="index.html" title="Djinni" class="md-header__button md-logo" aria-label="Djinni" data-md-component="logo">
+    <a href="." title="Djinni" class="md-header__button md-logo" aria-label="Djinni" data-md-component="logo">
       
   <img src="assets/logo.svg" alt="logo">
 
@@ -195,14 +195,18 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-      </button>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -239,7 +243,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="index.html" class="md-tabs__link md-tabs__link--active">
+    <a href="." class="md-tabs__link md-tabs__link--active">
       Home
     </a>
   </li>
@@ -254,7 +258,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="overview.html" class="md-tabs__link">
+      <a href="overview/" class="md-tabs__link">
         Getting Started
       </a>
     </li>
@@ -270,7 +274,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="djinni-generator/setup.html" class="md-tabs__link">
+      <a href="djinni-generator/setup/" class="md-tabs__link">
         Generator <code>v1.1.0</code>
       </a>
     </li>
@@ -286,7 +290,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="djinni-support-lib/install.html" class="md-tabs__link">
+      <a href="djinni-support-lib/install/" class="md-tabs__link">
         Support Lib <code>v1.1.0</code>
       </a>
     </li>
@@ -307,7 +311,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="djinni-intellij-plugin/index.html" class="md-tabs__link">
+      <a href="djinni-intellij-plugin/" class="md-tabs__link">
         IDE Integration
       </a>
     </li>
@@ -325,7 +329,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="icon_resources.html" class="md-tabs__link">
+      <a href="icon_resources/" class="md-tabs__link">
         Resources
       </a>
     </li>
@@ -430,6 +434,15 @@
       user-select: none;
     }
 
+    #button-getting-started {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+
+    .secondary-landingpage-button {
+      min-width: 192px;
+    }
+
     @media screen and (max-width: 800px) {
       .hero-bottom-image {
         margin-left: -600px;
@@ -447,29 +460,40 @@
           <h1>Integrate <b>C++</b> code into<br>your <b>Java</b>, <b>Kotlin</b>, <b>Objective-C</b>, <b>Swift</b>, <b>Python</b> or <b>C#</b> application!</h1>
           <p>Djinni is a tool for generating cross-language type declarations and interface bindings.  It's designed to connect C++ with either Java, Objective-C, Python or C#.</p>
           <a
-            href="overview.html"
+            href="overview/"
             title="Overview"
+            id="button-getting-started"
             class="md-button md-button--primary"
           >
-            Getting Started
+            Get Started
           </a>
+          <br>
           <a
             href="https://github.com/cross-language-cpp"
             title="Contribute on Github"
-            class="md-button"
+            class="md-button secondary-landingpage-button"
             target="blank"
           >
           <img class="twemoji" src="assets/github.svg"/>&nbsp;&nbsp;
           Contribute
           </a>
           <a
+            href="https://github.com/cross-language-cpp/djinni-generator/discussions"
+            title="Discuss on Github"
+            class="md-button secondary-landingpage-button"
+            target="blank"
+          >
+          <img class="twemoji" src="assets/github-discussion.svg"/>&nbsp;&nbsp;
+          Discuss
+          </a>
+          <a
             href="https://mobilecpp.slack.com/"
             title="Chat on Slack"
-            class="md-button"
+            class="md-button secondary-landingpage-button"
             target="blank"
           >
           <img class="twemoji" src="assets/slack.svg"/>&nbsp;&nbsp;
-          Slack
+          Chat
           </a>
         </div>
       </div>
@@ -494,7 +518,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="Djinni" class="md-nav__button md-logo" aria-label="Djinni" data-md-component="logo">
+    <a href="." title="Djinni" class="md-nav__button md-logo" aria-label="Djinni" data-md-component="logo">
       
   <img src="assets/logo.svg" alt="logo">
 
@@ -524,7 +548,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+      <a href="." class="md-nav__link md-nav__link--active">
         Home
       </a>
       
@@ -612,7 +636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="overview.html" class="md-nav__link">
+      <a href="overview/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -624,7 +648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="setup.html" class="md-nav__link">
+      <a href="setup/" class="md-nav__link">
         Setup
       </a>
     </li>
@@ -636,7 +660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="example.html" class="md-nav__link">
+      <a href="example/" class="md-nav__link">
         Example
       </a>
     </li>
@@ -648,7 +672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contributing.html" class="md-nav__link">
+      <a href="contributing/" class="md-nav__link">
         Contributing
       </a>
     </li>
@@ -690,7 +714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="djinni-generator/setup.html" class="md-nav__link">
+      <a href="djinni-generator/setup/" class="md-nav__link">
         Generator Setup
       </a>
     </li>
@@ -702,7 +726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="djinni-generator/idl.html" class="md-nav__link">
+      <a href="djinni-generator/idl/" class="md-nav__link">
         Interface Definition Language (IDL)
       </a>
     </li>
@@ -714,7 +738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="djinni-generator/cli-usage.html" class="md-nav__link">
+      <a href="djinni-generator/cli-usage/" class="md-nav__link">
         Using the Generator
       </a>
     </li>
@@ -726,7 +750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="djinni-generator/generated-code-usage.html" class="md-nav__link">
+      <a href="djinni-generator/generated-code-usage/" class="md-nav__link">
         Use Generated Code
       </a>
     </li>
@@ -738,7 +762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="djinni-generator/modularization.html" class="md-nav__link">
+      <a href="djinni-generator/modularization/" class="md-nav__link">
         Modularization and Library Support
       </a>
     </li>
@@ -750,7 +774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="djinni-generator/developer-guide.html" class="md-nav__link">
+      <a href="djinni-generator/developer-guide/" class="md-nav__link">
         Developer Guide
       </a>
     </li>
@@ -792,7 +816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="djinni-support-lib/install.html" class="md-nav__link">
+      <a href="djinni-support-lib/install/" class="md-nav__link">
         Installing the Support-Lib
       </a>
     </li>
@@ -804,7 +828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="djinni-support-lib/python-support.html" class="md-nav__link">
+      <a href="djinni-support-lib/python-support/" class="md-nav__link">
         Python Support
       </a>
     </li>
@@ -816,7 +840,7 @@
   
   
     <li class="md-nav__item">
-      <a href="djinni-support-lib/developer-guide.html" class="md-nav__link">
+      <a href="djinni-support-lib/developer-guide/" class="md-nav__link">
         Developer guide
       </a>
     </li>
@@ -879,7 +903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="djinni-intellij-plugin/index.html" class="md-nav__link">
+      <a href="djinni-intellij-plugin/" class="md-nav__link">
         About IntelliJ IDEA Plugin
       </a>
     </li>
@@ -891,7 +915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="djinni-intellij-plugin/developer-guide.html" class="md-nav__link">
+      <a href="djinni-intellij-plugin/developer-guide/" class="md-nav__link">
         Developer Guide
       </a>
     </li>
@@ -930,7 +954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="vscode-djinni/index.html" class="md-nav__link">
+      <a href="vscode-djinni/" class="md-nav__link">
         About VS Code Extension
       </a>
     </li>
@@ -942,7 +966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="vscode-djinni/developer-guide.html" class="md-nav__link">
+      <a href="vscode-djinni/developer-guide/" class="md-nav__link">
         Developer Guide
       </a>
     </li>
@@ -990,7 +1014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="icon_resources.html" class="md-nav__link">
+      <a href="icon_resources/" class="md-nav__link">
         Djinni Logo Resources
       </a>
     </li>
@@ -1081,10 +1105,10 @@
                   <h1>Home</h1>
                 
                 <h2 id="simple-idl"><img alt="👏" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f44f.svg" title=":clap:" /> Simple IDL<a class="headerlink" href="#simple-idl" title="Permanent link">&para;</a></h2>
-<p>The Djinni <a href="djinni-generator/idl.html"><strong>Interface Definition Language</strong></a> provides a simple, yet powerful way to design your interfaces.</p>
+<p>The Djinni <a href="djinni-generator/idl/"><strong>Interface Definition Language</strong></a> provides a simple, yet powerful way to design your interfaces.</p>
 <hr />
 <h2 id="ide-integration"><img alt="🔌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f50c.svg" title=":electric_plug:" /> IDE Integration<a class="headerlink" href="#ide-integration" title="Permanent link">&para;</a></h2>
-<p>Plugins for Djinni are available for <a href="djinni-intellij-plugin/index.html"><strong>IntelliJ IDEA</strong></a> &amp; <a href="vscode-djinni/index.html"><strong>VS Code</strong></a></p>
+<p>Plugins for Djinni are available for <a href="djinni-intellij-plugin/"><strong>IntelliJ IDEA</strong></a> &amp; <a href="vscode-djinni/"><strong>VS Code</strong></a></p>
 <hr />
 <h2 id="blurs-the-line-between-languages"><img alt="🚀" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f680.svg" title=":rocket:" /> Blurs the Line Between Languages<a class="headerlink" href="#blurs-the-line-between-languages" title="Permanent link">&para;</a></h2>
 <p>With Djinni you can implement interfaces in any target language and call the implementation from C++!</p>
@@ -1096,7 +1120,8 @@
 <h2 id="maintained-by-a-small-but-active-community"><img alt="🌎" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f30e.svg" title=":earth_americas:" /> Maintained by a Small, but Active Community<a class="headerlink" href="#maintained-by-a-small-but-active-community" title="Permanent link">&para;</a></h2>
 <p>Djinni was originally developed by Dropbox in 2014.<br>
 Since June 2020 it is independently maintained by a small group of individuals from all over the globe.</p>
-<p>Get in contact with us on the <a href="https://mobilecpp.slack.com/">Mobile C++ Slack</a>! <img alt="😊" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f60a.svg" title=":blush:" /></p>
+<p>Get in contact with us on the <a href="https://mobilecpp.slack.com/">Mobile C++ Slack</a>
+or share your ideas with us in our <a href="https://github.com/cross-language-cpp/djinni-generator/discussions">Github Discussion</a>. <img alt="😊" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f60a.svg" title=":blush:" /></p>
 <p><br>
 <br></p>
                 
@@ -1107,7 +1132,7 @@ Since June 2020 it is independently maintained by a small group of individuals f
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 26, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 26, 2021</span>
       
     
   </small>
@@ -1136,7 +1161,7 @@ Since June 2020 it is independently maintained by a small group of individuals f
       
       
         
-        <a href="overview.html" class="md-footer__link md-footer__link--next" aria-label="Next: Overview" rel="next">
+        <a href="overview/" class="md-footer__link md-footer__link--next" aria-label="Next: Overview" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
@@ -1241,10 +1266,10 @@ Since June 2020 it is independently maintained by a small group of individuals f
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.53c85856.min.js", "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.82b56eb2.min.js"></script>
+      <script src="assets/javascripts/bundle.716f8af4.min.js"></script>
       
     
   </body>

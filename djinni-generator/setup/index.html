@@ -34,19 +34,19 @@
       
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.1">
     
     
       
-        <title>Developer Guide - Djinni</title>
+        <title>Generator Setup - Djinni</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1118c9be.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ba0d045b.min.css">
         
       
     
@@ -61,7 +61,7 @@
     
     
     
-      <link rel="stylesheet" href="../stylesheets/theme.css">
+      <link rel="stylesheet" href="../../stylesheets/theme.css">
     
     
       
@@ -78,7 +78,7 @@
 
   <!-- Open graph meta tags -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Djinni - Developer Guide" />
+  <meta property="og:title" content="Djinni - Generator Setup" />
   <meta property="og:description" content="Djinni is a tool for generating cross-language type declarations and interface bindings.  It's designed to connect C++ with either Java, Objective-C, Python or C#." />
   <meta property="og:url" content="None" />
 
@@ -96,7 +96,7 @@
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
-    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
       <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#developer-guide" class="md-skip">
+        <a href="#generator-setup" class="md-skip">
           Skip to content
         </a>
       
@@ -117,9 +117,9 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="Djinni" class="md-header__button md-logo" aria-label="Djinni" data-md-component="logo">
+    <a href="../.." title="Djinni" class="md-header__button md-logo" aria-label="Djinni" data-md-component="logo">
       
-  <img src="../assets/logo.svg" alt="logo">
+  <img src="../../assets/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -135,7 +135,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Developer Guide
+              Generator Setup
             
           </span>
         </div>
@@ -174,14 +174,18 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-      </button>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -215,7 +219,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../index.html" class="md-tabs__link">
+    <a href="../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -230,7 +234,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../overview.html" class="md-tabs__link">
+      <a href="../../overview/" class="md-tabs__link">
         Getting Started
       </a>
     </li>
@@ -240,13 +244,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../djinni-generator/setup.html" class="md-tabs__link">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         Generator <code>v1.1.0</code>
       </a>
     </li>
@@ -262,7 +268,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../djinni-support-lib/install.html" class="md-tabs__link">
+      <a href="../../djinni-support-lib/install/" class="md-tabs__link">
         Support Lib <code>v1.1.0</code>
       </a>
     </li>
@@ -271,8 +277,6 @@
       
         
   
-  
-    
   
 
 
@@ -285,7 +289,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="index.html" class="md-tabs__link md-tabs__link--active">
+      <a href="../../djinni-intellij-plugin/" class="md-tabs__link">
         IDE Integration
       </a>
     </li>
@@ -303,7 +307,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../icon_resources.html" class="md-tabs__link">
+      <a href="../../icon_resources/" class="md-tabs__link">
         Resources
       </a>
     </li>
@@ -330,9 +334,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="Djinni" class="md-nav__button md-logo" aria-label="Djinni" data-md-component="logo">
+    <a href="../.." title="Djinni" class="md-nav__button md-logo" aria-label="Djinni" data-md-component="logo">
       
-  <img src="../assets/logo.svg" alt="logo">
+  <img src="../../assets/logo.svg" alt="logo">
 
     </a>
     Djinni
@@ -348,7 +352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -384,7 +388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../overview.html" class="md-nav__link">
+      <a href="../../overview/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -396,7 +400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup.html" class="md-nav__link">
+      <a href="../../setup/" class="md-nav__link">
         Setup
       </a>
     </li>
@@ -408,7 +412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../example.html" class="md-nav__link">
+      <a href="../../example/" class="md-nav__link">
         Example
       </a>
     </li>
@@ -420,7 +424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing.html" class="md-nav__link">
+      <a href="../../contributing/" class="md-nav__link">
         Contributing
       </a>
     </li>
@@ -439,12 +443,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       <label class="md-nav__link" for="__nav_3">
         Generator <code>v1.1.0</code>
@@ -460,11 +466,98 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../djinni-generator/setup.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Generator Setup
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Generator Setup
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux-macos" class="md-nav__link">
+    Linux, macOS
+  </a>
+  
+    <nav class="md-nav" aria-label="Linux, macOS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manually" class="md-nav__link">
+    Manually
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-with-asdf" class="md-nav__link">
+    Install with asdf
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conan" class="md-nav__link">
+    Conan
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -474,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../djinni-generator/idl.html" class="md-nav__link">
+      <a href="../idl/" class="md-nav__link">
         Interface Definition Language (IDL)
       </a>
     </li>
@@ -486,7 +579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../djinni-generator/cli-usage.html" class="md-nav__link">
+      <a href="../cli-usage/" class="md-nav__link">
         Using the Generator
       </a>
     </li>
@@ -498,7 +591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../djinni-generator/generated-code-usage.html" class="md-nav__link">
+      <a href="../generated-code-usage/" class="md-nav__link">
         Use Generated Code
       </a>
     </li>
@@ -510,7 +603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../djinni-generator/modularization.html" class="md-nav__link">
+      <a href="../modularization/" class="md-nav__link">
         Modularization and Library Support
       </a>
     </li>
@@ -522,7 +615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../djinni-generator/developer-guide.html" class="md-nav__link">
+      <a href="../developer-guide/" class="md-nav__link">
         Developer Guide
       </a>
     </li>
@@ -564,7 +657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../djinni-support-lib/install.html" class="md-nav__link">
+      <a href="../../djinni-support-lib/install/" class="md-nav__link">
         Installing the Support-Lib
       </a>
     </li>
@@ -576,7 +669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../djinni-support-lib/python-support.html" class="md-nav__link">
+      <a href="../../djinni-support-lib/python-support/" class="md-nav__link">
         Python Support
       </a>
     </li>
@@ -588,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../djinni-support-lib/developer-guide.html" class="md-nav__link">
+      <a href="../../djinni-support-lib/developer-guide/" class="md-nav__link">
         Developer guide
       </a>
     </li>
@@ -607,14 +700,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       <label class="md-nav__link" for="__nav_5">
         IDE Integration
@@ -630,14 +721,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
       
       <label class="md-nav__link" for="__nav_5_1">
         IntelliJ IDEA Plugin <code>v0.11.0</code>
@@ -655,7 +744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="index.html" class="md-nav__link">
+      <a href="../../djinni-intellij-plugin/" class="md-nav__link">
         About IntelliJ IDEA Plugin
       </a>
     </li>
@@ -665,92 +754,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Developer Guide
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="developer-guide.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../djinni-intellij-plugin/developer-guide/" class="md-nav__link">
         Developer Guide
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#development-basics" class="md-nav__link">
-    Development Basics
-  </a>
-  
-    <nav class="md-nav" aria-label="Development Basics">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#build" class="md-nav__link">
-    Build
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#debug" class="md-nav__link">
-    Debug
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#install" class="md-nav__link">
-    Install
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adjusting-grammar" class="md-nav__link">
-    Adjusting grammar
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#release-process" class="md-nav__link">
-    Release process
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -787,7 +795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vscode-djinni/index.html" class="md-nav__link">
+      <a href="../../vscode-djinni/" class="md-nav__link">
         About VS Code Extension
       </a>
     </li>
@@ -799,7 +807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vscode-djinni/developer-guide.html" class="md-nav__link">
+      <a href="../../vscode-djinni/developer-guide/" class="md-nav__link">
         Developer Guide
       </a>
     </li>
@@ -847,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../icon_resources.html" class="md-nav__link">
+      <a href="../../icon_resources/" class="md-nav__link">
         Djinni Logo Resources
       </a>
     </li>
@@ -886,37 +894,31 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#development-basics" class="md-nav__link">
-    Development Basics
+  <a href="#installation" class="md-nav__link">
+    Installation
   </a>
   
-    <nav class="md-nav" aria-label="Development Basics">
+    <nav class="md-nav" aria-label="Installation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#build" class="md-nav__link">
-    Build
+  <a href="#linux-macos" class="md-nav__link">
+    Linux, macOS
+  </a>
+  
+    <nav class="md-nav" aria-label="Linux, macOS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manually" class="md-nav__link">
+    Manually
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#debug" class="md-nav__link">
-    Debug
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#install" class="md-nav__link">
-    Install
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adjusting-grammar" class="md-nav__link">
-    Adjusting grammar
+  <a href="#install-with-asdf" class="md-nav__link">
+    Install with asdf
   </a>
   
 </li>
@@ -925,11 +927,23 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#release-process" class="md-nav__link">
-    Release process
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conan" class="md-nav__link">
+    Conan
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -947,44 +961,27 @@
   
                 
                 
-                <h1 id="developer-guide">Developer Guide<a class="headerlink" href="#developer-guide" title="Permanent link">&para;</a></h1>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>This chapter is only of interest if you want to make changes to the code of the intellij plugin!</p>
+                <h1 id="generator-setup">Generator Setup<a class="headerlink" href="#generator-setup" title="Permanent link">&para;</a></h1>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The generator <strong>requires Java</strong>!</p>
 </div>
-<h2 id="development-basics">Development Basics<a class="headerlink" href="#development-basics" title="Permanent link">&para;</a></h2>
-<h3 id="build">Build<a class="headerlink" href="#build" title="Permanent link">&para;</a></h3>
-<p>To build on your local machine, run the <code>buildPlugin</code> task</p>
-<div class="highlight"><pre><span></span><code>./gradlew buildPlugin
+<h3 id="linux-macos">Linux, macOS<a class="headerlink" href="#linux-macos" title="Permanent link">&para;</a></h3>
+<h4 id="manually">Manually<a class="headerlink" href="#manually" title="Permanent link">&para;</a></h4>
+<p><a href="https://github.com/cross-language-cpp/djinni-generator/releases/latest/download/djinni"><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/cross-language-cpp/djinni-generator?label=Download&amp;logo=linux&amp;logoColor=%23fff&amp;style=for-the-badge" /></a></p>
+<h4 id="install-with-asdf">Install with <a href="https://asdf-vm.com/">asdf</a><a class="headerlink" href="#install-with-asdf" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>asdf plugin add djinni
+asdf install djinni latest
 </code></pre></div>
-<h3 id="debug">Debug<a class="headerlink" href="#debug" title="Permanent link">&para;</a></h3>
-<p>With the <code>runIde</code> task you can run the plugin in an isolated IDE and get logs about whats going on.</p>
-<h3 id="install">Install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h3>
-<p>To install the plugin you just built locally, go to</p>
-<p><kbd>Preferences</kbd> &gt; <kbd>Plugins</kbd> &gt; <kbd>Marketplace</kbd> &gt; <kbd>⚙</kbd> &gt; <kbd>Install plugin from disk...</kbd></p>
-<p>You can find the built plugin package under <code>build/distributions/djinni-intellij-plugin-&lt;version&gt;.zip</code></p>
-<h3 id="adjusting-grammar">Adjusting grammar<a class="headerlink" href="#adjusting-grammar" title="Permanent link">&para;</a></h3>
-<p>The grammar for <code>.djinni</code> files is defined in Backus–Naur form in <code>Djinni.bnf</code></p>
-<p>If you decide to make changes to this file, the following manual steps are required to apply them:</p>
-<ul>
-<li><code>Djinni.bnf</code>: <ul>
-<li><kbd>Right-Click</kbd> &gt; <kbd>Generate Parser Code</kbd></li>
-<li><kbd>Right-Click</kbd> &gt; <kbd>Generate JFlex Lexer</kbd>, in the file dialog click <kbd>Save</kbd> and <kbd>Replace</kbd></li>
-</ul>
-</li>
-<li><code>_DjinniLexer.flex</code>:<ul>
-<li><kbd>Right-Click</kbd> &gt; <kbd>Run JFlex Generator</kbd></li>
-</ul>
-</li>
-</ul>
-<h2 id="release-process">Release process<a class="headerlink" href="#release-process" title="Permanent link">&para;</a></h2>
-<p>To release a new plugin version, the following steps must be followed:</p>
-<ol>
-<li>Create a <a href="https://github.com/cross-language-cpp/djinni-intellij-plugin/releases/new">new release</a> on Github like <a href="https://docs.github.com/en/github/administering-a-repository/managing-releases-in-a-repository">described here</a>.
-   Set a tag version following <a href="https://semver.org/">semantic versioning</a> rules (<code>v&lt;MAJOR&gt;.&lt;MINOR&gt;.&lt;PATCH&gt;</code>) and describe what has changed in the new version.</li>
-<li>Wait. Github will automatically build the plugin, publish it to the <a href="https://plugins.jetbrains.com/organization/cross-language-cpp">jetbrains marketplace</a> &amp; upload the plugin-artifact to the release.</li>
-<li>The update will be verified by Jetbrains within a few days. Then it will be distributed to the users.</li>
-</ol>
+<h3 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/cross-language-cpp/djinni-generator/releases/latest/download/djinni.bat"><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/cross-language-cpp/djinni-generator?label=Download&amp;logo=windows&amp;style=for-the-badge" /></a></p>
+<h3 id="conan">Conan<a class="headerlink" href="#conan" title="Permanent link">&para;</a></h3>
+<p>The generator is available at <a href="https://conan.io/center/djinni-generator">conan-center</a> for Windows, Linux &amp; macOS.</p>
+<p>Add the generator as a build requirement in <code>conanfile.txt</code>:</p>
+<div class="highlight"><pre><span></span><code>[build_requires]
+djinni-generator/1.1.0
+</code></pre></div>
                 
                   
                     
@@ -993,7 +990,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 25, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 18, 2021</span>
       
     
   </small>
@@ -1019,7 +1016,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="index.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: About IntelliJ IDEA Plugin" rel="prev">
+        <a href="../../contributing/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Contributing" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1028,20 +1025,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              About IntelliJ IDEA Plugin
+              Contributing
             </div>
           </div>
         </a>
       
       
         
-        <a href="../vscode-djinni/index.html" class="md-footer__link md-footer__link--next" aria-label="Next: About VS Code Extension" rel="next">
+        <a href="../idl/" class="md-footer__link md-footer__link--next" aria-label="Next: Interface Definition Language (IDL)" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              About VS Code Extension
+              Interface Definition Language (IDL)
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1139,10 +1136,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.53c85856.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.82b56eb2.min.js"></script>
+      <script src="../../assets/javascripts/bundle.716f8af4.min.js"></script>
       
     
   </body>

@@ -34,19 +34,19 @@
       
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.1">
     
     
       
-        <title>Developer Guide - Djinni</title>
+        <title>Developer guide - Djinni</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1118c9be.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ba0d045b.min.css">
         
       
     
@@ -61,7 +61,7 @@
     
     
     
-      <link rel="stylesheet" href="../stylesheets/theme.css">
+      <link rel="stylesheet" href="../../stylesheets/theme.css">
     
     
       
@@ -78,7 +78,7 @@
 
   <!-- Open graph meta tags -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Djinni - Developer Guide" />
+  <meta property="og:title" content="Djinni - Developer guide" />
   <meta property="og:description" content="Djinni is a tool for generating cross-language type declarations and interface bindings.  It's designed to connect C++ with either Java, Objective-C, Python or C#." />
   <meta property="og:url" content="None" />
 
@@ -96,7 +96,7 @@
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
-    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
       <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
@@ -117,9 +117,9 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="Djinni" class="md-header__button md-logo" aria-label="Djinni" data-md-component="logo">
+    <a href="../.." title="Djinni" class="md-header__button md-logo" aria-label="Djinni" data-md-component="logo">
       
-  <img src="../assets/logo.svg" alt="logo">
+  <img src="../../assets/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -135,7 +135,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Developer Guide
+              Developer guide
             
           </span>
         </div>
@@ -174,14 +174,18 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-      </button>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -215,7 +219,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../index.html" class="md-tabs__link">
+    <a href="../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -230,8 +234,24 @@
   
   
     <li class="md-tabs__item">
-      <a href="../overview.html" class="md-tabs__link">
+      <a href="../../overview/" class="md-tabs__link">
         Getting Started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../djinni-generator/setup/" class="md-tabs__link">
+        Generator <code>v1.1.0</code>
       </a>
     </li>
   
@@ -248,23 +268,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="setup.html" class="md-tabs__link md-tabs__link--active">
-        Generator <code>v1.1.0</code>
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../djinni-support-lib/install.html" class="md-tabs__link">
+      <a href="../install/" class="md-tabs__link md-tabs__link--active">
         Support Lib <code>v1.1.0</code>
       </a>
     </li>
@@ -285,7 +289,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../djinni-intellij-plugin/index.html" class="md-tabs__link">
+      <a href="../../djinni-intellij-plugin/" class="md-tabs__link">
         IDE Integration
       </a>
     </li>
@@ -303,7 +307,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../icon_resources.html" class="md-tabs__link">
+      <a href="../../icon_resources/" class="md-tabs__link">
         Resources
       </a>
     </li>
@@ -330,9 +334,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="Djinni" class="md-nav__button md-logo" aria-label="Djinni" data-md-component="logo">
+    <a href="../.." title="Djinni" class="md-nav__button md-logo" aria-label="Djinni" data-md-component="logo">
       
-  <img src="../assets/logo.svg" alt="logo">
+  <img src="../../assets/logo.svg" alt="logo">
 
     </a>
     Djinni
@@ -348,7 +352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -384,7 +388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../overview.html" class="md-nav__link">
+      <a href="../../overview/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -396,7 +400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup.html" class="md-nav__link">
+      <a href="../../setup/" class="md-nav__link">
         Setup
       </a>
     </li>
@@ -408,7 +412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../example.html" class="md-nav__link">
+      <a href="../../example/" class="md-nav__link">
         Example
       </a>
     </li>
@@ -420,8 +424,110 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing.html" class="md-nav__link">
+      <a href="../../contributing/" class="md-nav__link">
         Contributing
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Generator <code>v1.1.0</code>
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Generator <code>v1.1.0</code>" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Generator <code>v1.1.0</code>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../djinni-generator/setup/" class="md-nav__link">
+        Generator Setup
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../djinni-generator/idl/" class="md-nav__link">
+        Interface Definition Language (IDL)
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../djinni-generator/cli-usage/" class="md-nav__link">
+        Using the Generator
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../djinni-generator/generated-code-usage/" class="md-nav__link">
+        Use Generated Code
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../djinni-generator/modularization/" class="md-nav__link">
+        Modularization and Library Support
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../djinni-generator/developer-guide/" class="md-nav__link">
+        Developer Guide
       </a>
     </li>
   
@@ -446,16 +552,16 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
-      <label class="md-nav__link" for="__nav_3">
-        Generator <code>v1.1.0</code>
+      <label class="md-nav__link" for="__nav_4">
+        Support Lib <code>v1.1.0</code>
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Generator <code>v1.1.0</code>" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
+      <nav class="md-nav" aria-label="Support Lib <code>v1.1.0</code>" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
-          Generator <code>v1.1.0</code>
+          Support Lib <code>v1.1.0</code>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -464,8 +570,8 @@
   
   
     <li class="md-nav__item">
-      <a href="setup.html" class="md-nav__link">
-        Generator Setup
+      <a href="../install/" class="md-nav__link">
+        Installing the Support-Lib
       </a>
     </li>
   
@@ -476,44 +582,8 @@
   
   
     <li class="md-nav__item">
-      <a href="idl.html" class="md-nav__link">
-        Interface Definition Language (IDL)
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="cli-usage.html" class="md-nav__link">
-        Using the Generator
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="generated-code-usage.html" class="md-nav__link">
-        Use Generated Code
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="modularization.html" class="md-nav__link">
-        Modularization and Library Support
+      <a href="../python-support/" class="md-nav__link">
+        Python Support
       </a>
     </li>
   
@@ -534,12 +604,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Developer Guide
+          Developer guide
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="developer-guide.html" class="md-nav__link md-nav__link--active">
-        Developer Guide
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Developer guide
       </a>
       
         
@@ -579,22 +649,23 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#running" class="md-nav__link">
-    Running
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#running-tests" class="md-nav__link">
     Running Tests
   </a>
   
+    <nav class="md-nav" aria-label="Running Tests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#java-objective-c" class="md-nav__link">
+    Java, Objective-C
+  </a>
+  
 </li>
         
           <li class="md-nav__item">
-  <a href="#packaging" class="md-nav__link">
-    Packaging
+  <a href="#ccli" class="md-nav__link">
+    C++/CLI
   </a>
   
 </li>
@@ -603,11 +674,9 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#project-structure" class="md-nav__link">
-    Project Structure
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -629,72 +698,6 @@
   
 </nav>
       
-    </li>
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
-      
-      <label class="md-nav__link" for="__nav_4">
-        Support Lib <code>v1.1.0</code>
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Support Lib <code>v1.1.0</code>" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          Support Lib <code>v1.1.0</code>
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../djinni-support-lib/install.html" class="md-nav__link">
-        Installing the Support-Lib
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../djinni-support-lib/python-support.html" class="md-nav__link">
-        Python Support
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../djinni-support-lib/developer-guide.html" class="md-nav__link">
-        Developer guide
-      </a>
     </li>
   
 
@@ -755,7 +758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../djinni-intellij-plugin/index.html" class="md-nav__link">
+      <a href="../../djinni-intellij-plugin/" class="md-nav__link">
         About IntelliJ IDEA Plugin
       </a>
     </li>
@@ -767,7 +770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../djinni-intellij-plugin/developer-guide.html" class="md-nav__link">
+      <a href="../../djinni-intellij-plugin/developer-guide/" class="md-nav__link">
         Developer Guide
       </a>
     </li>
@@ -806,7 +809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vscode-djinni/index.html" class="md-nav__link">
+      <a href="../../vscode-djinni/" class="md-nav__link">
         About VS Code Extension
       </a>
     </li>
@@ -818,7 +821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vscode-djinni/developer-guide.html" class="md-nav__link">
+      <a href="../../vscode-djinni/developer-guide/" class="md-nav__link">
         Developer Guide
       </a>
     </li>
@@ -866,7 +869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../icon_resources.html" class="md-nav__link">
+      <a href="../../icon_resources/" class="md-nav__link">
         Djinni Logo Resources
       </a>
     </li>
@@ -927,22 +930,23 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#running" class="md-nav__link">
-    Running
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#running-tests" class="md-nav__link">
     Running Tests
   </a>
   
+    <nav class="md-nav" aria-label="Running Tests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#java-objective-c" class="md-nav__link">
+    Java, Objective-C
+  </a>
+  
 </li>
         
           <li class="md-nav__item">
-  <a href="#packaging" class="md-nav__link">
-    Packaging
+  <a href="#ccli" class="md-nav__link">
+    C++/CLI
   </a>
   
 </li>
@@ -951,11 +955,9 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#project-structure" class="md-nav__link">
-    Project Structure
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -987,97 +989,41 @@
   
                 
                 
-                <h1 id="developer-guide">Developer Guide<a class="headerlink" href="#developer-guide" title="Permanent link">&para;</a></h1>
+                <h1 id="developer-guide">Developer guide<a class="headerlink" href="#developer-guide" title="Permanent link">&para;</a></h1>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>This chapter is only interesting if you intend to make changes to the code of djinni generator</p>
+<p>This chapter is only interesting if you intend to make changes to the code of djinni-support-lib</p>
 </div>
 <h2 id="building-from-source">Building from source<a class="headerlink" href="#building-from-source" title="Permanent link">&para;</a></h2>
 <h3 id="build-dependencies">Build dependencies<a class="headerlink" href="#build-dependencies" title="Permanent link">&para;</a></h3>
 <ul>
+<li>Djinni generator (compatible version specified in <code>.tool-versions</code>)</li>
 <li>Java JDK 8 or 11</li>
-<li><a href="https://www.scala-sbt.org/">sbt</a></li>
 </ul>
 <h3 id="building">Building<a class="headerlink" href="#building" title="Permanent link">&para;</a></h3>
-<p>To build once:</p>
-<div class="highlight"><pre><span></span><code>sbt compile
+<p>Make sure you have the <code>JAVA_HOME</code> environment variable properly set, e.g.:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">JAVA_HOME</span><span class="o">=</span><span class="k">$(</span>/usr/libexec/java_home<span class="k">)</span>
 </code></pre></div>
-<p>To automatically re-build on every change, open the sbt shell &amp; prefix <code>compile</code> with <code>~</code></p>
-<div class="highlight"><pre><span></span><code>$ sbt
-sbt:djinni&gt; ~compile
+<p>For an out of source build:</p>
+<div class="highlight"><pre><span></span><code>mkdir -p build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+cmake -DDJINNI_WITH_JNI<span class="o">=</span><span class="m">1</span> -DDJINNI_WITH_OBJC<span class="o">=</span><span class="m">1</span> ..
+cmake --build . --parallel
 </code></pre></div>
-<h3 id="running">Running<a class="headerlink" href="#running" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>sbt <span class="s2">&quot;run</span>
-<span class="s2">    --idl input.djinni</span>
-<span class="s2">    --cpp-out out/cpp</span>
-<span class="s2">    --java-out out/java/src</span>
-<span class="s2">    --jni-out out/java/jni</span>
-<span class="s2">    --objc-out out/objc</span>
-<span class="s2">    --py-out out/python</span>
-<span class="s2">    --pycffi-out out/cffi</span>
-<span class="s2">    --c-wrapper-out out/cwrapper</span>
-<span class="s2">    --cppcli-out out/cppcli&quot;</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>sbt <span class="s2">&quot;run --help&quot;</span>  <span class="c1"># show all options</span>
-</code></pre></div>
-<p><em>It is important to put <code>run</code> and all arguments in <code>"</code>, to be able to pass arguments to the executed jar!</em></p>
+<p>A custom <code>djinni</code> executable can be specified with the CMake option
+<code>DJINNI_EXECUTABLE_PATH</code>.</p>
 <h3 id="running-tests">Running Tests<a class="headerlink" href="#running-tests" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>sbt it:test
+<h4 id="java-objective-c">Java, Objective-C<a class="headerlink" href="#java-objective-c" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> build/test-suite
+ctest
 </code></pre></div>
-<h3 id="packaging">Packaging<a class="headerlink" href="#packaging" title="Permanent link">&para;</a></h3>
-<p>Create a binary like the one that is published on github releases:</p>
-<div class="highlight"><pre><span></span><code>sbt assembly
-</code></pre></div>
-<p>This will generate a standalone, self-executing jar in <code>target/bin</code>.
-You can run the jar like this:</p>
-<div class="highlight"><pre><span></span><code>./djinni --help
-</code></pre></div>
-<p>On Windows the file must be renamed to <code>djinni.bat</code> to make it executable.</p>
-<div class="admonition attention">
-<p class="admonition-title">Attention</p>
-<p>The resulting binary still requires Java to be able to run! <a href="https://github.com/sbt/sbt-assembly#prepending-a-launch-script">Details on how the self-executing jar works</a>.</p>
-</div>
-<h2 id="project-structure">Project Structure<a class="headerlink" href="#project-structure" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>.
-├── CODE_OF_CONDUCT.md (1)
-├── LICENSE (2)
-├── README.md (3)
-├── build.sbt (4)
-├── docs (5)
-│   └── ...
-├── mkdocs.yml (6)
-├── project (7)
-│   └── ...
-└── src (8)
-    ├── it (9)
-    │   ├── resources (10)
-    │   │   ├── expected (11)
-    │   │   │   └── ...
-    │   │   └── result (12)
-    │   │       └── ...
-    │   └── scala 
-    │       └── djinni (13)
-    │           └── ...
-    └── main
-        └── scala
-            └── djinni (14)
-                └── ...
-</code></pre></div>
+<h4 id="ccli">C++/CLI<a class="headerlink" href="#ccli" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Project Code of Conduct.</li>
-<li>Project License (Apache License).</li>
-<li>Readme file.</li>
-<li>Sbt build configuration.</li>
-<li>Documentation folder containing markdown documentation that will be rendered with MkDocs.</li>
-<li><a href="https://www.mkdocs.org/">MkDocs</a> configuration. Will be included by the <a href="https://github.com/cross-language-cpp/cross-language-cpp.github.io">cross-language-cpp.github.io</a> repository and published to <a href="https://djinni.xlcpp.dev/">djinni.xlcpp.dev</a>.</li>
-<li>Sbt configuration.</li>
-<li>Sources folder.</li>
-<li>Integration testing directory.</li>
-<li>Resources for integration tests.</li>
-<li>Folder containing expected outcomes of the djinni generator. These files are matched against the real result of the generator in the integration tests.</li>
-<li>Folder that will be used for generator outputs in the integration tests. Files in here should not be checked in to source control.</li>
-<li>Folder containing the integration testing code.</li>
-<li>djinni-generator source code.</li>
+<li>Generate Visual Studio Solution with <code>-G "Visual Studio 16 2019"</code>:
+    <div class="highlight"><pre><span></span><code>cmake -S . -B build -DDJINNI_WITH_CPPCLI<span class="o">=</span>ON -DDJINNI_STATIC_LIB<span class="o">=</span>ON -G <span class="s2">&quot;Visual Studio 16 2019&quot;</span>
+</code></pre></div></li>
+<li>Open the solution <code>djinni_support_lib.sln</code> in Visual Studio.</li>
+<li>Build <code>DjinniCppCliTest</code>.</li>
+<li>Run the tests: <kbd>Test</kbd> &gt; <kbd>Run All Tests</kbd>.</li>
 </ol>
 <h2 id="preview-documentation">Preview Documentation<a class="headerlink" href="#preview-documentation" title="Permanent link">&para;</a></h2>
 <p>The documentation in <code>docs</code> will be rendered as a part of <a href="https://djinni.xlcpp.dev/">djinni.xlcpp.dev</a>.</p>
@@ -1088,11 +1034,11 @@ pip install -r mkdocs-requirements.txt
 mkdocs serve 
 </code></pre></div>
 <h2 id="release-process">Release process<a class="headerlink" href="#release-process" title="Permanent link">&para;</a></h2>
-<p>To release a new version of the generator, the following steps must be followed:</p>
+<p>To release a new version of the support-lib, the following steps must be followed:</p>
 <ol>
-<li>Create a <a href="https://github.com/cross-language-cpp/djinni-generator/releases/new">new release</a> on Github. Set a tag version following <a href="https://semver.org/">semantic versioning</a> rules (<code>v&lt;MAJOR&gt;.&lt;MINOR&gt;.&lt;PATCH&gt;</code>) and describe what has changed in the new version.</li>
-<li>Wait. The <a href="https://github.com/cross-language-cpp/djinni-generator/blob/main/.github/workflows/release.yaml">Github "release" Action</a> will automatically build the project and upload the resulting binaries to the release.</li>
-<li>Create a PR to the <a href="https://github.com/conan-io/conan-center-index/tree/master/recipes/djinni-generator">conan-center-index</a> to publish the new version to <a href="https://conan.io/center/djinni-generator">Conan Center</a>.</li>
+<li>Create a <a href="https://github.com/cross-language-cpp/djinni-support-lib/releases/new">new release</a> on Github like <a href="https://docs.github.com/en/github/administering-a-repository/managing-releases-in-a-repository">described here</a>.
+   Set a tag version following <a href="https://semver.org/">semantic versioning</a> rules (<code>v&lt;MAJOR&gt;.&lt;MINOR&gt;.&lt;PATCH&gt;</code>) and describe what has changed in the new version.</li>
+<li>Create a PR to the <a href="https://github.com/conan-io/conan-center-index/tree/master/recipes/djinni-support-lib">conan-center-index</a> to publish the new version to <a href="https://conan.io/center/djinni-support-lib">Conan Center</a>.</li>
 </ol>
                 
                   
@@ -1102,7 +1048,7 @@ mkdocs serve
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 2, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 7, 2021</span>
       
     
   </small>
@@ -1128,7 +1074,7 @@ mkdocs serve
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="modularization.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Modularization and Library Support" rel="prev">
+        <a href="../python-support/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Python Support" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1137,20 +1083,20 @@ mkdocs serve
               <span class="md-footer__direction">
                 Previous
               </span>
-              Modularization and Library Support
+              Python Support
             </div>
           </div>
         </a>
       
       
         
-        <a href="../djinni-support-lib/install.html" class="md-footer__link md-footer__link--next" aria-label="Next: Installing the Support-Lib" rel="next">
+        <a href="../../djinni-intellij-plugin/" class="md-footer__link md-footer__link--next" aria-label="Next: About IntelliJ IDEA Plugin" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Installing the Support-Lib
+              About IntelliJ IDEA Plugin
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1248,10 +1194,10 @@ mkdocs serve
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.53c85856.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.82b56eb2.min.js"></script>
+      <script src="../../assets/javascripts/bundle.716f8af4.min.js"></script>
       
     
   </body>
