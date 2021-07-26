@@ -119,6 +119,15 @@
       user-select: none;
     }
 
+    #button-getting-started {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+
+    .secondary-landingpage-button {
+      min-width: 192px;
+    }
+
     @media screen and (max-width: 800px) {
       .hero-bottom-image {
         margin-left: -600px;
@@ -138,27 +147,38 @@
           <a
             href="{{ page.next_page.url | url }}"
             title="{{ page.next_page.title | e }}"
+            id="button-getting-started"
             class="md-button md-button--primary"
           >
-            Getting Started
+            Get Started
           </a>
+          <br>
           <a
             href="https://github.com/cross-language-cpp"
             title="Contribute on Github"
-            class="md-button"
+            class="md-button secondary-landingpage-button"
             target="blank"
           >
           <img class="twemoji" src="assets/github.svg"/>&nbsp;&nbsp;
           Contribute
           </a>
           <a
+            href="https://github.com/cross-language-cpp/djinni-generator/discussions"
+            title="Discuss on Github"
+            class="md-button secondary-landingpage-button"
+            target="blank"
+          >
+          <img class="twemoji" src="assets/github-discussion.svg"/>&nbsp;&nbsp;
+          Discuss
+          </a>
+          <a
             href="https://mobilecpp.slack.com/"
             title="Chat on Slack"
-            class="md-button"
+            class="md-button secondary-landingpage-button"
             target="blank"
           >
           <img class="twemoji" src="assets/slack.svg"/>&nbsp;&nbsp;
-          Slack
+          Chat
           </a>
         </div>
       </div>

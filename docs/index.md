@@ -39,7 +39,8 @@ Djinni comes with support for native app development on every popular OS:
 Djinni was originally developed by Dropbox in 2014.<br>
 Since June 2020 it is independently maintained by a small group of individuals from all over the globe.
 
-Get in contact with us on the [Mobile C++ Slack](https://mobilecpp.slack.com/)! :blush:
+Get in contact with us on the [Mobile C++ Slack](https://mobilecpp.slack.com/)
+or share your ideas with us in our [Github Discussion](https://github.com/cross-language-cpp/djinni-generator/discussions). :blush:
 
 <br>
 <br>
