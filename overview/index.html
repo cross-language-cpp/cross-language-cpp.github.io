@@ -75,12 +75,15 @@
   
     
   
+  
+  <script defer data-domain="djinni.xlcpp.dev" src="https://plausible.io/js/plausible.js"></script>
 
   <!-- Open graph meta tags -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Djinni - Overview" />
   <meta property="og:description" content="Djinni is a tool for generating cross-language type declarations and interface bindings.  It's designed to connect C++ with either Java, Objective-C, Python or C#." />
   <meta property="og:url" content="None" />
+
 
 
   </head>
@@ -930,17 +933,17 @@ Djinni automatically generates this gluecode from an <a href="../djinni-generato
 }
 </code></pre></div></p>
 <div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Implemented in C++</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&quot;djinni/generated/HelloWorld.hpp&quot;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;djinni/generated/HelloWorld.hpp&quot;</span><span class="cp"></span>
 
-<span class="k">class</span> <span class="nc">HelloWorldImpl</span> <span class="o">:</span> <span class="k">public</span> <span class="n">HelloWorld</span> <span class="p">{</span>
-<span class="k">public</span><span class="o">:</span>
-    <span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">HelloWorld</span><span class="o">&gt;</span> <span class="n">create</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">HelloWorldImpl</span><span class="o">&gt;</span><span class="p">();</span>
-    <span class="p">}</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">fromCpp</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="s">&quot;Hello From C++!&quot;</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+<span class="k">class</span> <span class="nc">HelloWorldImpl</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">HelloWorld</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">HelloWorld</span><span class="o">&gt;</span><span class="w"> </span><span class="n">create</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">HelloWorldImpl</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">fromCpp</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Hello From C++!&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Called from Java</label><div class="tabbed-content">
@@ -950,8 +953,8 @@ Djinni automatically generates this gluecode from an <a href="../djinni-generato
 </code></pre></div>
 </div>
 <input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">or Objective-C</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="n">HelloWorld</span> <span class="o">*</span><span class="n">helloWorld</span> <span class="o">=</span> <span class="p">[</span><span class="n">HelloWorld</span> <span class="n">create</span><span class="p">];</span>
-<span class="n">NSLog</span><span class="p">([</span><span class="n">helloWorld</span> <span class="n">fromCpp</span><span class="p">]);</span>
+<div class="highlight"><pre><span></span><code><span class="n">HelloWorld</span><span class="w"> </span><span class="o">*</span><span class="n">helloWorld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">HelloWorld</span><span class="w"> </span><span class="n">create</span><span class="p">];</span><span class="w"></span>
+<span class="n">NSLog</span><span class="p">([</span><span class="n">helloWorld</span><span class="w"> </span><span class="n">fromCpp</span><span class="p">]);</span><span class="w"></span>
 <span class="c1">// Hello from C++!</span>
 </code></pre></div>
 </div>
@@ -972,19 +975,19 @@ Djinni automatically generates this gluecode from an <a href="../djinni-generato
 </code></pre></div>
 </div>
 <input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">or Objective-C</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="k">@interface</span> <span class="nc">HelloWorldObjC</span> : <span class="bp">NSObject</span> <span class="o">&lt;</span><span class="n">HelloWorld</span><span class="o">&gt;</span>
-<span class="o">-</span> <span class="p">(</span><span class="bp">NSString</span><span class="p">)</span><span class="n">fromLanguage</span><span class="p">;</span> 
-<span class="k">@end</span>
+<div class="highlight"><pre><span></span><code><span class="k">@interface</span> <span class="nc">HelloWorldObjC</span> : <span class="bp">NSObject</span><span class="w"> </span><span class="o">&lt;</span><span class="n">HelloWorld</span><span class="o">&gt;</span><span class="w"></span>
+<span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="bp">NSString</span><span class="p">)</span><span class="n">fromLanguage</span><span class="p">;</span><span class="w"> </span>
+<span class="k">@end</span><span class="w"></span>
 
-<span class="k">@implementation</span> <span class="nc">HelloWorldObjC</span>
-<span class="p">-</span> <span class="p">(</span><span class="bp">NSString</span><span class="p">)</span><span class="nf">fromLanguage</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="s">&quot;from Objective-C&quot;</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="k">@end</span>
+<span class="k">@implementation</span> <span class="nc">HelloWorldObjC</span><span class="w"></span>
+<span class="p">-</span> <span class="p">(</span><span class="bp">NSString</span><span class="p">)</span><span class="nf">fromLanguage</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;from Objective-C&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="k">@end</span><span class="w"></span>
 </code></pre></div>
 </div>
 <input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><label for="__tabbed_2_3">Called from C++</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">helloWorldInstance</span><span class="o">-&gt;</span><span class="n">fromLanguage</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">helloWorldInstance</span><span class="o">-&gt;</span><span class="n">fromLanguage</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 </div>
 </div>
