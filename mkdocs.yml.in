@@ -1,4 +1,5 @@
 site_name: Djinni
+site_url: https://djinni.xlcpp.dev
 site_description: >-
   Djinni is a tool for generating cross-language type declarations and interface bindings. 
   It's designed to connect C++ with either Java, Objective-C, Python or C#.
