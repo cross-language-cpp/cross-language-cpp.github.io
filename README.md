@@ -60,3 +60,7 @@ A few non-standard CSS-customizations have been made to the theme:
 
 - a custom color theme has been created
 - the version of each submodule is injected into `mkdocs.yml` with `./configure.sh`. The version is displayed as a small tag in the sidebar navigation.
+
+## Analytics
+
+Page analytics data is public: [plausible.io/djinni.xlcpp.dev](https://plausible.io/djinni.xlcpp.dev)
