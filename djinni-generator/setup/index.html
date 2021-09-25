@@ -258,7 +258,7 @@
   
     <li class="md-tabs__item">
       <a href="./" class="md-tabs__link md-tabs__link--active">
-        Generator <code>v1.1.0</code>
+        Generator <code>v1.2.0</code>
       </a>
     </li>
   
@@ -458,13 +458,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       <label class="md-nav__link" for="__nav_3">
-        Generator <code>v1.1.0</code>
+        Generator <code>v1.2.0</code>
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Generator <code>v1.1.0</code>" data-md-level="1">
+      <nav class="md-nav" aria-label="Generator <code>v1.2.0</code>" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Generator <code>v1.1.0</code>
+          Generator <code>v1.2.0</code>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -531,6 +531,13 @@
           <li class="md-nav__item">
   <a href="#install-with-asdf" class="md-nav__link">
     Install with asdf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos-homebrew" class="md-nav__link">
+    MacOS homebrew
   </a>
   
 </li>
@@ -940,6 +947,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#macos-homebrew" class="md-nav__link">
+    MacOS homebrew
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -991,13 +1005,21 @@
 <div class="highlight"><pre><span></span><code>asdf plugin add djinni
 asdf install djinni latest
 </code></pre></div>
+<h4 id="macos-homebrew">MacOS homebrew<a class="headerlink" href="#macos-homebrew" title="Permanent link">&para;</a></h4>
+<p>We have a brew tap!</p>
+<p>Add the tap:</p>
+<div class="highlight"><pre><span></span><code>brew tap cross-language-cpp/brew https://github.com/cross-language-cpp/brew.git
+</code></pre></div>
+<p>Install the djinni generator:</p>
+<div class="highlight"><pre><span></span><code>brew install djinni
+</code></pre></div>
 <h3 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h3>
 <p><a href="https://github.com/cross-language-cpp/djinni-generator/releases/latest/download/djinni.bat"><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/cross-language-cpp/djinni-generator?label=Download&amp;logo=windows&amp;style=for-the-badge" /></a></p>
 <h3 id="conan">Conan<a class="headerlink" href="#conan" title="Permanent link">&para;</a></h3>
 <p>The generator is available at <a href="https://conan.io/center/djinni-generator">conan-center</a> for Windows, Linux &amp; macOS.</p>
 <p>Add the generator as a build requirement in <code>conanfile.txt</code>:</p>
 <div class="highlight"><pre><span></span><code>[build_requires]
-djinni-generator/1.1.0
+djinni-generator/1.2.0
 </code></pre></div>
                 
                   
@@ -1007,7 +1029,7 @@ djinni-generator/1.1.0
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 18, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 25, 2021</span>
       
     
   </small>
