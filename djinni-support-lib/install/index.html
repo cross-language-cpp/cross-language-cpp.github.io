@@ -274,7 +274,7 @@
   
     <li class="md-tabs__item">
       <a href="./" class="md-tabs__link md-tabs__link--active">
-        Support Lib <code>v1.1.0</code>
+        Support Lib <code>v1.2.0</code>
       </a>
     </li>
   
@@ -560,13 +560,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       <label class="md-nav__link" for="__nav_4">
-        Support Lib <code>v1.1.0</code>
+        Support Lib <code>v1.2.0</code>
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Support Lib <code>v1.1.0</code>" data-md-level="1">
+      <nav class="md-nav" aria-label="Support Lib <code>v1.2.0</code>" data-md-level="1">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
-          Support Lib <code>v1.1.0</code>
+          Support Lib <code>v1.2.0</code>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1023,7 +1023,7 @@
 
 <span class="nb">FetchContent_Declare</span><span class="p">(</span><span class="s">djinni-support-lib</span>
   <span class="s">GIT_REPOSITORY</span> <span class="s">https://github.com/cross-language-cpp/djinni-support-lib.git</span>
-  <span class="s">GIT_TAG</span> <span class="s">v1.0.0</span><span class="p">)</span>
+  <span class="s">GIT_TAG</span> <span class="s">v1.2.0</span><span class="p">)</span>
 <span class="c"># set options for djinni-support-lib</span>
 <span class="nb">set</span><span class="p">(</span><span class="s">DJINNI_BUILD_TESTING</span> <span class="s">OFF</span> <span class="s">CACHE</span> <span class="s">INTERNAL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
 <span class="nb">if</span><span class="p">(</span><span class="s">ANDROID</span><span class="p">)</span>
@@ -1043,7 +1043,7 @@
 <h3 id="conan">Conan<a class="headerlink" href="#conan" title="Permanent link">&para;</a></h3>
 <p>The library is available at <a href="https://conan.io/center/djinni-support-lib">conan-center</a>:</p>
 <div class="highlight"><pre><span></span><code>[requires]
-djinni-support-lib/1.0.0
+djinni-support-lib/1.2.0
 </code></pre></div>
 <h4 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h4>
 <table>
@@ -1067,8 +1067,28 @@ djinni-support-lib/1.0.0
 </tr>
 <tr>
 <td><code>target</code></td>
-<td><code>jni</code>, <code>objc</code>, <code>python</code>, <code>cppcli</code>, <code>auto</code></td>
-<td>The library has different targets for usage with Java, Objective-C, Python or C++/CLI. By default (<code>auto</code>) the target is determined automatically depending on the target OS (<code>iOS</code> → <code>objc</code>, <code>Android</code> → <code>jni</code>, <code>Windows</code> → <code>cppcli</code>). Set this explicitly if you want to build for <code>macOS</code>/<code>Windows</code>/<code>Linux</code>, because on these platforms multiple targets may be a valid option!</td>
+<td><code>deprecated</code></td>
+<td><em>Do not use the target option anymore! It exists just to stay compatible to old versions of the recipe and will be removed.</em></td>
+</tr>
+<tr>
+<td><code>with_jni</code></td>
+<td><code>True</code>, <code>False</code>, <code>auto</code></td>
+<td>Default: <code>auto</code>. Wether to build JNI bindings or not. <code>auto</code> means <code>True</code> for Android builds, <code>False</code> for other platforms.</td>
+</tr>
+<tr>
+<td><code>with_objc</code></td>
+<td><code>True</code>, <code>False</code>, <code>auto</code></td>
+<td>Default: <code>auto</code>. Wether to build Objective-C bindings or not. <code>auto</code> means <code>True</code> for any Darwin platform (iOS, macOS, ...), <code>False</code> false other platforms.</td>
+</tr>
+<tr>
+<td><code>with_python</code></td>
+<td><code>True</code>, <code>False</code>, <code>auto</code></td>
+<td>Default: <code>auto</code>. Wether to build Python bindings or not. <code>auto</code> means <code>False</code>.</td>
+</tr>
+<tr>
+<td><code>with_cppcli</code></td>
+<td><code>True</code>, <code>False</code>, <code>auto</code></td>
+<td>Default: <code>auto</code>. Wether to build C++/CLI bindings or not. <code>auto</code> means <code>True</code> on Windows, <code>False</code> otherwise.</td>
 </tr>
 <tr>
 <td><code>system_java</code></td>
@@ -1085,7 +1105,7 @@ djinni-support-lib/1.0.0
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 8, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 25, 2021</span>
       
     
   </small>
