@@ -39,4 +39,4 @@ While this documentation aims to provide all the information you need to get sta
 The following projects are trying to make the integration of Djinni into the software development process easier:
 
 - [**Ezored**](https://ezored.github.io): A C++ multi-platform toolkit template that builds upon Djinni. It targets the platforms Linux, macOS, Windows, Android & iOS.
-- [**Djinni Library Template**](https://jothepro.github.io/djinni-library-template/cpp/): A template for a Djinni library that comes with a CLI to build artifacts for each supported platform (XCFramework for iOS,macOS, AAR for Android, NuGet for .Net Core Windows, Conan for Linux).
+- [**Djinni Library Template**](https://jothepro.github.io/djinni-library-template/cpp/): A template for a Djinni library that comes with a CLI to build artifacts for each supported platform (XCFramework for iOS/macOS, AAR for Android, NuGet for .Net Core Windows, Conan for Linux).
