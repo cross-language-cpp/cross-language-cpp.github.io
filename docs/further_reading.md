@@ -7,9 +7,7 @@ There is a number of other forks of the original [dropbox/djinni](https://github
 - [Snapchat/djinni](https://github.com/Snapchat/djinni): 
     - about 5-10x faster string passing between Java and C++ (depending on string size)
     - Javascript support via WASM
-    - `array<>` type support
-    - `outcome<>` type support
-    - Protobuf type support 
+    - `array<>`, `outcome<>` & Protobuf type support
     - And a lot more! ([Read more...](https://eng.snap.com/improving_djinni))
 - [hiennguyenle/finn](https://github.com/hiennguyenle/finn) (Not maintained any more): 
     - Support for `@deprecated` directive in the Djinni IDL
@@ -38,7 +36,7 @@ A curated list of articles and videos about Djinni:
 
 While this documentation aims to provide all the information you need to get started with Djinni, there is still a long way to really using it in a real world development setup.
 
-The following projects are helping to integrate Djinni into your software development process:
+The following projects are trying to make the integration of Djinni into the software development process easier:
 
 - [**Ezored**](https://ezored.github.io): A C++ multi-platform toolkit template that builds upon Djinni. It targets the platforms Linux, macOS, Windows, Android & iOS.
 - [**Djinni Library Template**](https://jothepro.github.io/djinni-library-template/cpp/): A template for a Djinni library that comes with a CLI to build artifacts for each supported platform (XCFramework for iOS,macOS, AAR for Android, NuGet for .Net Core Windows, Conan for Linux).
