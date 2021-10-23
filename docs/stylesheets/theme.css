@@ -7,7 +7,15 @@
 
 .md-search__input {
   background-color: rgba(255,255,255,0.15);
-  border-radius: 12rem;
+  border-radius: 0.9rem;
+}
+
+[data-md-toggle=search]:checked~.md-header .md-search__form, [data-md-toggle=search]:checked~.md-header .md-search__input {
+  border-radius: 0.4rem 0.4rem 0 0;
+}
+
+.md-search__output {
+  border-radius: 0 0 0.4rem 0.4rem;
 }
 
 .md-search__form {
@@ -44,6 +52,11 @@
 
 .md-content hr {
   border-bottom: .05rem solid var(--md-default-fg-color--lighter);
+}
+
+.md-nav__link {
+  justify-content: flex-start;
+  gap: 5px;
 }
 
 /* custom styles for social.html */
