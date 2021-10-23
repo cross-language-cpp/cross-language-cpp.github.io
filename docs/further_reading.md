@@ -9,7 +9,7 @@ There is a number of other forks of the original [dropbox/djinni](https://github
     - Javascript support via WASM
     - `array<>`, `outcome<>` & Protobuf type support
     - And a lot more! ([Read more...](https://eng.snap.com/improving_djinni))
-- [hiennguyenle/finn](https://github.com/hiennguyenle/finn) (Not maintained any more): 
+- [hiennguyenle/finn](https://github.com/hiennguyenle/finn) (Not maintained anymore): 
     - Support for `@deprecated` directive in the Djinni IDL
     - Extending records to inherit properties from a base record
     - A `Json` Datatype
