@@ -59,6 +59,10 @@
   gap: 5px;
 }
 
+.md-header[data-md-state=shadow] {
+  box-shadow: 0 -1rem 0.4rem 1rem rgba(0,0,0,0.25);
+}
+
 /* custom styles for social.html */
 
 .md-footer-social {
