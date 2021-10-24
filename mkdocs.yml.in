@@ -63,6 +63,7 @@ nav:
   - Getting Started: 
     - overview.md
     - setup.md
+    - example.md
     - contributing.md
   - Generator <code>${VERSION_djinni_generator}</code>: '!include ./djinni-generator/mkdocs.yml'
   - Support Lib <code>${VERSION_djinni_support_lib}</code>: '!include ./djinni-support-lib/mkdocs.yml'
