@@ -262,7 +262,7 @@
   
     <li class="md-tabs__item">
       <a href="../setup/" class="md-tabs__link md-tabs__link--active">
-        Generator <code>v1.2.0</code>
+        Generator <code>v1.3.0</code>
       </a>
     </li>
   
@@ -478,14 +478,14 @@
       
       
         <label class="md-nav__link" for="__nav_3">
-          Generator <code>v1.2.0</code>
+          Generator <code>v1.3.0</code>
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Generator <code>v1.2.0</code>" data-md-level="1">
+      <nav class="md-nav" aria-label="Generator <code>v1.3.0</code>" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Generator <code>v1.2.0</code>
+          Generator <code>v1.3.0</code>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -636,6 +636,13 @@
           <li class="md-nav__item">
   <a href="#packaging" class="md-nav__link">
     Packaging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-formatting" class="md-nav__link">
+    Code Formatting
   </a>
   
 </li>
@@ -1043,6 +1050,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#code-formatting" class="md-nav__link">
+    Code Formatting
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1118,8 +1132,9 @@ sbt:djinni&gt; ~compile
 </code></pre></div>
 <p><em>It is important to put <code>run</code> and all arguments in <code>"</code>, to be able to pass arguments to the executed jar!</em></p>
 <h3 id="running-tests">Running Tests<a class="headerlink" href="#running-tests" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>sbt it:test
+<div class="highlight"><pre><span></span><code>sbt IntegrationTest/test
 </code></pre></div>
+<p>For testing, the djinni target needs to exist, so run <code>sbt assembly</code> before. This is also required when you do development on the generator. Always run <code>sbt assembly</code> before doing integration testing!</p>
 <h3 id="packaging">Packaging<a class="headerlink" href="#packaging" title="Permanent link">&para;</a></h3>
 <p>Create a binary like the one that is published on github releases:</p>
 <div class="highlight"><pre><span></span><code>sbt assembly
@@ -1133,6 +1148,13 @@ You can run the jar like this:</p>
 <p class="admonition-title">Attention</p>
 <p>The resulting binary still requires Java to be able to run! <a href="https://github.com/sbt/sbt-assembly#prepending-a-launch-script">Details on how the self-executing jar works</a>.</p>
 </div>
+<h3 id="code-formatting">Code Formatting<a class="headerlink" href="#code-formatting" title="Permanent link">&para;</a></h3>
+<p>All <strong>scala</strong>- and <strong>sbt</strong>-files need to be formatted with the <a href="https://scalameta.org/scalafmt/">scala-fmt</a> plugin.</p>
+<p>To format all files, execute <code>sbt scalafmtAll</code>.</p>
+<p>The version of the scala format tool can be changed in the file <code>.scalafmt.conf</code> and the version of the scala plugin can be changed in the file <code>project/plugins.sbt</code>.</p>
+<p>To change the code formatter configurations, put all configuration options inside <code>.scalafmt.conf</code>. See all configuration options <a href="https://scalameta.org/scalafmt/docs/configuration.html">here</a>.</p>
+<p>You can check if the formatter is working with the command <code>sbt scalafmtCheck</code>.</p>
+<p>All available tasks of the code formatter plugin can be checked <a href="https://scalameta.org/scalafmt/docs/installation.html#task-keys">here</a>.</p>
 <h2 id="project-structure">Project Structure<a class="headerlink" href="#project-structure" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>.
 ├── CODE_OF_CONDUCT.md (1)
@@ -1151,7 +1173,7 @@ You can run the jar like this:</p>
     │   │   │   └── ...
     │   │   └── result (12)
     │   │       └── ...
-    │   └── scala 
+    │   └── scala
     │       └── djinni (13)
     │           └── ...
     └── main
@@ -1181,7 +1203,7 @@ You can run the jar like this:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># install required dependencies</span>
 pip install -r mkdocs-requirements.txt
 <span class="c1"># render a live preview of the docs under http://127.0.0.1:8000</span>
-mkdocs serve 
+mkdocs serve
 </code></pre></div>
 <h2 id="release-process">Release process<a class="headerlink" href="#release-process" title="Permanent link">&para;</a></h2>
 <p>To release a new version of the generator, the following steps must be followed:</p>
@@ -1189,6 +1211,7 @@ mkdocs serve
 <li>Create a <a href="https://github.com/cross-language-cpp/djinni-generator/releases/new">new release</a> on Github. Set a tag version following <a href="https://semver.org/">semantic versioning</a> rules (<code>v&lt;MAJOR&gt;.&lt;MINOR&gt;.&lt;PATCH&gt;</code>) and describe what has changed in the new version.</li>
 <li>Wait. The <a href="https://github.com/cross-language-cpp/djinni-generator/blob/main/.github/workflows/release.yaml">Github "release" Action</a> will automatically build the project and upload the resulting binaries to the release.</li>
 <li>Create a PR to the <a href="https://github.com/conan-io/conan-center-index/tree/master/recipes/djinni-generator">conan-center-index</a> to publish the new version to <a href="https://conan.io/center/djinni-generator">Conan Center</a>.</li>
+<li>Update the <a href="https://github.com/cross-language-cpp/brew">homebrew tap</a> to make it point to the newest version <a href="https://github.com/cross-language-cpp/brew/blob/main/Casks/djinni.rb#L2">here</a>.</li>
 </ol>
                 
                   
@@ -1198,7 +1221,7 @@ mkdocs serve
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 2, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2021</span>
       
     
   </small>
