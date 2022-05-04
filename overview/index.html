@@ -262,7 +262,7 @@
   
     <li class="md-tabs__item">
       <a href="../djinni-generator/setup/" class="md-tabs__link">
-        Generator <code>v1.3.0</code>
+        Generator <code>v1.3.1</code>
       </a>
     </li>
   
@@ -278,7 +278,7 @@
   
     <li class="md-tabs__item">
       <a href="../djinni-support-lib/install/" class="md-tabs__link">
-        Support Lib <code>v1.2.0</code>
+        Support Lib <code>v1.2.1</code>
       </a>
     </li>
   
@@ -539,14 +539,14 @@
       
       
         <label class="md-nav__link" for="__nav_3">
-          Generator <code>v1.3.0</code>
+          Generator <code>v1.3.1</code>
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Generator <code>v1.3.0</code>" data-md-level="1">
+      <nav class="md-nav" aria-label="Generator <code>v1.3.1</code>" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Generator <code>v1.3.0</code>
+          Generator <code>v1.3.1</code>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -657,14 +657,14 @@
       
       
         <label class="md-nav__link" for="__nav_4">
-          Support Lib <code>v1.2.0</code>
+          Support Lib <code>v1.2.1</code>
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Support Lib <code>v1.2.0</code>" data-md-level="1">
+      <nav class="md-nav" aria-label="Support Lib <code>v1.2.1</code>" data-md-level="1">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
-          Support Lib <code>v1.2.0</code>
+          Support Lib <code>v1.2.1</code>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -820,14 +820,14 @@
       
       
         <label class="md-nav__link" for="__nav_5_2">
-          VS Code Extension <code>v1.1.0</code>
+          VS Code Extension <code>v1.2.0</code>
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="VS Code Extension <code>v1.1.0</code>" data-md-level="2">
+      <nav class="md-nav" aria-label="VS Code Extension <code>v1.2.0</code>" data-md-level="2">
         <label class="md-nav__title" for="__nav_5_2">
           <span class="md-nav__icon md-icon"></span>
-          VS Code Extension <code>v1.1.0</code>
+          VS Code Extension <code>v1.2.0</code>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1026,7 +1026,7 @@ Djinni automatically generates this gluecode from an <a href="../djinni-generato
 <div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Implemented in C++</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;djinni/generated/HelloWorld.hpp&quot;</span><span class="cp"></span>
 
-<span class="k">class</span> <span class="nc">HelloWorldImpl</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">HelloWorld</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="k">class</span><span class="w"> </span><span class="nc">HelloWorldImpl</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">HelloWorld</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="k">public</span><span class="o">:</span><span class="w"></span>
 <span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">HelloWorld</span><span class="o">&gt;</span><span class="w"> </span><span class="n">create</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">HelloWorldImpl</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
@@ -1038,9 +1038,9 @@ Djinni automatically generates this gluecode from an <a href="../djinni-generato
 </code></pre></div>
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Called from Java</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="n">HelloWorld</span> <span class="n">helloWorld</span> <span class="o">=</span> <span class="n">HelloWorld</span><span class="p">.</span><span class="na">create</span><span class="p">();</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">helloWorld</span><span class="p">.</span><span class="na">fromCpp</span><span class="p">());</span>
-<span class="c1">// Hello from C++!</span>
+<div class="highlight"><pre><span></span><code><span class="n">HelloWorld</span><span class="w"> </span><span class="n">helloWorld</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HelloWorld</span><span class="p">.</span><span class="na">create</span><span class="p">();</span><span class="w"></span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">helloWorld</span><span class="p">.</span><span class="na">fromCpp</span><span class="p">());</span><span class="w"></span>
+<span class="c1">// Hello from C++!</span><span class="w"></span>
 </code></pre></div>
 </div>
 <input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">or Objective-C</label><div class="tabbed-content">
@@ -1059,12 +1059,12 @@ Djinni automatically generates this gluecode from an <a href="../djinni-generato
 }
 </code></pre></div>
 <div class="tabbed-set" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Implemented in Java</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloWorldJava</span> <span class="kd">extends</span> <span class="n">HelloWorld</span> <span class="p">{</span>
-    <span class="nd">@Override</span>
-    <span class="n">String</span> <span class="nf">fromLanguage</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="s">&quot;from Java&quot;</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span> 
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HelloWorldJava</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">HelloWorld</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="nf">fromLanguage</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;from Java&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span>
 </code></pre></div>
 </div>
 <input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">or Objective-C</label><div class="tabbed-content">

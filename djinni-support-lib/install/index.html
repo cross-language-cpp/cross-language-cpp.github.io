@@ -260,7 +260,7 @@
   
     <li class="md-tabs__item">
       <a href="../../djinni-generator/setup/" class="md-tabs__link">
-        Generator <code>v1.3.0</code>
+        Generator <code>v1.3.1</code>
       </a>
     </li>
   
@@ -278,7 +278,7 @@
   
     <li class="md-tabs__item">
       <a href="./" class="md-tabs__link md-tabs__link--active">
-        Support Lib <code>v1.2.0</code>
+        Support Lib <code>v1.2.1</code>
       </a>
     </li>
   
@@ -476,14 +476,14 @@
       
       
         <label class="md-nav__link" for="__nav_3">
-          Generator <code>v1.3.0</code>
+          Generator <code>v1.3.1</code>
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Generator <code>v1.3.0</code>" data-md-level="1">
+      <nav class="md-nav" aria-label="Generator <code>v1.3.1</code>" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Generator <code>v1.3.0</code>
+          Generator <code>v1.3.1</code>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -596,14 +596,14 @@
       
       
         <label class="md-nav__link" for="__nav_4">
-          Support Lib <code>v1.2.0</code>
+          Support Lib <code>v1.2.1</code>
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Support Lib <code>v1.2.0</code>" data-md-level="1">
+      <nav class="md-nav" aria-label="Support Lib <code>v1.2.1</code>" data-md-level="1">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
-          Support Lib <code>v1.2.0</code>
+          Support Lib <code>v1.2.1</code>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -852,14 +852,14 @@
       
       
         <label class="md-nav__link" for="__nav_5_2">
-          VS Code Extension <code>v1.1.0</code>
+          VS Code Extension <code>v1.2.0</code>
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="VS Code Extension <code>v1.1.0</code>" data-md-level="2">
+      <nav class="md-nav" aria-label="VS Code Extension <code>v1.2.0</code>" data-md-level="2">
         <label class="md-nav__title" for="__nav_5_2">
           <span class="md-nav__icon md-icon"></span>
-          VS Code Extension <code>v1.1.0</code>
+          VS Code Extension <code>v1.2.0</code>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1072,47 +1072,47 @@
 <code>add_subdirectory()</code> in your <code>CMakeLists.txt</code> file:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">project</span><span class="p">(</span><span class="s">foo</span><span class="p">)</span>
 <span class="c"># disable tests</span>
-<span class="nb">set</span><span class="p">(</span><span class="s">DJINNI_BUILD_TESTING</span> <span class="s">OFF</span> <span class="s">CACHE</span> <span class="s">INTERNAL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">DJINNI_BUILD_TESTING</span><span class="w"> </span><span class="s">OFF</span><span class="w"> </span><span class="s">CACHE</span><span class="w"> </span><span class="s">INTERNAL</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 <span class="c"># choose for which target language the djinni-support-lib should be compiled.</span>
 <span class="c"># At least one of the following options must be set to true:</span>
 <span class="c"># DJINNI_WITH_JNI, DJINNI_WITH_OBJC, DJINNI_WITH_PYTHON, DJINNI_WITH_CPPCLI</span>
 <span class="c"># In this example the target language depends on the target system:</span>
 <span class="nb">if</span><span class="p">(</span><span class="s">ANDROID</span><span class="p">)</span>
-    <span class="nb">set</span><span class="p">(</span><span class="s">DJINNI_WITH_JNI</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">INTERNAL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
-<span class="nb">elseif</span><span class="p">(</span><span class="s">CMAKE_SYSTEM_NAME</span> <span class="s">IN_LIST</span> <span class="s2">&quot;Darwin;iOS&quot;</span><span class="p">)</span>
-    <span class="nb">set</span><span class="p">(</span><span class="s">DJINNI_WITH_OBJC</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">INTERNAL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
-<span class="nb">elseif</span><span class="p">(</span><span class="s">CMAKE_SYSTEM_NAME</span> <span class="s">STREQUAL</span> <span class="s2">&quot;Windows&quot;</span><span class="p">)</span>
-    <span class="nb">set</span><span class="p">(</span><span class="s">DJINNI_WITH_CPPCLI</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">INTERNAL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">set</span><span class="p">(</span><span class="s">DJINNI_WITH_JNI</span><span class="w"> </span><span class="s">ON</span><span class="w"> </span><span class="s">CACHE</span><span class="w"> </span><span class="s">INTERNAL</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">elseif</span><span class="p">(</span><span class="s">CMAKE_SYSTEM_NAME</span><span class="w"> </span><span class="s">IN_LIST</span><span class="w"> </span><span class="s2">&quot;Darwin;iOS&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">set</span><span class="p">(</span><span class="s">DJINNI_WITH_OBJC</span><span class="w"> </span><span class="s">ON</span><span class="w"> </span><span class="s">CACHE</span><span class="w"> </span><span class="s">INTERNAL</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">elseif</span><span class="p">(</span><span class="s">CMAKE_SYSTEM_NAME</span><span class="w"> </span><span class="s">STREQUAL</span><span class="w"> </span><span class="s2">&quot;Windows&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">set</span><span class="p">(</span><span class="s">DJINNI_WITH_CPPCLI</span><span class="w"> </span><span class="s">ON</span><span class="w"> </span><span class="s">CACHE</span><span class="w"> </span><span class="s">INTERNAL</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 <span class="nb">endif</span><span class="p">()</span>
 <span class="nb">add_subdirectory</span><span class="p">(</span><span class="s">thirdparty/djinni-support-lib</span><span class="p">)</span>
 
-<span class="nb">add_library</span><span class="p">(</span><span class="s">foo</span> <span class="s">...</span><span class="p">)</span>
+<span class="nb">add_library</span><span class="p">(</span><span class="s">foo</span><span class="w"> </span><span class="s">...</span><span class="p">)</span>
 
-<span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">foo</span> <span class="s">PRIVATE</span> <span class="s">djinni-support-lib::djinni-support-lib</span><span class="p">)</span>
+<span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">foo</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="s">djinni-support-lib::djinni-support-lib</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="embedded-fetchcontent">Embedded (FetchContent)<a class="headerlink" href="#embedded-fetchcontent" title="Permanent link">&para;</a></h3>
 <p><a href="https://cmake.org/cmake/help/v3.14/module/FetchContent.html">FetchContent</a> can be used to automatically download the repository as a dependency at configuration time.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span> <span class="s">3.14</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span><span class="w"> </span><span class="s">3.14</span><span class="p">)</span>
 <span class="nb">include</span><span class="p">(</span><span class="s">FetchContent</span><span class="p">)</span>
 <span class="nb">project</span><span class="p">(</span><span class="s">foo</span><span class="p">)</span>
 
 <span class="nb">FetchContent_Declare</span><span class="p">(</span><span class="s">djinni-support-lib</span>
-  <span class="s">GIT_REPOSITORY</span> <span class="s">https://github.com/cross-language-cpp/djinni-support-lib.git</span>
-  <span class="s">GIT_TAG</span> <span class="s">v1.2.0</span><span class="p">)</span>
+<span class="w">  </span><span class="s">GIT_REPOSITORY</span><span class="w"> </span><span class="s">https://github.com/cross-language-cpp/djinni-support-lib.git</span>
+<span class="w">  </span><span class="s">GIT_TAG</span><span class="w"> </span><span class="s">v1.2.0</span><span class="p">)</span>
 <span class="c"># set options for djinni-support-lib</span>
-<span class="nb">set</span><span class="p">(</span><span class="s">DJINNI_BUILD_TESTING</span> <span class="s">OFF</span> <span class="s">CACHE</span> <span class="s">INTERNAL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">DJINNI_BUILD_TESTING</span><span class="w"> </span><span class="s">OFF</span><span class="w"> </span><span class="s">CACHE</span><span class="w"> </span><span class="s">INTERNAL</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 <span class="nb">if</span><span class="p">(</span><span class="s">ANDROID</span><span class="p">)</span>
-    <span class="nb">set</span><span class="p">(</span><span class="s">DJINNI_WITH_JNI</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">INTERNAL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
-<span class="nb">elseif</span><span class="p">(</span><span class="s">CMAKE_SYSTEM_NAME</span> <span class="s">IN_LIST</span> <span class="s2">&quot;Darwin;iOS&quot;</span><span class="p">)</span>
-    <span class="nb">set</span><span class="p">(</span><span class="s">DJINNI_WITH_OBJC</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">INTERNAL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
-<span class="nb">elseif</span><span class="p">(</span><span class="s">CMAKE_SYSTEM_NAME</span> <span class="s">STREQUAL</span> <span class="s2">&quot;Windows&quot;</span><span class="p">)</span>
-    <span class="nb">set</span><span class="p">(</span><span class="s">DJINNI_WITH_CPPCLI</span> <span class="s">ON</span> <span class="s">CACHE</span> <span class="s">INTERNAL</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">set</span><span class="p">(</span><span class="s">DJINNI_WITH_JNI</span><span class="w"> </span><span class="s">ON</span><span class="w"> </span><span class="s">CACHE</span><span class="w"> </span><span class="s">INTERNAL</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">elseif</span><span class="p">(</span><span class="s">CMAKE_SYSTEM_NAME</span><span class="w"> </span><span class="s">IN_LIST</span><span class="w"> </span><span class="s2">&quot;Darwin;iOS&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">set</span><span class="p">(</span><span class="s">DJINNI_WITH_OBJC</span><span class="w"> </span><span class="s">ON</span><span class="w"> </span><span class="s">CACHE</span><span class="w"> </span><span class="s">INTERNAL</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">elseif</span><span class="p">(</span><span class="s">CMAKE_SYSTEM_NAME</span><span class="w"> </span><span class="s">STREQUAL</span><span class="w"> </span><span class="s2">&quot;Windows&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">set</span><span class="p">(</span><span class="s">DJINNI_WITH_CPPCLI</span><span class="w"> </span><span class="s">ON</span><span class="w"> </span><span class="s">CACHE</span><span class="w"> </span><span class="s">INTERNAL</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 <span class="nb">endif</span><span class="p">()</span>
 <span class="nb">FetchContent_MakeAvailable</span><span class="p">(</span><span class="s">djinni-support-lib</span><span class="p">)</span>
 
-<span class="nb">add_library</span><span class="p">(</span><span class="s">foo</span> <span class="s">...</span><span class="p">)</span>
+<span class="nb">add_library</span><span class="p">(</span><span class="s">foo</span><span class="w"> </span><span class="s">...</span><span class="p">)</span>
 
-<span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">foo</span> <span class="s">PRIVATE</span> <span class="s">djinni-support-lib::djinni-support-lib</span><span class="p">)</span>
+<span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">foo</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="s">djinni-support-lib::djinni-support-lib</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="package-managers">Package Managers<a class="headerlink" href="#package-managers" title="Permanent link">&para;</a></h2>
 <h3 id="conan">Conan<a class="headerlink" href="#conan" title="Permanent link">&para;</a></h3>

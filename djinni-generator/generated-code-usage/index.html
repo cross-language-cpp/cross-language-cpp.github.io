@@ -262,7 +262,7 @@
   
     <li class="md-tabs__item">
       <a href="../setup/" class="md-tabs__link md-tabs__link--active">
-        Generator <code>v1.3.0</code>
+        Generator <code>v1.3.1</code>
       </a>
     </li>
   
@@ -278,7 +278,7 @@
   
     <li class="md-tabs__item">
       <a href="../../djinni-support-lib/install/" class="md-tabs__link">
-        Support Lib <code>v1.2.0</code>
+        Support Lib <code>v1.2.1</code>
       </a>
     </li>
   
@@ -478,14 +478,14 @@
       
       
         <label class="md-nav__link" for="__nav_3">
-          Generator <code>v1.3.0</code>
+          Generator <code>v1.3.1</code>
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Generator <code>v1.3.0</code>" data-md-level="1">
+      <nav class="md-nav" aria-label="Generator <code>v1.3.1</code>" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Generator <code>v1.3.0</code>
+          Generator <code>v1.3.1</code>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -743,14 +743,14 @@
       
       
         <label class="md-nav__link" for="__nav_4">
-          Support Lib <code>v1.2.0</code>
+          Support Lib <code>v1.2.1</code>
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Support Lib <code>v1.2.0</code>" data-md-level="1">
+      <nav class="md-nav" aria-label="Support Lib <code>v1.2.1</code>" data-md-level="1">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
-          Support Lib <code>v1.2.0</code>
+          Support Lib <code>v1.2.1</code>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -906,14 +906,14 @@
       
       
         <label class="md-nav__link" for="__nav_5_2">
-          VS Code Extension <code>v1.1.0</code>
+          VS Code Extension <code>v1.2.0</code>
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="VS Code Extension <code>v1.1.0</code>" data-md-level="2">
+      <nav class="md-nav" aria-label="VS Code Extension <code>v1.2.0</code>" data-md-level="2">
         <label class="md-nav__title" for="__nav_5_2">
           <span class="md-nav__icon md-icon"></span>
-          VS Code Extension <code>v1.1.0</code>
+          VS Code Extension <code>v1.2.0</code>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1252,13 +1252,13 @@ native (C/C++) code or libraries.</p>
 class with a <code>toJava</code> and <code>fromJava</code> function to translate back and forth.</p>
 <p>Application code is responsible for the initial load of the JNI library. Add a static block
 somewhere in your code:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
-    <span class="kd">static</span> <span class="p">{</span>
-      <span class="n">System</span><span class="p">.</span><span class="na">loadLibrary</span><span class="p">(</span><span class="s">&quot;YourLibraryName&quot;</span><span class="p">);</span>
-      <span class="c1">// The name  of the library is specified in Android.mk / build.gradle / Makefile / CMakeLists.txt, </span>
-      <span class="c1">// depending on your build system.</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">loadLibrary</span><span class="p">(</span><span class="s">&quot;YourLibraryName&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="c1">// The name  of the library is specified in Android.mk / build.gradle / Makefile / CMakeLists.txt, </span><span class="w"></span>
+<span class="w">      </span><span class="c1">// depending on your build system.</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>If you package your native library in a jar, you can also use the <a href="https://github.com/cross-language-cpp/djinni-support-lib/blob/main/java/com/dropbox/djinni/NativeLibLoader.java"><code>NativeLibLoader</code></a>
 to help unpack and load your lib(s).</p>
@@ -1563,7 +1563,7 @@ just needs to be added to your C# project as reference, and you can call your Dj
 
 <span class="k">namespace</span><span class="w"> </span><span class="nn">nlohmann</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"></span>
-<span class="w">    </span><span class="k">struct</span> <span class="nc">adl_serializer</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">system_clock</span><span class="o">::</span><span class="n">time_point</span><span class="o">&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">adl_serializer</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">system_clock</span><span class="o">::</span><span class="n">time_point</span><span class="o">&gt;</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">to_json</span><span class="p">(</span><span class="n">json</span><span class="w"> </span><span class="o">&amp;</span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">system_clock</span><span class="o">::</span><span class="n">time_point</span><span class="o">&amp;</span><span class="w"> </span><span class="n">tp</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">            </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">date</span><span class="o">::</span><span class="n">format</span><span class="p">(</span><span class="s">&quot;%F %T %Z&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">tp</span><span class="p">);</span><span class="w"></span>

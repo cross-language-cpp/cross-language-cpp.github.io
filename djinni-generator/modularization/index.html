@@ -262,7 +262,7 @@
   
     <li class="md-tabs__item">
       <a href="../setup/" class="md-tabs__link md-tabs__link--active">
-        Generator <code>v1.3.0</code>
+        Generator <code>v1.3.1</code>
       </a>
     </li>
   
@@ -278,7 +278,7 @@
   
     <li class="md-tabs__item">
       <a href="../../djinni-support-lib/install/" class="md-tabs__link">
-        Support Lib <code>v1.2.0</code>
+        Support Lib <code>v1.2.1</code>
       </a>
     </li>
   
@@ -478,14 +478,14 @@
       
       
         <label class="md-nav__link" for="__nav_3">
-          Generator <code>v1.3.0</code>
+          Generator <code>v1.3.1</code>
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Generator <code>v1.3.0</code>" data-md-level="1">
+      <nav class="md-nav" aria-label="Generator <code>v1.3.1</code>" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Generator <code>v1.3.0</code>
+          Generator <code>v1.3.1</code>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -650,14 +650,14 @@
       
       
         <label class="md-nav__link" for="__nav_4">
-          Support Lib <code>v1.2.0</code>
+          Support Lib <code>v1.2.1</code>
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Support Lib <code>v1.2.0</code>" data-md-level="1">
+      <nav class="md-nav" aria-label="Support Lib <code>v1.2.1</code>" data-md-level="1">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
-          Support Lib <code>v1.2.0</code>
+          Support Lib <code>v1.2.1</code>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -813,14 +813,14 @@
       
       
         <label class="md-nav__link" for="__nav_5_2">
-          VS Code Extension <code>v1.1.0</code>
+          VS Code Extension <code>v1.2.0</code>
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="VS Code Extension <code>v1.1.0</code>" data-md-level="2">
+      <nav class="md-nav" aria-label="VS Code Extension <code>v1.2.0</code>" data-md-level="2">
         <label class="md-nav__title" for="__nav_5_2">
           <span class="md-nav__icon md-icon"></span>
-          VS Code Extension <code>v1.1.0</code>
+          VS Code Extension <code>v1.2.0</code>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -998,48 +998,48 @@ Instructing Djinni to create these YAML files is controlled by the <a href="../c
 </div>
 <h2 id="yaml-file-structure">YAML file structure<a class="headerlink" href="#yaml-file-structure" title="Permanent link">&para;</a></h2>
 <p>Such a YAML file looks as follows:</p>
-<div class="highlight"><pre><span></span><code><span class="nn">---</span>
-<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mylib_record1</span>
-<span class="nt">typedef</span><span class="p">:</span> <span class="s">&#39;record</span><span class="nv"> </span><span class="s">+c</span><span class="nv"> </span><span class="s">deriving(eq,</span><span class="nv"> </span><span class="s">ord)&#39;</span>
-<span class="nt">params</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
-<span class="nt">prefix</span><span class="p">:</span> <span class="s">&#39;mylib&#39;</span>
-<span class="nt">cpp</span><span class="p">:</span>
-  <span class="nt">typename</span><span class="p">:</span> <span class="s">&#39;::mylib::Record1&#39;</span>
-  <span class="nt">header</span><span class="p">:</span> <span class="s">&#39;&quot;MyLib/Record1.hpp&quot;&#39;</span>
-  <span class="nt">byValue</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-<span class="nt">objc</span><span class="p">:</span>
-  <span class="nt">typename</span><span class="p">:</span> <span class="s">&#39;MLBRecord1&#39;</span>
-  <span class="nt">header</span><span class="p">:</span> <span class="s">&#39;&quot;MLB/MLBRecord1.h&quot;&#39;</span>
-  <span class="nt">boxed</span><span class="p">:</span> <span class="s">&#39;MLBRecord1&#39;</span>
-  <span class="nt">pointer</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-  <span class="nt">hash</span><span class="p">:</span> <span class="s">&#39;%s.hash&#39;</span>
-<span class="nt">objcpp</span><span class="p">:</span>
-  <span class="nt">translator</span><span class="p">:</span> <span class="s">&#39;::mylib::djinni::objc::Record1&#39;</span>
-  <span class="nt">header</span><span class="p">:</span> <span class="s">&#39;&quot;mylib/djinni/objc/Record1.hpp&quot;&#39;</span>
-<span class="nt">java</span><span class="p">:</span>
-  <span class="nt">typename</span><span class="p">:</span> <span class="s">&#39;com.example.mylib.Record1&#39;</span>
-  <span class="nt">boxed</span><span class="p">:</span> <span class="s">&#39;com.example.mylib.Record1&#39;</span>
-  <span class="nt">reference</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-  <span class="nt">generic</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-  <span class="nt">hash</span><span class="p">:</span> <span class="s">&#39;%s.hashCode()&#39;</span>
-<span class="nt">jni</span><span class="p">:</span>
-  <span class="nt">translator</span><span class="p">:</span> <span class="s">&#39;::mylib::djinni::jni::Record1&#39;</span>
-  <span class="nt">header</span><span class="p">:</span> <span class="s">&#39;&quot;Duration-jni.hpp&quot;&#39;</span>
-  <span class="nt">typename</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">jobject</span>
-  <span class="nt">typeSignature</span><span class="p">:</span> <span class="s">&#39;Lcom/example/mylib/Record1;&#39;</span>
-<span class="nt">cs</span><span class="p">:</span>
-  <span class="nt">translator</span><span class="p">:</span> <span class="s">&#39;::djinni::Record1_h&#39;</span>
-  <span class="nt">header</span><span class="p">:</span> <span class="s">&#39;&quot;Record1-cs.hpp&quot;&#39;</span>
-  <span class="nt">typename</span><span class="p">:</span> <span class="s">&#39;Record1^&#39;</span>
-  <span class="nt">reference</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-<span class="nn">---</span>
-<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mylib_interface1</span>
-<span class="nt">typedef</span><span class="p">:</span> <span class="s">&#39;interface</span><span class="nv"> </span><span class="s">+j</span><span class="nv"> </span><span class="s">+o</span><span class="nv"> </span><span class="s">+s&#39;</span>
-    <span class="l l-Scalar l-Scalar-Plain">(...)</span>
-<span class="nn">---</span>
-<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mylib_enum1</span>
-<span class="nt">typedef</span><span class="p">:</span> <span class="s">&#39;enum&#39;</span>
-    <span class="l l-Scalar l-Scalar-Plain">(...)</span>
+<div class="highlight"><pre><span></span><code><span class="nn">---</span><span class="w"></span>
+<span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mylib_record1</span><span class="w"></span>
+<span class="nt">typedef</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;record</span><span class="nv"> </span><span class="s">+c</span><span class="nv"> </span><span class="s">deriving(eq,</span><span class="nv"> </span><span class="s">ord)&#39;</span><span class="w"></span>
+<span class="nt">params</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"></span>
+<span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;mylib&#39;</span><span class="w"></span>
+<span class="nt">cpp</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">typename</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;::mylib::Record1&#39;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">header</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&quot;MyLib/Record1.hpp&quot;&#39;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">byValue</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="nt">objc</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">typename</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;MLBRecord1&#39;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">header</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&quot;MLB/MLBRecord1.h&quot;&#39;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">boxed</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;MLBRecord1&#39;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">pointer</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">  </span><span class="nt">hash</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;%s.hash&#39;</span><span class="w"></span>
+<span class="nt">objcpp</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">translator</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;::mylib::djinni::objc::Record1&#39;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">header</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&quot;mylib/djinni/objc/Record1.hpp&quot;&#39;</span><span class="w"></span>
+<span class="nt">java</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">typename</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;com.example.mylib.Record1&#39;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">boxed</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;com.example.mylib.Record1&#39;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">reference</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">  </span><span class="nt">generic</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">  </span><span class="nt">hash</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;%s.hashCode()&#39;</span><span class="w"></span>
+<span class="nt">jni</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">translator</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;::mylib::djinni::jni::Record1&#39;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">header</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&quot;Duration-jni.hpp&quot;&#39;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">typename</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jobject</span><span class="w"></span>
+<span class="w">  </span><span class="nt">typeSignature</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Lcom/example/mylib/Record1;&#39;</span><span class="w"></span>
+<span class="nt">cs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">translator</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;::djinni::Record1_h&#39;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">header</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&quot;Record1-cs.hpp&quot;&#39;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">typename</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Record1^&#39;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">reference</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="nn">---</span><span class="w"></span>
+<span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mylib_interface1</span><span class="w"></span>
+<span class="nt">typedef</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;interface</span><span class="nv"> </span><span class="s">+j</span><span class="nv"> </span><span class="s">+o</span><span class="nv"> </span><span class="s">+s&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">(...)</span><span class="w"></span>
+<span class="nn">---</span><span class="w"></span>
+<span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mylib_enum1</span><span class="w"></span>
+<span class="nt">typedef</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;enum&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">(...)</span><span class="w"></span>
 </code></pre></div>
 <p>Each document in the YAML file describes one extern type.</p>
 <p>You can also check these files for some real working examples of what you can do with it:</p>
@@ -1064,7 +1064,7 @@ and the accompanying translators in <a href="https://github.com/cross-language-c
 and <a href="https://github.com/cross-language-cpp/djinni-support-lib/blob/main/test-suite/handwritten-src/cpp/Duration-cs.hpp"><code>Duration-cs.hpp</code></a> for an advanced example.</p>
 <p>Handwritten translators implement the following concept:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// For C++ &lt;-&gt; Objective-C</span>
-<span class="k">struct</span> <span class="nc">Record1</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Record1</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">CppType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">::</span><span class="n">mylib</span><span class="o">::</span><span class="n">Record1</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">ObjcType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MLBRecord1</span><span class="o">*</span><span class="p">;</span><span class="w"></span>
@@ -1075,7 +1075,7 @@ and <a href="https://github.com/cross-language-cpp/djinni-support-lib/blob/main/
 <span class="w">    </span><span class="c1">// Option 1: use this if no boxing is required</span>
 <span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">Boxed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Record1</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="c1">// Option 2: or this if you do need dedicated boxing behavior</span>
-<span class="w">    </span><span class="k">struct</span> <span class="nc">Boxed</span><span class="w"></span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">Boxed</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="k">using</span><span class="w"> </span><span class="n">ObjcType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MLBRecord1Special</span><span class="o">*</span><span class="p">;</span><span class="w"></span>
 <span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="n">CppType</span><span class="w"> </span><span class="nf">toCpp</span><span class="p">(</span><span class="n">ObjcType</span><span class="w"> </span><span class="n">o</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="cm">/* your magic here */</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
@@ -1085,7 +1085,7 @@ and <a href="https://github.com/cross-language-cpp/djinni-support-lib/blob/main/
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="c1">// For C++ &lt;-&gt; JNI</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;djinni_support.hpp&quot;</span><span class="cp"></span>
-<span class="k">struct</span> <span class="nc">Record1</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Record1</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">CppType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">::</span><span class="n">mylib</span><span class="o">::</span><span class="n">Record1</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">JniType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jobject</span><span class="p">;</span><span class="w"></span>
@@ -1098,7 +1098,7 @@ and <a href="https://github.com/cross-language-cpp/djinni-support-lib/blob/main/
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="c1">// For C++ &lt;-&gt; C++/CLI</span>
-<span class="k">public</span><span class="w"> </span><span class="n">ref</span><span class="w"> </span><span class="k">class</span> <span class="nc">Record1</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="w"> </span><span class="n">ref</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Record1</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="k">public</span><span class="o">:</span><span class="w"></span>
 <span class="w">    </span><span class="c1">// Record1 public properties</span>
 <span class="nl">internal</span><span class="p">:</span><span class="w"></span>
@@ -1114,10 +1114,10 @@ and <a href="https://github.com/cross-language-cpp/djinni-support-lib/blob/main/
 <p>Be sure to put the translators into representative and distinct namespaces.</p>
 <p>If your type is generic the translator takes the same number of template parameters.
 At usage each is instantiated with the translators of the respective type argument.</p>
-<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">A</span><span class="p">,</span><span class="w"> </span><span class="k">class</span> <span class="nc">B</span><span class="o">&gt;</span><span class="w"></span>
-<span class="k">struct</span> <span class="nc">Record1</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="p">,</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">B</span><span class="o">&gt;</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Record1</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">CppType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">::</span><span class="n">mylib</span><span class="o">::</span><span class="n">Record1</span><span class="o">&lt;</span><span class="k">typename</span> <span class="nc">A</span><span class="o">::</span><span class="n">CppType</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span> <span class="nc">B</span><span class="o">::</span><span class="n">CppType</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">CppType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">::</span><span class="n">mylib</span><span class="o">::</span><span class="n">Record1</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">A</span><span class="o">::</span><span class="n">CppType</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">B</span><span class="o">::</span><span class="n">CppType</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">ObjcType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MLBRecord1</span><span class="o">*</span><span class="p">;</span><span class="w"></span>
 
 <span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">CppType</span><span class="w"> </span><span class="nf">toCpp</span><span class="p">(</span><span class="n">ObjcType</span><span class="w"> </span><span class="n">o</span><span class="p">)</span><span class="w"></span>
