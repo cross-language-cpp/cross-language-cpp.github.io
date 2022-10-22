@@ -4,7 +4,8 @@
 
 [**Cross-language-cpp**](https://github.com/cross-language-cpp) is driven by individual people on a volunteer base.
 
-The idea for this project has been born at the [Mobile C++](https://mobilecpp.slack.com/) slack channel.
+The idea for this project has been born at the [Mobile C++](https://mobilecpp.slack.com/) slack channel.</br>
+If you are not member of this slack join via the [Mobile C++ Slack self-registration](https://join.slack.com/t/mobilecpp/shared_invite/zt-1iofql6w0-lTeGqoFrzOT_lGu~rG1MUg).
 
 ### Motivation
 
