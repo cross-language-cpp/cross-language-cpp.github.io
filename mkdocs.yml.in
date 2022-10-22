@@ -1,7 +1,7 @@
 site_name: Djinni
 site_url: https://djinni.xlcpp.dev
 site_description: >-
-  Djinni is a tool for generating cross-language type declarations and interface bindings. 
+  Djinni is a tool for generating cross-language type declarations and interface bindings.
   It's designed to connect C++ with either Java, Objective-C, Python or C#.
 copyright: Copyright &copy; 2020 <a href="https://github.com/cross-language-cpp" target="_blank">cross-language-cpp</a>
 markdown_extensions:
@@ -35,7 +35,10 @@ extra:
       link: https://github.com/cross-language-cpp/vscode-djinni
     - icon: fontawesome/brands/slack
       name: mobilecpp
-      link: https://mobilecpp.herokuapp.com/
+      link: https://mobilecpp.slack.com/
+    - icon: fontawesome/brands/slack
+      name: mobilecpp-registration
+      link: https://join.slack.com/t/mobilecpp/shared_invite/zt-1iofql6w0-lTeGqoFrzOT_lGu~rG1MUg
 theme:
   name: material
   custom_dir: overrides
@@ -60,7 +63,7 @@ extra_css:
   - stylesheets/theme.css
 nav:
   - Home: index.md
-  - Getting Started: 
+  - Getting Started:
     - overview.md
     - setup.md
     - example.md
@@ -70,6 +73,6 @@ nav:
   - IDE Integration:
     - IntelliJ IDEA Plugin <code>${VERSION_djinni_intellij_plugin}</code>: '!include ./djinni-intellij-plugin/mkdocs.yml'
     - VS Code Extension <code>${VERSION_vscode_djinni}</code>: '!include ./vscode-djinni/mkdocs.yml'
-  - Resources: 
+  - Resources:
     - further_reading.md
     - icon_resources.md
