@@ -1094,24 +1094,24 @@
 </ul>
 <h3 id="building">Building<a class="headerlink" href="#building" title="Permanent link">&para;</a></h3>
 <p>Make sure you have the <code>JAVA_HOME</code> environment variable properly set, e.g.:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">JAVA_HOME</span><span class="o">=</span><span class="k">$(</span>/usr/libexec/java_home<span class="k">)</span>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">JAVA_HOME</span><span class="o">=</span><span class="k">$(</span>/usr/libexec/java_home<span class="k">)</span>
 </code></pre></div>
 <p>For an out of source build:</p>
-<div class="highlight"><pre><span></span><code>mkdir -p build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
-cmake -DDJINNI_WITH_JNI<span class="o">=</span><span class="m">1</span> -DDJINNI_WITH_OBJC<span class="o">=</span><span class="m">1</span> ..
-cmake --build . --parallel
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build
+cmake<span class="w"> </span>-DDJINNI_WITH_JNI<span class="o">=</span><span class="m">1</span><span class="w"> </span>-DDJINNI_WITH_OBJC<span class="o">=</span><span class="m">1</span><span class="w"> </span>..
+cmake<span class="w"> </span>--build<span class="w"> </span>.<span class="w"> </span>--parallel
 </code></pre></div>
 <p>A custom <code>djinni</code> executable can be specified with the CMake option
 <code>DJINNI_EXECUTABLE_PATH</code>.</p>
 <h3 id="running-tests">Running Tests<a class="headerlink" href="#running-tests" title="Permanent link">&para;</a></h3>
 <h4 id="java-objective-c">Java, Objective-C<a class="headerlink" href="#java-objective-c" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span> build/test-suite
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>build/test-suite
 ctest
 </code></pre></div>
 <h4 id="ccli">C++/CLI<a class="headerlink" href="#ccli" title="Permanent link">&para;</a></h4>
 <ol>
 <li>Generate Visual Studio Solution with <code>-G "Visual Studio 16 2019"</code>:
-    <div class="highlight"><pre><span></span><code>cmake -S . -B build -DDJINNI_WITH_CPPCLI<span class="o">=</span>ON -DDJINNI_STATIC_LIB<span class="o">=</span>ON -G <span class="s2">&quot;Visual Studio 16 2019&quot;</span>
+    <div class="highlight"><pre><span></span><code>cmake<span class="w"> </span>-S<span class="w"> </span>.<span class="w"> </span>-B<span class="w"> </span>build<span class="w"> </span>-DDJINNI_WITH_CPPCLI<span class="o">=</span>ON<span class="w"> </span>-DDJINNI_STATIC_LIB<span class="o">=</span>ON<span class="w"> </span>-G<span class="w"> </span><span class="s2">&quot;Visual Studio 16 2019&quot;</span>
 </code></pre></div></li>
 <li>Open the solution <code>djinni_support_lib.sln</code> in Visual Studio.</li>
 <li>Build <code>DjinniCppCliTest</code>.</li>
@@ -1121,9 +1121,9 @@ ctest
 <p>The documentation in <code>docs</code> will be rendered as a part of <a href="https://djinni.xlcpp.dev/">djinni.xlcpp.dev</a>.</p>
 <p>You can preview how the docs will look like:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># install required dependencies</span>
-pip install -r mkdocs-requirements.txt
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>mkdocs-requirements.txt
 <span class="c1"># render a live preview of the docs under http://127.0.0.1:8000</span>
-mkdocs serve 
+mkdocs<span class="w"> </span>serve<span class="w"> </span>
 </code></pre></div>
 <h2 id="release-process">Release process<a class="headerlink" href="#release-process" title="Permanent link">&para;</a></h2>
 <p>To release a new version of the support-lib, the following steps must be followed:</p>
@@ -1281,7 +1281,7 @@ mkdocs serve
       
       
       <a
-        href="https://join.slack.com/t/mobilecpp/shared_invite/zt-1iofql6w0-lTeGqoFrzOT_lGu~rG1MUg"
+        href="https://join.slack.com/t/mobilecpp/shared_invite/zt-25wmizuq8-u2q4GATVQvACgDykqdnONw"
         target="_blank" rel="noopener"
         title="mobilecpp-registration"
         class="md-footer-social__link"

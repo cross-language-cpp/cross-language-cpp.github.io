@@ -1110,14 +1110,14 @@
 </ul>
 <h3 id="building">Building<a class="headerlink" href="#building" title="Permanent link">&para;</a></h3>
 <p>To build once:</p>
-<div class="highlight"><pre><span></span><code>sbt compile
+<div class="highlight"><pre><span></span><code>sbt<span class="w"> </span>compile
 </code></pre></div>
 <p>To automatically re-build on every change, open the sbt shell &amp; prefix <code>compile</code> with <code>~</code></p>
-<div class="highlight"><pre><span></span><code>$ sbt
-sbt:djinni&gt; ~compile
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sbt
+sbt:djinni&gt;<span class="w"> </span>~compile
 </code></pre></div>
 <h3 id="running">Running<a class="headerlink" href="#running" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>sbt <span class="s2">&quot;run</span>
+<div class="highlight"><pre><span></span><code>sbt<span class="w"> </span><span class="s2">&quot;run</span>
 <span class="s2">    --idl input.djinni</span>
 <span class="s2">    --cpp-out out/cpp</span>
 <span class="s2">    --java-out out/java/src</span>
@@ -1128,20 +1128,20 @@ sbt:djinni&gt; ~compile
 <span class="s2">    --c-wrapper-out out/cwrapper</span>
 <span class="s2">    --cppcli-out out/cppcli&quot;</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>sbt <span class="s2">&quot;run --help&quot;</span>  <span class="c1"># show all options</span>
+<div class="highlight"><pre><span></span><code>sbt<span class="w"> </span><span class="s2">&quot;run --help&quot;</span><span class="w">  </span><span class="c1"># show all options</span>
 </code></pre></div>
 <p><em>It is important to put <code>run</code> and all arguments in <code>"</code>, to be able to pass arguments to the executed jar!</em></p>
 <h3 id="running-tests">Running Tests<a class="headerlink" href="#running-tests" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>sbt IntegrationTest/test
+<div class="highlight"><pre><span></span><code>sbt<span class="w"> </span>IntegrationTest/test
 </code></pre></div>
 <p>For testing, the djinni target needs to exist, so run <code>sbt assembly</code> before. This is also required when you do development on the generator. Always run <code>sbt assembly</code> before doing integration testing!</p>
 <h3 id="packaging">Packaging<a class="headerlink" href="#packaging" title="Permanent link">&para;</a></h3>
 <p>Create a binary like the one that is published on github releases:</p>
-<div class="highlight"><pre><span></span><code>sbt assembly
+<div class="highlight"><pre><span></span><code>sbt<span class="w"> </span>assembly
 </code></pre></div>
 <p>This will generate a standalone, self-executing jar in <code>target/bin</code>.
 You can run the jar like this:</p>
-<div class="highlight"><pre><span></span><code>./djinni --help
+<div class="highlight"><pre><span></span><code>./djinni<span class="w"> </span>--help
 </code></pre></div>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
@@ -1200,9 +1200,9 @@ You can run the jar like this:</p>
 <p>The documentation in <code>docs</code> will be rendered as a part of <a href="https://djinni.xlcpp.dev/">djinni.xlcpp.dev</a>.</p>
 <p>You can preview how the docs will look like:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># install required dependencies</span>
-pip install -r mkdocs-requirements.txt
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>mkdocs-requirements.txt
 <span class="c1"># render a live preview of the docs under http://127.0.0.1:8000</span>
-mkdocs serve
+mkdocs<span class="w"> </span>serve
 </code></pre></div>
 <h2 id="release-process">Release process<a class="headerlink" href="#release-process" title="Permanent link">&para;</a></h2>
 <p>To release a new version of the generator, the following steps must be followed:</p>
@@ -1361,7 +1361,7 @@ mkdocs serve
       
       
       <a
-        href="https://join.slack.com/t/mobilecpp/shared_invite/zt-1iofql6w0-lTeGqoFrzOT_lGu~rG1MUg"
+        href="https://join.slack.com/t/mobilecpp/shared_invite/zt-25wmizuq8-u2q4GATVQvACgDykqdnONw"
         target="_blank" rel="noopener"
         title="mobilecpp-registration"
         class="md-footer-social__link"

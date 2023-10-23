@@ -1199,7 +1199,7 @@
 </tr>
 <tr>
 <td></td>
-<td>my_enum+json.hpp <img alt="2⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/32-20e3.svg" title=":two:" /></td>
+<td>my_enum+json.hpp <img alt="2⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/32-20e3.svg" title=":two:" /></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1208,7 +1208,7 @@
 <tr>
 <td>Record</td>
 <td>my_record[_base].hpp</td>
-<td>my_record[_base].cpp <img alt="1⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/31-20e3.svg" title=":one:" /></td>
+<td>my_record[_base].cpp <img alt="1⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/31-20e3.svg" title=":one:" /></td>
 <td>MyRecord[Base].java</td>
 <td>NativeMyRecord.hpp</td>
 <td>NativeMyRecord.cpp</td>
@@ -1223,7 +1223,7 @@
 </tr>
 <tr>
 <td></td>
-<td><img alt="2⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/32-20e3.svg" title=":two:" /></td>
+<td><img alt="2⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/32-20e3.svg" title=":two:" /></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1232,7 +1232,7 @@
 <tr>
 <td>Interface</td>
 <td>my_interface.hpp</td>
-<td>my_interface.cpp <img alt="1⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/31-20e3.svg" title=":one:" /></td>
+<td>my_interface.cpp <img alt="1⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/31-20e3.svg" title=":one:" /></td>
 <td>MyInterface.java</td>
 <td>NativeMyInterface.hpp</td>
 <td>NativeMyInterface.cpp</td>
@@ -1240,8 +1240,8 @@
 </tbody>
 </table>
 <ul>
-<li><img alt="1⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/31-20e3.svg" title=":one:" /> Generated only for types that contain constants.</li>
-<li><img alt="2⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/32-20e3.svg" title=":two:" /> Generated only if cpp json serialization is enabled.</li>
+<li><img alt="1⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/31-20e3.svg" title=":one:" /> Generated only for types that contain constants.</li>
+<li><img alt="2⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/32-20e3.svg" title=":two:" /> Generated only if cpp json serialization is enabled.</li>
 </ul>
 <p>Additionally <code>djinni_jni_main.cpp</code> is generated to provide a default implementation for <code>JNI_OnLoad</code> and <code>JNI_OnUnload</code>, if <code>--jni-generate-main=true</code>.</p>
 <p>Add all generated source files to your build target, and link the C++ code against the <a href="https://github.com/cross-language-cpp/djinni-support-lib">djinni-support-lib</a>.</p>
@@ -1252,13 +1252,13 @@ native (C/C++) code or libraries.</p>
 class with a <code>toJava</code> and <code>fromJava</code> function to translate back and forth.</p>
 <p>Application code is responsible for the initial load of the JNI library. Add a static block
 somewhere in your code:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">loadLibrary</span><span class="p">(</span><span class="s">&quot;YourLibraryName&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">      </span><span class="c1">// The name  of the library is specified in Android.mk / build.gradle / Makefile / CMakeLists.txt, </span><span class="w"></span>
-<span class="w">      </span><span class="c1">// depending on your build system.</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">loadLibrary</span><span class="p">(</span><span class="s">&quot;YourLibraryName&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="c1">// The name  of the library is specified in Android.mk / build.gradle / Makefile / CMakeLists.txt, </span>
+<span class="w">      </span><span class="c1">// depending on your build system.</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
 <p>If you package your native library in a jar, you can also use the <a href="https://github.com/cross-language-cpp/djinni-support-lib/blob/main/java/com/dropbox/djinni/NativeLibLoader.java"><code>NativeLibLoader</code></a>
 to help unpack and load your lib(s).</p>
@@ -1292,7 +1292,7 @@ If want to provide your own implementation of <code>JNI_Onload</code> and <code>
 </tr>
 <tr>
 <td></td>
-<td>my_enum+json.hpp <img alt="3⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/33-20e3.svg" title=":three:" /></td>
+<td>my_enum+json.hpp <img alt="3⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/33-20e3.svg" title=":three:" /></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1300,7 +1300,7 @@ If want to provide your own implementation of <code>JNI_Onload</code> and <code>
 <tr>
 <td>Record</td>
 <td>my_record[_base].hpp</td>
-<td>my_record[_base].cpp <img alt="1⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/31-20e3.svg" title=":one:" /></td>
+<td>my_record[_base].cpp <img alt="1⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/31-20e3.svg" title=":one:" /></td>
 <td>DBMyRecord[Base].h</td>
 <td>DBMyRecord[Base]+Private.h</td>
 </tr>
@@ -1308,12 +1308,12 @@ If want to provide your own implementation of <code>JNI_Onload</code> and <code>
 <td></td>
 <td>my_record[_base]+json.hpp</td>
 <td></td>
-<td>DBMyRecord[Base].mm <img alt="2⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/32-20e3.svg" title=":two:" /></td>
+<td>DBMyRecord[Base].mm <img alt="2⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/32-20e3.svg" title=":two:" /></td>
 <td>DBMyRecord[Base]+Private.mm</td>
 </tr>
 <tr>
 <td></td>
-<td><img alt="3⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/33-20e3.svg" title=":three:" /></td>
+<td><img alt="3⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/33-20e3.svg" title=":three:" /></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1321,7 +1321,7 @@ If want to provide your own implementation of <code>JNI_Onload</code> and <code>
 <tr>
 <td>Interface</td>
 <td>my_interface.hpp</td>
-<td>my_interface.cpp <img alt="1⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/31-20e3.svg" title=":one:" /></td>
+<td>my_interface.cpp <img alt="1⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/31-20e3.svg" title=":one:" /></td>
 <td>DBMyInterface.h</td>
 <td>DBMyInterface+Private.h</td>
 </tr>
@@ -1335,9 +1335,9 @@ If want to provide your own implementation of <code>JNI_Onload</code> and <code>
 </tbody>
 </table>
 <ul>
-<li><img alt="1⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/31-20e3.svg" title=":one:" /> Generated only for types that contain constants.</li>
-<li><img alt="2⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/32-20e3.svg" title=":two:" /> Generated only for types with derived operations and/or constants. These have <code>.mm</code> extensions to allow non-trivial constants.</li>
-<li><img alt="3⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/33-20e3.svg" title=":three:" /> Generated only if cpp json serialization is enabled.</li>
+<li><img alt="1⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/31-20e3.svg" title=":one:" /> Generated only for types that contain constants.</li>
+<li><img alt="2⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/32-20e3.svg" title=":two:" /> Generated only for types with derived operations and/or constants. These have <code>.mm</code> extensions to allow non-trivial constants.</li>
+<li><img alt="3⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/33-20e3.svg" title=":three:" /> Generated only if cpp json serialization is enabled.</li>
 </ul>
 <p>Add all generated files to your build target, and link against the <a href="https://github.com/cross-language-cpp/djinni-support-lib">djinni-support-lib</a>.</p>
 <p>Note that <code>+Private</code> files can only be used with ObjC++ source (other headers are pure ObjC) and are not required by Objective-C users of your interface.</p>
@@ -1377,7 +1377,7 @@ C++ with Python 3.</p>
 </tr>
 <tr>
 <td></td>
-<td>my_enum+json.hpp <img alt="2⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/32-20e3.svg" title=":two:" /></td>
+<td>my_enum+json.hpp <img alt="2⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/32-20e3.svg" title=":two:" /></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1394,7 +1394,7 @@ C++ with Python 3.</p>
 <tr>
 <td>Record</td>
 <td>my_record[_base].hpp</td>
-<td>my_record[_base].cpp <img alt="1⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/31-20e3.svg" title=":one:" /></td>
+<td>my_record[_base].cpp <img alt="1⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/31-20e3.svg" title=":one:" /></td>
 <td>my_record[_base].py</td>
 <td></td>
 <td>dh__my_record.cpp</td>
@@ -1409,7 +1409,7 @@ C++ with Python 3.</p>
 </tr>
 <tr>
 <td></td>
-<td><img alt="2⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/32-20e3.svg" title=":two:" /></td>
+<td><img alt="2⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/32-20e3.svg" title=":two:" /></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1418,7 +1418,7 @@ C++ with Python 3.</p>
 <tr>
 <td>Interface</td>
 <td>my_interface.hpp</td>
-<td>my_interface.cpp <img alt="1⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/31-20e3.svg" title=":one:" /></td>
+<td>my_interface.cpp <img alt="1⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/31-20e3.svg" title=":one:" /></td>
 <td>my_interface.py</td>
 <td>pycffi_lib_build.py</td>
 <td>cw__my_interface.cpp</td>
@@ -1442,8 +1442,8 @@ C++ with Python 3.</p>
 </tbody>
 </table>
 <ul>
-<li><img alt="1⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/31-20e3.svg" title=":one:" /> Generated only for types that contain constants.</li>
-<li><img alt="2⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/32-20e3.svg" title=":two:" /> Generated only if cpp json serialization is enabled.</li>
+<li><img alt="1⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/31-20e3.svg" title=":one:" /> Generated only for types that contain constants.</li>
+<li><img alt="2⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/32-20e3.svg" title=":two:" /> Generated only if cpp json serialization is enabled.</li>
 </ul>
 <p>Additional C Wrapper files are generated for data structures; their names are encoded as:</p>
 <div class="highlight"><pre><span></span><code>dh__{list,set,map}_{encoded_type(s)}.cpp
@@ -1508,7 +1508,7 @@ just needs to be added to your C# project as reference, and you can call your Dj
 </tr>
 <tr>
 <td></td>
-<td>my_enum+json.hpp <img alt="2⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/32-20e3.svg" title=":two:" /></td>
+<td>my_enum+json.hpp <img alt="2⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/32-20e3.svg" title=":two:" /></td>
 <td></td>
 <td></td>
 </tr>
@@ -1520,68 +1520,68 @@ just needs to be added to your C# project as reference, and you can call your Dj
 </tr>
 <tr>
 <td></td>
-<td>my_record+json.hpp <img alt="2⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/32-20e3.svg" title=":two:" /></td>
+<td>my_record+json.hpp <img alt="2⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/32-20e3.svg" title=":two:" /></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td>Interface</td>
 <td>my_interface.hpp</td>
-<td>my_interface.cpp <img alt="1⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/31-20e3.svg" title=":one:" /></td>
+<td>my_interface.cpp <img alt="1⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/31-20e3.svg" title=":one:" /></td>
 <td>MyInterface.hpp, MyInterface.cpp</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li><img alt="1⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/31-20e3.svg" title=":one:" /> Generated only for types that contain constants.</li>
-<li><img alt="2⃣" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/32-20e3.svg" title=":two:" /> Generated only if cpp json serialization is enabled.</li>
+<li><img alt="1⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/31-20e3.svg" title=":one:" /> Generated only for types that contain constants.</li>
+<li><img alt="2⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/32-20e3.svg" title=":two:" /> Generated only if cpp json serialization is enabled.</li>
 </ul>
 <p>Add all generated files to your build target, and link against the <a href="https://github.com/cross-language-cpp/djinni-support-lib">djinni-support-lib</a>.</p>
 <p>C++/CLI sources have to be compiled with MSVC and the <a href="https://docs.microsoft.com/en-us/cpp/build/reference/clr-common-language-runtime-compilation?view=msvc-160"><code>/clr</code> (Common Language Runtime Compilation)</a> option.</p>
 <h2 id="c-json-serialization-support">C++ JSON Serialization support<a class="headerlink" href="#c-json-serialization-support" title="Permanent link">&para;</a></h2>
 <p>Serialization from C++ types to/from JSON is supported. This feature is currently only enabled for <code>nlohmann/json</code>, and if enabled creates <code>to_json</code>/<code>from_json</code> methods for all djinni records and enums.</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;my_record.hpp&quot;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;my_record+json.hpp&quot;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;nlohmann/json.hpp&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;my_record.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;my_record+json.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;nlohmann/json.hpp&gt;</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">foo</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">my_record</span><span class="o">&amp;</span><span class="w"> </span><span class="n">record</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">foo</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">my_record</span><span class="o">&amp;</span><span class="w"> </span><span class="n">record</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="c1">// convert record to json object</span>
-<span class="w">  </span><span class="n">nlohmann</span><span class="o">::</span><span class="n">json</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">record</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">nlohmann</span><span class="o">::</span><span class="n">json</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">record</span><span class="p">;</span>
 <span class="w">  </span><span class="c1">// dump serialized string</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">j</span><span class="p">.</span><span class="n">dump</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">j</span><span class="p">.</span><span class="n">dump</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
 <span class="w">  </span><span class="c1">// create new instance of record from json object</span>
-<span class="w">  </span><span class="n">my_record</span><span class="w"> </span><span class="n">cloned</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j</span><span class="p">.</span><span class="n">get</span><span class="o">&lt;</span><span class="n">my_record</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="n">my_record</span><span class="w"> </span><span class="n">cloned</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j</span><span class="p">.</span><span class="n">get</span><span class="o">&lt;</span><span class="n">my_record</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="p">}</span>
 </code></pre></div>
 <h3 id="json-support-for-the-date-data-type">Json support for the date data type<a class="headerlink" href="#json-support-for-the-date-data-type" title="Permanent link">&para;</a></h3>
 <p>Since there are many ways of converting a date to and from json, a simple implementation is provided by default which stores the date as the number of milliseconds elapsed since 00:00:00 UTC on January 1, 1970.</p>
 <p>This default can be deactivated by adding a <code>-DDJINNI_CUSTOM_JSON_DATE</code> compilation flag to your compiler; in this case, you can implement your own date json serializer which better matches your requirements.</p>
 <p>One such solution using <a href="https://github.com/HowardHinnant/date">Howard Hinnant's date library</a> could be implemented as follows:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;nlohmann/json.hpp&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;date/date.h&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;nlohmann/json.hpp&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;date/date.h&gt;</span>
 
-<span class="k">namespace</span><span class="w"> </span><span class="nn">nlohmann</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"></span>
-<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">adl_serializer</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">system_clock</span><span class="o">::</span><span class="n">time_point</span><span class="o">&gt;</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">to_json</span><span class="p">(</span><span class="n">json</span><span class="w"> </span><span class="o">&amp;</span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">system_clock</span><span class="o">::</span><span class="n">time_point</span><span class="o">&amp;</span><span class="w"> </span><span class="n">tp</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">date</span><span class="o">::</span><span class="n">format</span><span class="p">(</span><span class="s">&quot;%F %T %Z&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">tp</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">nlohmann</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;&gt;</span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">adl_serializer</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">system_clock</span><span class="o">::</span><span class="n">time_point</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">to_json</span><span class="p">(</span><span class="n">json</span><span class="w"> </span><span class="o">&amp;</span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">system_clock</span><span class="o">::</span><span class="n">time_point</span><span class="o">&amp;</span><span class="w"> </span><span class="n">tp</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">date</span><span class="o">::</span><span class="n">format</span><span class="p">(</span><span class="s">&quot;%F %T %Z&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">tp</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
 
-<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">from_json</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">json</span><span class="w"> </span><span class="o">&amp;</span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">system_clock</span><span class="o">::</span><span class="n">time_point</span><span class="o">&amp;</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="p">.</span><span class="n">is_null</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">                </span><span class="k">auto</span><span class="w"> </span><span class="n">dur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">milliseconds</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
-<span class="w">                </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">time_point</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">system_clock</span><span class="o">&gt;</span><span class="p">(</span><span class="n">dur</span><span class="p">);</span><span class="w"></span>
-<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">                </span><span class="n">std</span><span class="o">::</span><span class="n">istringstream</span><span class="w"> </span><span class="n">json_time</span><span class="p">{</span><span class="n">j</span><span class="p">.</span><span class="n">get</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">()};</span><span class="w"></span>
-<span class="w">                </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">system_clock</span><span class="o">::</span><span class="n">time_point</span><span class="w"> </span><span class="n">parsed_time</span><span class="p">{};</span><span class="w"></span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">from_json</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">json</span><span class="w"> </span><span class="o">&amp;</span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">system_clock</span><span class="o">::</span><span class="n">time_point</span><span class="o">&amp;</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="p">.</span><span class="n">is_null</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">auto</span><span class="w"> </span><span class="n">dur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">milliseconds</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">                </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">time_point</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">system_clock</span><span class="o">&gt;</span><span class="p">(</span><span class="n">dur</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">std</span><span class="o">::</span><span class="n">istringstream</span><span class="w"> </span><span class="n">json_time</span><span class="p">{</span><span class="n">j</span><span class="p">.</span><span class="n">get</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">()};</span>
+<span class="w">                </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">system_clock</span><span class="o">::</span><span class="n">time_point</span><span class="w"> </span><span class="n">parsed_time</span><span class="p">{};</span>
 <span class="w">                </span><span class="c1">// Time saved in UTC, so no need to extract time zone</span>
-<span class="w">                </span><span class="n">json_time</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">date</span><span class="o">::</span><span class="n">parse</span><span class="p">(</span><span class="s">&quot;%F %T&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="p">);</span><span class="w"></span>
-<span class="w">            </span><span class="p">}</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">};</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">                </span><span class="n">json_time</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">date</span><span class="o">::</span><span class="n">parse</span><span class="p">(</span><span class="s">&quot;%F %T&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="p">}</span>
 </code></pre></div>
                 
                   
@@ -1732,7 +1732,7 @@ just needs to be added to your C# project as reference, and you can call your Dj
       
       
       <a
-        href="https://join.slack.com/t/mobilecpp/shared_invite/zt-1iofql6w0-lTeGqoFrzOT_lGu~rG1MUg"
+        href="https://join.slack.com/t/mobilecpp/shared_invite/zt-25wmizuq8-u2q4GATVQvACgDykqdnONw"
         target="_blank" rel="noopener"
         title="mobilecpp-registration"
         class="md-footer-social__link"

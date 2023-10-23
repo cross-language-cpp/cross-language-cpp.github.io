@@ -1223,30 +1223,30 @@
                 
                 <h1 id="using-the-generator">Using the Generator<a class="headerlink" href="#using-the-generator" title="Permanent link">&para;</a></h1>
 <p>When the Djinni file(s) are ready, from the command line you can run:</p>
-<div class="highlight"><pre><span></span><code>djinni <span class="se">\</span>
-   --java-out JAVA_OUTPUT_FOLDER <span class="se">\</span>
-   --java-package com.example.jnigenpackage <span class="se">\</span>
-   --java-cpp-exception DbxException <span class="se">\ </span><span class="c1"># Choose between a customized C++ exception in Java and java.lang.RuntimeException (the default).</span>
-   --ident-java-field mFooBar <span class="se">\ </span><span class="c1"># Optional, this adds an &quot;m&quot; in front of Java field names</span>
-   <span class="se">\</span>
-   --cpp-out CPP_OUTPUT_FOLDER <span class="se">\</span>
-   <span class="se">\</span>
-   --jni-out JNI_OUTPUT_FOLDER <span class="se">\</span>
-   --ident-jni-class NativeFooBar <span class="se">\ </span><span class="c1"># This adds a &quot;Native&quot; prefix to JNI class</span>
-   --ident-jni-file NativeFooBar <span class="se">\ </span><span class="c1"># This adds a prefix to the JNI filenames otherwise the cpp and jni filenames are the same.</span>
-   <span class="se">\</span>
-   --objc-out OBJC_OUTPUT_FOLDER <span class="se">\</span>
-   --objc-type-prefix DB <span class="se">\ </span><span class="c1"># Apple suggests Objective-C classes have a prefix for each defined type.</span>
-   <span class="se">\</span>
-   --objcpp-out OBJC_OUTPUT_FOLDER <span class="se">\</span>
-   <span class="se">\</span>
-   --py-out PYTHON_OUTPUT_FOLDER <span class="se">\</span>
-   --pycffi-out CFFI_OUTPUT_FOLDER <span class="se">\ </span><span class="c1"># Required for Python support</span>
-   --pycffi-package-name PyCFFIlib <span class="se">\</span>
-   --pycffi-dynamic-lib-list mylib <span class="se">\</span>
-   --c-wrapper-out C_WRAPPER_OUTPUT_FOLDER <span class="se">\ </span><span class="c1"># Required for Python support</span>
-   <span class="se">\</span>
-   --idl MY_PROJECT.djinni
+<div class="highlight"><pre><span></span><code>djinni<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--java-out<span class="w"> </span>JAVA_OUTPUT_FOLDER<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--java-package<span class="w"> </span>com.example.jnigenpackage<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--java-cpp-exception<span class="w"> </span>DbxException<span class="w"> </span><span class="se">\ </span><span class="c1"># Choose between a customized C++ exception in Java and java.lang.RuntimeException (the default).</span>
+<span class="w">   </span>--ident-java-field<span class="w"> </span>mFooBar<span class="w"> </span><span class="se">\ </span><span class="c1"># Optional, this adds an &quot;m&quot; in front of Java field names</span>
+<span class="w">   </span><span class="se">\</span>
+<span class="w">   </span>--cpp-out<span class="w"> </span>CPP_OUTPUT_FOLDER<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span><span class="se">\</span>
+<span class="w">   </span>--jni-out<span class="w"> </span>JNI_OUTPUT_FOLDER<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--ident-jni-class<span class="w"> </span>NativeFooBar<span class="w"> </span><span class="se">\ </span><span class="c1"># This adds a &quot;Native&quot; prefix to JNI class</span>
+<span class="w">   </span>--ident-jni-file<span class="w"> </span>NativeFooBar<span class="w"> </span><span class="se">\ </span><span class="c1"># This adds a prefix to the JNI filenames otherwise the cpp and jni filenames are the same.</span>
+<span class="w">   </span><span class="se">\</span>
+<span class="w">   </span>--objc-out<span class="w"> </span>OBJC_OUTPUT_FOLDER<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--objc-type-prefix<span class="w"> </span>DB<span class="w"> </span><span class="se">\ </span><span class="c1"># Apple suggests Objective-C classes have a prefix for each defined type.</span>
+<span class="w">   </span><span class="se">\</span>
+<span class="w">   </span>--objcpp-out<span class="w"> </span>OBJC_OUTPUT_FOLDER<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span><span class="se">\</span>
+<span class="w">   </span>--py-out<span class="w"> </span>PYTHON_OUTPUT_FOLDER<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--pycffi-out<span class="w"> </span>CFFI_OUTPUT_FOLDER<span class="w"> </span><span class="se">\ </span><span class="c1"># Required for Python support</span>
+<span class="w">   </span>--pycffi-package-name<span class="w"> </span>PyCFFIlib<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--pycffi-dynamic-lib-list<span class="w"> </span>mylib<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--c-wrapper-out<span class="w"> </span>C_WRAPPER_OUTPUT_FOLDER<span class="w"> </span><span class="se">\ </span><span class="c1"># Required for Python support</span>
+<span class="w">   </span><span class="se">\</span>
+<span class="w">   </span>--idl<span class="w"> </span>MY_PROJECT.djinni
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -2032,7 +2032,7 @@ Nevertheless make sure to <strong>explicitly set</strong> text transformation st
       
       
       <a
-        href="https://join.slack.com/t/mobilecpp/shared_invite/zt-1iofql6w0-lTeGqoFrzOT_lGu~rG1MUg"
+        href="https://join.slack.com/t/mobilecpp/shared_invite/zt-25wmizuq8-u2q4GATVQvACgDykqdnONw"
         target="_blank" rel="noopener"
         title="mobilecpp-registration"
         class="md-footer-social__link"

@@ -2,102 +2,102 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://djinni.xlcpp.dev/</loc>
-         <lastmod>2022-10-22</lastmod>
+         <lastmod>2023-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://djinni.xlcpp.dev/contributing/</loc>
-         <lastmod>2022-10-22</lastmod>
+         <lastmod>2023-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://djinni.xlcpp.dev/example/</loc>
-         <lastmod>2022-10-22</lastmod>
+         <lastmod>2023-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://djinni.xlcpp.dev/further_reading/</loc>
-         <lastmod>2022-10-22</lastmod>
+         <lastmod>2023-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://djinni.xlcpp.dev/icon_resources/</loc>
-         <lastmod>2022-10-22</lastmod>
+         <lastmod>2023-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://djinni.xlcpp.dev/overview/</loc>
-         <lastmod>2022-10-22</lastmod>
+         <lastmod>2023-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://djinni.xlcpp.dev/setup/</loc>
-         <lastmod>2022-10-22</lastmod>
+         <lastmod>2023-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://djinni.xlcpp.dev/djinni-generator/cli-usage/</loc>
-         <lastmod>2022-10-22</lastmod>
+         <lastmod>2023-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://djinni.xlcpp.dev/djinni-generator/developer-guide/</loc>
-         <lastmod>2022-10-22</lastmod>
+         <lastmod>2023-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://djinni.xlcpp.dev/djinni-generator/generated-code-usage/</loc>
-         <lastmod>2022-10-22</lastmod>
+         <lastmod>2023-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://djinni.xlcpp.dev/djinni-generator/idl/</loc>
-         <lastmod>2022-10-22</lastmod>
+         <lastmod>2023-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://djinni.xlcpp.dev/djinni-generator/modularization/</loc>
-         <lastmod>2022-10-22</lastmod>
+         <lastmod>2023-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://djinni.xlcpp.dev/djinni-generator/setup/</loc>
-         <lastmod>2022-10-22</lastmod>
+         <lastmod>2023-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://djinni.xlcpp.dev/djinni-intellij-plugin/</loc>
-         <lastmod>2022-10-22</lastmod>
+         <lastmod>2023-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://djinni.xlcpp.dev/djinni-intellij-plugin/developer-guide/</loc>
-         <lastmod>2022-10-22</lastmod>
+         <lastmod>2023-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://djinni.xlcpp.dev/djinni-support-lib/developer-guide/</loc>
-         <lastmod>2022-10-22</lastmod>
+         <lastmod>2023-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://djinni.xlcpp.dev/djinni-support-lib/install/</loc>
-         <lastmod>2022-10-22</lastmod>
+         <lastmod>2023-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://djinni.xlcpp.dev/djinni-support-lib/python-support/</loc>
-         <lastmod>2022-10-22</lastmod>
+         <lastmod>2023-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://djinni.xlcpp.dev/vscode-djinni/</loc>
-         <lastmod>2022-10-22</lastmod>
+         <lastmod>2023-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://djinni.xlcpp.dev/vscode-djinni/developer-guide/</loc>
-         <lastmod>2022-10-22</lastmod>
+         <lastmod>2023-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
