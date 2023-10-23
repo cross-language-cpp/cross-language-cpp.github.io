@@ -38,7 +38,7 @@ extra:
       link: https://mobilecpp.slack.com/
     - icon: fontawesome/brands/slack
       name: mobilecpp-registration
-      link: https://join.slack.com/t/mobilecpp/shared_invite/zt-1iofql6w0-lTeGqoFrzOT_lGu~rG1MUg
+      link: https://join.slack.com/t/mobilecpp/shared_invite/zt-25wmizuq8-u2q4GATVQvACgDykqdnONw
 theme:
   name: material
   custom_dir: overrides
