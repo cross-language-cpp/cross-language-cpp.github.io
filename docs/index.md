@@ -40,7 +40,7 @@ Djinni was originally developed by Dropbox in 2014.<br>
 Since June 2020 it is independently maintained by a small group of individuals from all over the globe.
 
 Get in contact with us on the [Mobile C++ Slack](https://mobilecpp.slack.com/)<br>
-If you are not member of this slack join via the [Mobile C++ Slack self-registration](https://join.slack.com/t/mobilecpp/shared_invite/zt-1iofql6w0-lTeGqoFrzOT_lGu~rG1MUg)
+If you are not member of this slack join via the [Mobile C++ Slack self-registration](https://join.slack.com/t/mobilecpp/shared_invite/zt-25wmizuq8-u2q4GATVQvACgDykqdnONw)
 
 or share your ideas with us in our [Github Discussion](https://github.com/cross-language-cpp/djinni-generator/discussions). :blush:
 
